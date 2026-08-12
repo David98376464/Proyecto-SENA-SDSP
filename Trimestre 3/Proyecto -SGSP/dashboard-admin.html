@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Dashboard Administrador</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS del dashboard -->
+    <link rel="stylesheet" href="assets/css/dashboard-admin.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- ==================================================
+             BARRA LATERAL
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="assets/img/logo.pnj.jpeg"
+                    alt="Logo SGSP">
+
+                <span>SGSP</span>
+
+            </div>
+
+
+            <!-- INFORMACIÓN DEL USUARIO -->
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="user-info">
+
+                    <strong>Administrador</strong>
+
+                    <span>Administrador</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <nav class="sidebar-menu">
+
+
+                <p class="menu-title">
+                    PRINCIPAL
+                </p>
+
+
+                <a href="#" class="menu-item active">
+
+                    <span class="menu-icon">▦</span>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <p class="menu-title">
+                    GESTIÓN
+                </p>
+
+
+                <a href="proyectos.html" class="menu-item">
+
+                    <span class="menu-icon">▣</span>
+
+                    <span>Proyectos</span>
+
+                </a>
+
+
+                <a href="empleados.html" class="menu-item">
+
+                    <span class="menu-icon">👥</span>
+
+                    <span>Empleados</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">✓</span>
+
+                    <span>Tareas</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">▤</span>
+
+                    <span>Materiales</span>
+
+                </a>
+
+
+                <p class="menu-title">
+                    INFORMACIÓN
+                </p>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">▤</span>
+
+                    <span>Reportes</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">⚙</span>
+
+                    <span>Configuración</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html" class="logout-button">
+
+                    <span>↪</span>
+
+                    Cerrar sesión
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+
+                <div>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Bienvenido al Sistema de Gestión y Seguimiento de Proyectos
+                    </p>
+
+                </div>
+
+
+                <div class="header-actions">
+
+                    <button class="notification-button">
+                        🔔
+                    </button>
+
+
+                    <div class="header-user">
+
+                        <div class="header-avatar">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Administrador
+                            </strong>
+
+                            <span>
+                                Administrador
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </header>
+
+
+            <!-- ==================================================
+                 TARJETAS DE RESUMEN
+            ================================================== -->
+
+            <section class="dashboard-cards">
+
+
+                <!-- PROYECTOS -->
+
+                <article class="dashboard-card">
+
+                    <div class="card-icon blue">
+                        ▣
+                    </div>
+
+                    <div class="card-information">
+
+                        <span>
+                            Proyectos
+                        </span>
+
+                        <strong>
+                            12
+                        </strong>
+
+                        <small>
+                            <b>+8.2%</b> respecto al mes anterior
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- EMPLEADOS -->
+
+                <article class="dashboard-card">
+
+                    <div class="card-icon green">
+                        👥
+                    </div>
+
+                    <div class="card-information">
+
+                        <span>
+                            Empleados
+                        </span>
+
+                        <strong>
+                            48
+                        </strong>
+
+                        <small>
+                            <b>+4.5%</b> respecto al mes anterior
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TAREAS -->
+
+                <article class="dashboard-card">
+
+                    <div class="card-icon orange">
+                        ✓
+                    </div>
+
+                    <div class="card-information">
+
+                        <span>
+                            Tareas pendientes
+                        </span>
+
+                        <strong>
+                            24
+                        </strong>
+
+                        <small>
+                            6 vencen esta semana
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MATERIALES -->
+
+                <article class="dashboard-card">
+
+                    <div class="card-icon purple">
+                        ▤
+                    </div>
+
+                    <div class="card-information">
+
+                        <span>
+                            Materiales
+                        </span>
+
+                        <strong>
+                            156
+                        </strong>
+
+                        <small>
+                            Inventario disponible
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <!-- ==================================================
+                 CONTENIDO INFERIOR
+            ================================================== -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- PROYECTOS RECIENTES -->
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Proyectos recientes
+                            </h2>
+
+                            <p>
+                                Últimos proyectos registrados
+                            </p>
+
+                        </div>
+
+
+                        <a href="#">
+                            Ver todos
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Proyecto
+                                    </th>
+
+                                    <th>
+                                        Responsable
+                                    </th>
+
+                                    <th>
+                                        Estado
+                                    </th>
+
+                                    <th>
+                                        Avance
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        Proyecto Alfa
+                                    </td>
+
+                                    <td>
+                                        Carlos Pérez
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            En progreso
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        75%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Proyecto Beta
+                                    </td>
+
+                                    <td>
+                                        María Gómez
+                                    </td>
+
+                                    <td>
+                                        <span class="status completed">
+                                            Completado
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        100%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Proyecto Gamma
+                                    </td>
+
+                                    <td>
+                                        Juan Rodríguez
+                                    </td>
+
+                                    <td>
+                                        <span class="status pending">
+                                            Pendiente
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        25%
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        Proyecto Delta
+                                    </td>
+
+                                    <td>
+                                        Laura Martínez
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            En progreso
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        60%
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIVIDAD RECIENTE -->
+
+                <div class="dashboard-panel activity-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Actividad reciente
+                            </h2>
+
+                            <p>
+                                Últimos movimientos del sistema
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon blue">
+                                +
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Nuevo proyecto registrado
+                                </strong>
+
+                                <span>
+                                    Hace 10 minutos
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon green">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Tarea completada
+                                </strong>
+
+                                <span>
+                                    Hace 35 minutos
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon orange">
+                                !
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Material con bajo inventario
+                                </strong>
+
+                                <span>
+                                    Hace 1 hora
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon purple">
+                                👤
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Nuevo empleado registrado
+                                </strong>
+
+                                <span>
+                                    Hace 2 horas
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>

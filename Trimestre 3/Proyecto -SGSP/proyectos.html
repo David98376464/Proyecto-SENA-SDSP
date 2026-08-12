@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Proyectos</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard-admin.css">
+    <link rel="stylesheet" href="assets/css/proyectos.css">
+
+</head>
+
+
+<body>
+
+    <div class="dashboard-container">
+
+
+        <!-- ==================================================
+             BARRA LATERAL
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="assets/img/logo.pnj.jpeg"
+                    alt="Logo SGSP">
+
+                <span>SGSP</span>
+
+            </div>
+
+
+            <!-- USUARIO -->
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    A
+                </div>
+
+                <div class="user-info">
+
+                    <strong>Administrador</strong>
+
+                    <span>Administrador</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <nav class="sidebar-menu">
+
+
+                <p class="menu-title">
+                    PRINCIPAL
+                </p>
+
+
+                <a href="dashboard-admin.html" class="menu-item">
+
+                    <span class="menu-icon">▦</span>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <p class="menu-title">
+                    GESTIÓN
+                </p>
+
+
+                <a href="proyectos.html" class="menu-item active">
+
+                    <span class="menu-icon">▣</span>
+
+                    <span>Proyectos</span>
+
+                </a>
+
+
+                <a href="empleados.html" class="menu-item">
+
+                    <span class="menu-icon">👥</span>
+
+                    <span>Empleados</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">✓</span>
+
+                    <span>Tareas</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">▤</span>
+
+                    <span>Materiales</span>
+
+                </a>
+
+
+                <p class="menu-title">
+                    INFORMACIÓN
+                </p>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">▤</span>
+
+                    <span>Reportes</span>
+
+                </a>
+
+
+                <a href="#" class="menu-item">
+
+                    <span class="menu-icon">⚙</span>
+
+                    <span>Configuración</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-bottom">
+
+                <a href="index.html" class="logout-button">
+
+                    <span>↪</span>
+
+                    Cerrar sesión
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+
+            <header class="dashboard-header">
+
+
+                <div>
+
+                    <h1>
+                        Proyectos
+                    </h1>
+
+                    <p>
+                        Gestiona y realiza seguimiento de los proyectos
+                    </p>
+
+                </div>
+
+
+                <div class="header-actions">
+
+                    <button
+                        class="notification-button"
+                        type="button">
+
+                        🔔
+
+                    </button>
+
+
+                    <div class="header-user">
+
+                        <div class="header-avatar">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Administrador
+                            </strong>
+
+                            <span>
+                                Administrador
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- ==================================================
+                 BARRA DE ACCIONES
+            ================================================== -->
+
+            <section class="projects-toolbar">
+
+
+                <!-- BUSCADOR -->
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="searchProject"
+                        placeholder="Buscar proyecto...">
+
+                </div>
+
+
+                <!-- FILTRO ESTADO -->
+
+                <select id="filterStatus">
+
+                    <option value="all">
+                        Todos los estados
+                    </option>
+
+                    <option value="En progreso">
+                        En progreso
+                    </option>
+
+                    <option value="Completado">
+                        Completado
+                    </option>
+
+                    <option value="Pendiente">
+                        Pendiente
+                    </option>
+
+                </select>
+
+
+                <!-- NUEVO PROYECTO -->
+
+                <button
+                    type="button"
+                    class="new-project-btn"
+                    id="newProjectBtn">
+
+                    <span>+</span>
+
+                    Nuevo proyecto
+
+                </button>
+
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 PANEL DE PROYECTOS
+            ================================================== -->
+
+            <section class="projects-panel">
+
+
+                <div class="panel-header">
+
+
+                    <div>
+
+                        <h2>
+                            Lista de proyectos
+                        </h2>
+
+                        <p>
+                            Proyectos registrados en el sistema
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="project-count"
+                        id="projectCount">
+
+                        4 proyectos
+
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- TABLA -->
+
+                <div class="table-container">
+
+                    <table id="projectsTable">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Proyecto
+                                </th>
+
+                                <th>
+                                    Responsable
+                                </th>
+
+                                <th>
+                                    Fecha de inicio
+                                </th>
+
+                                <th>
+                                    Fecha final
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Avance
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="projectsBody">
+
+
+                            <!-- PROYECTO 1 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="project-name">
+
+                                        <div class="project-icon">
+                                            P
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Proyecto Alfa
+                                            </strong>
+
+                                            <span>
+                                                Desarrollo empresarial
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Carlos Pérez
+                                </td>
+
+
+                                <td>
+                                    10/01/2026
+                                </td>
+
+
+                                <td>
+                                    30/06/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status active">
+                                        En progreso
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="progress-container">
+
+                                        <div class="progress-bar">
+
+                                            <span style="width: 75%;">
+                                            </span>
+
+                                        </div>
+
+                                        <small>
+                                            75%
+                                        </small>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Editar">
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Eliminar">
+                                            🗑
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- PROYECTO 2 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="project-name">
+
+                                        <div class="project-icon">
+                                            P
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Proyecto Beta
+                                            </strong>
+
+                                            <span>
+                                                Infraestructura
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    María Gómez
+                                </td>
+
+
+                                <td>
+                                    05/02/2026
+                                </td>
+
+
+                                <td>
+                                    20/05/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status completed">
+                                        Completado
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="progress-container">
+
+                                        <div class="progress-bar">
+
+                                            <span style="width: 100%;">
+                                            </span>
+
+                                        </div>
+
+                                        <small>
+                                            100%
+                                        </small>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Editar">
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Eliminar">
+                                            🗑
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- PROYECTO 3 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="project-name">
+
+                                        <div class="project-icon">
+                                            P
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Proyecto Gamma
+                                            </strong>
+
+                                            <span>
+                                                Gestión tecnológica
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Juan Rodríguez
+                                </td>
+
+
+                                <td>
+                                    15/03/2026
+                                </td>
+
+
+                                <td>
+                                    15/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status pending">
+                                        Pendiente
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="progress-container">
+
+                                        <div class="progress-bar">
+
+                                            <span style="width: 25%;">
+                                            </span>
+
+                                        </div>
+
+                                        <small>
+                                            25%
+                                        </small>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Editar">
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Eliminar">
+                                            🗑
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- PROYECTO 4 -->
+
+                            <tr>
+
+                                <td>
+
+                                    <div class="project-name">
+
+                                        <div class="project-icon">
+                                            P
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Proyecto Delta
+                                            </strong>
+
+                                            <span>
+                                                Optimización de procesos
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Laura Martínez
+                                </td>
+
+
+                                <td>
+                                    20/04/2026
+                                </td>
+
+
+                                <td>
+                                    20/10/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status active">
+                                        En progreso
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="progress-container">
+
+                                        <div class="progress-bar">
+
+                                            <span style="width: 60%;">
+                                            </span>
+
+                                        </div>
+
+                                        <small>
+                                            60%
+                                        </small>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+                                            👁
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Editar">
+                                            ✎
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            title="Eliminar">
+                                            🗑
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         MODAL NUEVO PROYECTO
+    ================================================== -->
+
+    <div
+        class="modal"
+        id="projectModal">
+
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2>
+                        Nuevo proyecto
+                    </h2>
+
+                    <p>
+                        Registra un nuevo proyecto en el sistema
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="close-modal"
+                    id="closeModal">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+
+            <form id="projectForm">
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group full">
+
+                        <label for="projectName">
+                            Nombre del proyecto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="projectName"
+                            placeholder="Ej. Construcción sede principal"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="responsible">
+                            Responsable
+                        </label>
+
+                        <select id="responsible" required>
+
+                            <option value="">
+                                Seleccionar responsable
+                            </option>
+
+                            <option value="Carlos Pérez">
+                                Carlos Pérez
+                            </option>
+
+                            <option value="María Gómez">
+                                María Gómez
+                            </option>
+
+                            <option value="Juan Rodríguez">
+                                Juan Rodríguez
+                            </option>
+
+                            <option value="Laura Martínez">
+                                Laura Martínez
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="projectStatus">
+                        Estado
+                        </label>
+
+                        <select id="projectStatus" required>
+
+                            <option value="">
+                                Seleccionar estado
+                            </option>
+
+                            <option value="Pendiente">
+                                Pendiente
+                            </option>
+
+                            <option value="En progreso">
+                                En progreso
+                            </option>
+
+                            <option value="Completado">
+                                Completado
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+<div class="form-group" id="progressGroup">
+
+    <label for="projectProgress">
+        Avance del proyecto
+    </label>
+
+    <input
+        type="number"
+        id="projectProgress"
+        min="0"
+        max="100"
+        value="0"
+        placeholder="Ej. 50">
+
+    <small class="form-help">
+        Indica el avance entre 0% y 100%.
+    </small>
+
+</div>
+
+
+                    <div class="form-group">
+
+                        <label for="startDate">
+                            Fecha de inicio
+                        </label>
+
+                        <input
+                            type="date"
+                            id="startDate"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="endDate">
+                            Fecha final
+                        </label>
+
+                        <input
+                            type="date"
+                            id="endDate"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label for="description">
+                            Descripción
+                        </label>
+
+                        <textarea
+                            id="description"
+                            rows="4"
+                            placeholder="Describe brevemente el proyecto...">
+                        </textarea>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-btn"
+                        id="cancelModal">
+
+                        Cancelar
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="save-project-btn">
+
+                        Guardar proyecto
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="assets/js/proyectos.js"></script>
+
+</body>
+
+</html>
