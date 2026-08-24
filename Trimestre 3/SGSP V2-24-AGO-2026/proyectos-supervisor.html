@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP - Proyectos</title>
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/supervisor.css">
+
+    <!-- CSS DEL SUPERVISOR -->
+    <link rel="stylesheet" href="assets/css/proyectos-supervisor.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <img
+                src="assets/img/logo.pnj.jpeg"
+                alt="Logo SGSP"
+            >
+
+        </div>
+
+
+
+        <!-- MENÚ -->
+
+        <nav class="sidebar-menu">
+
+
+            <!-- PRINCIPAL -->
+
+            <div class="menu-section">
+
+                <p class="menu-title">
+                    PRINCIPAL
+                </p>
+
+
+                <a
+                    href="dashboard-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- GESTIÓN -->
+
+            <div class="menu-section">
+
+                <p class="menu-title">
+                    GESTIÓN
+                </p>
+
+
+                <a
+                    href="proyectos-supervisor.html"
+                    class="menu-item active"
+                >
+
+                    <span class="menu-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Proyectos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        📦
+                    </span>
+
+                    <span>
+                        Materiales
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        ✅
+                    </span>
+
+                    <span>
+                        Tareas
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- SEGUIMIENTO -->
+
+            <div class="menu-section">
+
+                <p class="menu-title">
+                    SEGUIMIENTO
+                </p>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        ⚠️
+                    </span>
+
+                    <span>
+                        Incidencias
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        📈
+                    </span>
+
+                    <span>
+                        Avance de proyectos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        📊
+                    </span>
+
+                    <span>
+                        Reportes
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        🗓️
+                    </span>
+
+                    <span>
+                        Diagrama de Gantt
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- OTROS -->
+
+            <div class="menu-section">
+
+                <p class="menu-title">
+                    OTROS
+                </p>
+
+
+                <a
+                    href="#"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        ⚙️
+                    </span>
+
+                    <span>
+                        Configuración
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- CERRAR SESIÓN -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="index.html"
+                class="menu-item logout"
+            >
+
+                <span class="menu-icon">
+                    🚪
+                </span>
+
+                <span>
+                    Cerrar sesión
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             ENCABEZADO
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+                <h1>
+                    Proyectos
+                </h1>
+
+                <p>
+                    Consulta y supervisa los proyectos que tienes asignados
+                </p>
+
+            </div>
+
+
+
+            <!-- USUARIO -->
+
+            <div class="topbar-right">
+
+
+                <!-- NOTIFICACIONES -->
+
+                <button
+                    class="notification-button"
+                    title="Notificaciones"
+                >
+                    🔔
+                </button>
+
+
+
+                <!-- PERFIL -->
+
+                <div class="user-profile">
+
+
+                    <div class="user-avatar">
+                        S
+                    </div>
+
+
+                    <div class="user-data">
+
+                        <strong>
+                            Supervisor
+                        </strong>
+
+                        <span>
+                            Supervisor de Obra
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             RESUMEN DE PROYECTOS
+        ================================================== -->
+
+        <section class="project-stats">
+
+
+            <!-- TOTAL -->
+
+            <div class="project-stat-card">
+
+                <div class="project-stat-icon blue">
+                    📁
+                </div>
+
+                <div>
+
+                    <span>
+                        Total de proyectos
+                    </span>
+
+                    <strong>
+                        4
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- EN PROGRESO -->
+
+            <div class="project-stat-card">
+
+                <div class="project-stat-icon green">
+                    📈
+                </div>
+
+                <div>
+
+                    <span>
+                        En progreso
+                    </span>
+
+                    <strong>
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RETRASADOS -->
+
+            <div class="project-stat-card">
+
+                <div class="project-stat-icon orange">
+                    ⚠️
+                </div>
+
+                <div>
+
+                    <span>
+                        Retrasados
+                    </span>
+
+                    <strong>
+                        1
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- COMPLETADOS -->
+
+            <div class="project-stat-card">
+
+                <div class="project-stat-icon purple">
+                    ✅
+                </div>
+
+                <div>
+
+                    <span>
+                        Completados
+                    </span>
+
+                    <strong>
+                        1
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LISTADO DE PROYECTOS
+        ================================================== -->
+
+        <section class="projects-container">
+
+
+            <!-- ENCABEZADO -->
+
+            <div class="projects-header">
+
+
+                <div>
+
+                    <h2>
+                        Mis proyectos
+                    </h2>
+
+                    <p>
+                        Proyectos actualmente bajo tu supervisión
+                    </p>
+
+                </div>
+
+
+
+                <!-- BUSCADOR -->
+
+                <div class="project-search">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="projectSearch"
+                        placeholder="Buscar proyecto..."
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FILTROS -->
+
+            <div class="project-filters">
+
+
+                <button
+                    class="filter-button active"
+                    data-filter="todos"
+                >
+                    Todos
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    data-filter="progreso"
+                >
+                    En progreso
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    data-filter="retrasado"
+                >
+                    Retrasados
+                </button>
+
+
+                <button
+                    class="filter-button"
+                    data-filter="completado"
+                >
+                    Completados
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TARJETAS DE PROYECTOS
+            ================================================== -->
+
+            <div class="projects-grid" id="projectsGrid">
+
+
+
+                <!-- =================================================
+                     PROYECTO 1
+                ================================================== -->
+
+                <article
+                    class="project-card"
+                    data-status="progreso"
+                    data-name="Proyecto Villa Esperanza"
+                >
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon">
+                            🏗️
+                        </div>
+
+                        <span class="status status-progress">
+                            En progreso
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Proyecto Villa Esperanza
+                    </h3>
+
+
+                    <p class="project-location">
+                        📍 Cúcuta, Norte de Santander
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <div>
+                            <span>
+                                Inicio
+                            </span>
+
+                            <strong>
+                                15/01/2026
+                            </strong>
+                        </div>
+
+
+                        <div>
+                            <span>
+                                Finalización
+                            </span>
+
+                            <strong>
+                                30/11/2026
+                            </strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+
+                        <div class="progress-header">
+
+                            <span>
+                                Avance
+                            </span>
+
+                            <strong>
+                                75%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                style="width: 75%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span>
+                            👷 Supervisor
+                        </span>
+
+
+                        <button
+                            class="view-project"
+                            data-project="Proyecto Villa Esperanza"
+                        >
+                            Ver proyecto
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROYECTO 2
+                ================================================== -->
+
+                <article
+                    class="project-card"
+                    data-status="progreso"
+                    data-name="Edificio San José"
+                >
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon">
+                            🏢
+                        </div>
+
+                        <span class="status status-progress">
+                            En progreso
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Edificio San José
+                    </h3>
+
+
+                    <p class="project-location">
+                        📍 Villa del Rosario
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <div>
+
+                            <span>
+                                Inicio
+                            </span>
+
+                            <strong>
+                                05/02/2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Finalización
+                            </span>
+
+                            <strong>
+                                15/12/2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-header">
+
+                            <span>
+                                Avance
+                            </span>
+
+                            <strong>
+                                52%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar"
+                                style="width: 52%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span>
+                            👷 Supervisor
+                        </span>
+
+
+                        <button
+                            class="view-project"
+                            data-project="Edificio San José"
+                        >
+                            Ver proyecto
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROYECTO 3
+                ================================================== -->
+
+                <article
+                    class="project-card"
+                    data-status="retrasado"
+                    data-name="Proyecto Los Pinos"
+                >
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon">
+                            🏠
+                        </div>
+
+                        <span class="status status-warning">
+                            Retrasado
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Proyecto Los Pinos
+                    </h3>
+
+
+                    <p class="project-location">
+                        📍 Los Patios
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <div>
+
+                            <span>
+                                Inicio
+                            </span>
+
+                            <strong>
+                                20/03/2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Finalización
+                            </span>
+
+                            <strong>
+                                20/10/2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-header">
+
+                            <span>
+                                Avance
+                            </span>
+
+                            <strong>
+                                35%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar warning-bar"
+                                style="width: 35%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span>
+                            👷 Supervisor
+                        </span>
+
+
+                        <button
+                            class="view-project"
+                            data-project="Proyecto Los Pinos"
+                        >
+                            Ver proyecto
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     PROYECTO 4
+                ================================================== -->
+
+                <article
+                    class="project-card"
+                    data-status="completado"
+                    data-name="Urbanización El Lago"
+                >
+
+
+                    <div class="project-card-header">
+
+                        <div class="project-icon">
+                            🏘️
+                        </div>
+
+                        <span class="status status-completed">
+                            Completado
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Urbanización El Lago
+                    </h3>
+
+
+                    <p class="project-location">
+                        📍 Cúcuta
+                    </p>
+
+
+                    <div class="project-details">
+
+                        <div>
+
+                            <span>
+                                Inicio
+                            </span>
+
+                            <strong>
+                                10/01/2026
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Finalización
+                            </span>
+
+                            <strong>
+                                01/08/2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-header">
+
+                            <span>
+                                Avance
+                            </span>
+
+                            <strong>
+                                100%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress">
+
+                            <div
+                                class="progress-bar completed-bar"
+                                style="width: 100%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-footer">
+
+                        <span>
+                            👷 Supervisor
+                        </span>
+
+
+                        <button
+                            class="view-project"
+                            data-project="Urbanización El Lago"
+                        >
+                            Ver proyecto
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MODAL DE INFORMACIÓN
+        ================================================== -->
+
+        <div
+            class="project-modal"
+            id="projectModal"
+        >
+
+            <div class="modal-content">
+
+
+                <button
+                    class="modal-close"
+                    id="modalClose"
+                >
+                    ×
+                </button>
+
+
+                <div class="modal-icon">
+                    🏗️
+                </div>
+
+
+                <h2 id="modalTitle">
+                    Proyecto
+                </h2>
+
+
+                <p>
+                    Vista detallada del proyecto seleccionado.
+                </p>
+
+
+                <div class="modal-info">
+
+                    <div>
+                        <span>
+                            Estado
+                        </span>
+
+                        <strong id="modalStatus">
+                            -
+                        </strong>
+                    </div>
+
+
+                    <div>
+                        <span>
+                            Avance
+                        </span>
+
+                        <strong id="modalProgress">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="modal-button"
+                    id="modalAccept"
+                >
+                    Entendido
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="assets/js/proyectos-supervisor.js"></script>
+
+</body>
+
+</html>
+

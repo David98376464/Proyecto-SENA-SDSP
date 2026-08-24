@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Tareas</title>
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS GLOBAL -->
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
+    <!-- CSS DASHBOARD -->
+    <link
+        rel="stylesheet"
+        href="assets/css/dashboard-admin.css">
+
+    <!-- CSS TAREAS -->
+    <link
+        rel="stylesheet"
+        href="assets/css/tareas.css">
+
+</head>
+
+
+<body>
+
+    <main class="dashboard-container">
+
+
+        <!-- ==================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="assets/img/logo.pnj.jpeg"
+                    alt="Logo SGSP">
+
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <nav class="sidebar-menu">
+
+
+                <a
+                    href="dashboard-admin.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <span class="menu-title">
+                    GESTIÓN
+                </span>
+
+
+                <a
+                    href="proyectos.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Proyectos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="empleados.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        👥
+                    </span>
+
+                    <span>
+                        Empleados
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="tareas.html"
+                    class="menu-item active">
+
+                    <span class="menu-icon">
+                        ✅
+                    </span>
+
+                    <span>
+                        Tareas
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="materiales.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📦
+                    </span>
+
+                    <span>
+                        Materiales
+                    </span>
+
+                </a>
+
+
+                <span class="menu-title">
+                    SISTEMA
+                </span>
+
+
+                <a
+                    href="reportes.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📊
+                    </span>
+
+                    <span>
+                        Reportes
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="configuracion.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        ⚙️
+                    </span>
+
+                    <span>
+                        Configuración
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    id="logoutBtn"
+                    class="logout-button">
+
+                    <span>
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <section class="main-content">
+
+
+            <!-- ==================================================
+                 HEADER
+            ================================================== -->
+
+            <header class="dashboard-header">
+
+
+                <div>
+
+                    <h1>
+                        Tareas
+                    </h1>
+
+                    <p>
+                        Gestiona y realiza seguimiento a las tareas de los proyectos.
+                    </p>
+
+                </div>
+
+
+                <!-- USUARIO -->
+
+                <div class="header-actions">
+
+
+                    <div class="header-user">
+
+                        <div class="header-avatar">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Administrador
+                            </strong>
+
+                            <span>
+                                Administrador
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </header>
+
+
+            <!-- ==================================================
+                 CONTENIDO DE TAREAS
+            ================================================== -->
+
+            <div class="tasks-content">
+
+
+                <!-- ==================================================
+                     BARRA DE HERRAMIENTAS
+                ================================================== -->
+
+                <div class="tasks-toolbar">
+
+
+                    <!-- BUSCADOR -->
+
+                    <div class="task-search">
+
+                        <span>
+                            🔎
+                        </span>
+
+                        <input
+                            type="text"
+                            id="searchTask"
+                            placeholder="Buscar tarea...">
+
+                    </div>
+
+
+                    <!-- FILTRO ESTADO -->
+
+                    <select
+                        id="filterTaskStatus">
+
+                        <option value="all">
+                            Todos los estados
+                        </option>
+
+                        <option value="Pendiente">
+                            Pendientes
+                        </option>
+
+                        <option value="En progreso">
+                            En progreso
+                        </option>
+
+                        <option value="Completada">
+                            Completadas
+                        </option>
+
+                    </select>
+
+
+                    <!-- FILTRO PROYECTO -->
+
+                    <select
+                        id="filterTaskProject">
+
+                        <option value="all">
+                            Todos los proyectos
+                        </option>
+
+                        <option value="Proyecto Alfa">
+                            Proyecto Alfa
+                        </option>
+
+                        <option value="Proyecto Beta">
+                            Proyecto Beta
+                        </option>
+
+                        <option value="Proyecto Gamma">
+                            Proyecto Gamma
+                        </option>
+
+                        <option value="Proyecto Delta">
+                            Proyecto Delta
+                        </option>
+
+                    </select>
+
+
+                    <!-- NUEVA TAREA -->
+
+                    <button
+                        type="button"
+                        id="newTaskBtn"
+                        class="new-task-btn">
+
+                        ➕
+                        Nueva tarea
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                     TARJETA
+                ================================================== -->
+
+                <div class="tasks-card">
+
+
+                    <!-- ENCABEZADO -->
+
+                    <div class="tasks-card-header">
+
+                        <div>
+
+                            <h2>
+                                Lista de tareas
+                            </h2>
+
+                            <p id="taskCount">
+                                6 tareas
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ==================================================
+                         TABLA
+                    ================================================== -->
+
+                    <div class="table-container">
+
+                        <table>
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Tarea
+                                    </th>
+
+                                    <th>
+                                        Proyecto
+                                    </th>
+
+                                    <th>
+                                        Responsable
+                                    </th>
+
+                                    <th>
+                                        Fecha límite
+                                    </th>
+
+                                    <th>
+                                        Prioridad
+                                    </th>
+
+                                    <th>
+                                        Estado
+                                    </th>
+
+                                    <th>
+                                        Acciones
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tasksBody">
+
+
+                                <!-- ==================================================
+                                     TAREA 1
+                                ================================================== -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="task-info">
+
+                                            <div class="task-icon">
+                                                📋
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Diseño de interfaz
+                                                </strong>
+
+                                                <span>
+                                                    Diseñar la interfaz principal del sistema.
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Alfa
+                                    </td>
+
+
+                                    <td>
+                                        Carlos Pérez
+                                    </td>
+
+
+                                    <td>
+                                        20/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-priority high">
+                                            Alta
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status progress">
+                                            En progreso
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="task-actions">
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+                                                👁
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+                                                ✎
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+                                                🗑
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     TAREA 2
+                                ================================================== -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="task-info">
+
+                                            <div class="task-icon">
+                                                💻
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Desarrollo del módulo
+                                                </strong>
+
+                                                <span>
+                                                    Programación del módulo de usuarios.
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Beta
+                                    </td>
+
+
+                                    <td>
+                                        María Gómez
+                                    </td>
+
+
+                                    <td>
+                                        25/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-priority medium">
+                                            Media
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status pending">
+                                            Pendiente
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="task-actions">
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+                                                👁
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+                                                ✎
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+                                                🗑
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     TAREA 3
+                                ================================================== -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="task-info">
+
+                                            <div class="task-icon">
+                                                🗂️
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Organización de documentos
+                                                </strong>
+
+                                                <span>
+                                                    Clasificar y organizar documentación.
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Gamma
+                                    </td>
+
+
+                                    <td>
+                                        Juan Rodríguez
+                                    </td>
+
+
+                                    <td>
+                                        18/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-priority low">
+                                            Baja
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status completed">
+                                            Completada
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="task-actions">
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+                                                👁
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+                                                ✎
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+                                                🗑
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     TAREA 4
+                                ================================================== -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="task-info">
+
+                                            <div class="task-icon">
+                                                🔧
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Revisión del sistema
+                                                </strong>
+
+                                                <span>
+                                                    Revisar funcionamiento general.
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Delta
+                                    </td>
+
+
+                                    <td>
+                                        Ana López
+                                    </td>
+
+
+                                    <td>
+                                        30/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-priority high">
+                                            Alta
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status progress">
+                                            En progreso
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="task-actions">
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+                                                👁
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+                                                ✎
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+                                                🗑
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     TAREA 5
+                                ================================================== -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="task-info">
+
+                                            <div class="task-icon">
+                                                📊
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Elaborar informe
+                                                </strong>
+
+                                                <span>
+                                                    Preparar informe de avance del proyecto.
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Alfa
+                                    </td>
+
+
+                                    <td>
+                                        Diego Sánchez
+                                    </td>
+
+
+                                    <td>
+                                        28/08/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-priority medium">
+                                            Media
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status pending">
+                                            Pendiente
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="task-actions">
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+                                                👁
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+                                                ✎
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+                                                🗑
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     TAREA 6
+                                ================================================== -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="task-info">
+
+                                            <div class="task-icon">
+                                                ✔️
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Pruebas finales
+                                                </strong>
+
+                                                <span>
+                                                    Realizar pruebas antes de la entrega.
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Beta
+                                    </td>
+
+
+                                    <td>
+                                        Carlos Pérez
+                                    </td>
+
+
+                                    <td>
+                                        02/09/2026
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-priority high">
+                                            Alta
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status pending">
+                                            Pendiente
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="task-actions">
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+                                                👁
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+                                                ✎
+                                            </button>
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+                                                🗑
+                                            </button>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="assets/js/tareas.js"></script>
+
+</body>
+
+</html>

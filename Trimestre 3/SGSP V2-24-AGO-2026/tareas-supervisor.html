@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Tareas - Supervisor</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- CSS PRINCIPAL -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
+
+    <!-- CSS DASHBOARD -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/supervisor.css">
+
+
+    <!-- CSS TAREAS -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/tareas-supervisor.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="dashboard-container">
+
+
+        <!-- ==================================================
+             BARRA LATERAL
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="assets/img/logo.pnj.jpeg"
+                    alt="Logo SGSP">
+
+                <span>
+                    SGSP
+                </span>
+
+            </div>
+
+
+            <!-- PERFIL -->
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    S
+                </div>
+
+
+                <div class="user-info">
+
+                    <strong>
+                        Supervisor de Obra
+                    </strong>
+
+                    <span>
+                        Supervisor
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                 MENÚ
+            ================================================== -->
+
+            <nav class="sidebar-menu">
+
+
+                <p class="menu-title">
+                    PRINCIPAL
+                </p>
+
+
+                <a
+                    href="dashboard-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <p class="menu-title">
+                    GESTIÓN
+                </p>
+
+
+                <!-- PROYECTOS -->
+
+                <a
+                    href="proyectos-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Proyectos
+                    </span>
+
+                </a>
+
+
+                <!-- TAREAS -->
+
+                <a
+                    href="tareas-supervisor.html"
+                    class="menu-item active">
+
+                    <span class="menu-icon">
+                        ✅
+                    </span>
+
+                    <span>
+                        Tareas
+                    </span>
+
+                </a>
+
+
+                <!-- MATERIALES -->
+
+                <a
+                    href="materiales-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📦
+                    </span>
+
+                    <span>
+                        Materiales
+                    </span>
+
+                </a>
+
+
+                <p class="menu-title">
+                    INFORMACIÓN
+                </p>
+
+
+                <!-- REPORTES -->
+
+                <a
+                    href="reportes-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📊
+                    </span>
+
+                    <span>
+                        Reportes
+                    </span>
+
+                </a>
+
+
+                <!-- CONFIGURACIÓN -->
+
+                <a
+                    href="configuracion-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        ⚙️
+                    </span>
+
+                    <span>
+                        Configuración
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- ==================================================
+                 CERRAR SESIÓN
+            ================================================== -->
+
+            <div class="sidebar-bottom">
+
+                <a
+                    href="index.html"
+                    class="logout-button">
+
+                    <span>
+                        🚪
+                    </span>
+
+                    Cerrar sesión
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- ==================================================
+                 HEADER
+            ================================================== -->
+
+            <header class="dashboard-header">
+
+
+                <div>
+
+                    <h1>
+                        Tareas
+                    </h1>
+
+                    <p>
+                        Supervisa y realiza seguimiento de las tareas
+                        de los proyectos
+                    </p>
+
+                </div>
+
+
+                <div class="header-actions">
+
+
+                    <!-- NOTIFICACIONES -->
+
+                    <button
+                        type="button"
+                        class="notification-button"
+                        id="notificationButton">
+
+                        🔔
+
+                    </button>
+
+
+                    <!-- USUARIO -->
+
+                    <div class="header-user">
+
+                        <div class="header-avatar">
+                            S
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Supervisor de Obra
+                            </strong>
+
+                            <span>
+                                Supervisor
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- ==================================================
+                 BARRA DE HERRAMIENTAS
+            ================================================== -->
+
+            <section class="tasks-toolbar">
+
+
+                <!-- BUSCADOR -->
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        🔍
+                    </span>
+
+
+                    <input
+                        type="text"
+                        id="searchTask"
+                        placeholder="Buscar tarea...">
+
+                </div>
+
+
+                <!-- FILTRO ESTADO -->
+
+                <select
+                    id="filterStatus">
+
+                    <option value="all">
+                        Todos los estados
+                    </option>
+
+                    <option value="Pendiente">
+                        Pendiente
+                    </option>
+
+                    <option value="En progreso">
+                        En progreso
+                    </option>
+
+                    <option value="Completada">
+                        Completada
+                    </option>
+
+                </select>
+
+
+                <!-- FILTRO PRIORIDAD -->
+
+                <select
+                    id="filterPriority">
+
+                    <option value="all">
+                        Todas las prioridades
+                    </option>
+
+                    <option value="Alta">
+                        Alta
+                    </option>
+
+                    <option value="Media">
+                        Media
+                    </option>
+
+                    <option value="Baja">
+                        Baja
+                    </option>
+
+                </select>
+
+
+            </section>
+
+
+
+            <!-- ==================================================
+                 PANEL DE TAREAS
+            ================================================== -->
+
+            <section class="tasks-panel">
+
+
+                <!-- HEADER DEL PANEL -->
+
+                <div class="panel-header">
+
+
+                    <div>
+
+                        <h2>
+                            Tareas de proyectos
+                        </h2>
+
+                        <p>
+                            Seguimiento de las tareas asignadas
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="task-count"
+                        id="taskCount">
+
+                        6 tareas
+
+                    </span>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     TABLA
+                ================================================== -->
+
+                <div class="table-container">
+
+
+                    <table
+                        id="tasksTable">
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Tarea
+                                </th>
+
+                                <th>
+                                    Proyecto
+                                </th>
+
+                                <th>
+                                    Responsable
+                                </th>
+
+                                <th>
+                                    Fecha límite
+                                </th>
+
+                                <th>
+                                    Prioridad
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="tasksBody">
+
+
+                            <!-- ==================================================
+                                 TAREA 1
+                            ================================================== -->
+
+                            <tr>
+
+
+                                <td>
+
+                                    <div class="task-name">
+
+
+                                        <div class="task-icon">
+                                            T
+                                        </div>
+
+
+                                        <div>
+
+                                            <strong>
+                                                Diseño de interfaz
+                                            </strong>
+
+                                            <span>
+                                                Desarrollo
+                                            </span>
+
+                                        </div>
+
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Proyecto Alfa
+                                </td>
+
+
+                                <td>
+                                    Carlos Pérez
+                                </td>
+
+
+                                <td>
+                                    25/08/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="priority high">
+                                        Alta
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status active">
+                                        En progreso
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+
+                                            👁
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            title="Actualizar">
+
+                                            ✎
+
+                                        </button>
+
+
+                                    </div>
+
+                                </td>
+
+
+                            </tr>
+
+
+
+                            <!-- ==================================================
+                                 TAREA 2
+                            ================================================== -->
+
+                            <tr>
+
+
+                                <td>
+
+                                    <div class="task-name">
+
+                                        <div class="task-icon">
+                                            T
+                                        </div>
+
+
+                                        <div>
+
+                                            <strong>
+                                                Instalación eléctrica
+                                            </strong>
+
+                                            <span>
+                                                Instalación
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Proyecto Beta
+                                </td>
+
+
+                                <td>
+                                    María Gómez
+                                </td>
+
+
+                                <td>
+                                    27/08/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="priority medium">
+                                        Media
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status completed">
+                                        Completada
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+
+                                            👁
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            title="Actualizar">
+
+                                            ✎
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+
+                            </tr>
+
+
+
+                            <!-- ==================================================
+                                 TAREA 3
+                            ================================================== -->
+
+                            <tr>
+
+
+                                <td>
+
+                                    <div class="task-name">
+
+                                        <div class="task-icon">
+                                            T
+                                        </div>
+
+
+                                        <div>
+
+                                            <strong>
+                                                Compra de materiales
+                                            </strong>
+
+                                            <span>
+                                                Abastecimiento
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Proyecto Gamma
+                                </td>
+
+
+                                <td>
+                                    Juan Rodríguez
+                                </td>
+
+
+                                <td>
+                                    30/08/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="priority high">
+                                        Alta
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status pending">
+                                        Pendiente
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+
+                                            👁
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            title="Actualizar">
+
+                                            ✎
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+
+                            </tr>
+
+
+
+                            <!-- ==================================================
+                                 TAREA 4
+                            ================================================== -->
+
+                            <tr>
+
+
+                                <td>
+
+                                    <div class="task-name">
+
+                                        <div class="task-icon">
+                                            T
+                                        </div>
+
+
+                                        <div>
+
+                                            <strong>
+                                                Revisión de planos
+                                            </strong>
+
+                                            <span>
+                                                Supervisión
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Proyecto Delta
+                                </td>
+
+
+                                <td>
+                                    Laura Martínez
+                                </td>
+
+
+                                <td>
+                                    02/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="priority medium">
+                                        Media
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status active">
+                                        En progreso
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+
+                                            👁
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            title="Actualizar">
+
+                                            ✎
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+
+                            </tr>
+
+
+
+                            <!-- ==================================================
+                                 TAREA 5
+                            ================================================== -->
+
+                            <tr>
+
+
+                                <td>
+
+                                    <div class="task-name">
+
+                                        <div class="task-icon">
+                                            T
+                                        </div>
+
+
+                                        <div>
+
+                                            <strong>
+                                                Pruebas del sistema
+                                            </strong>
+
+                                            <span>
+                                                Desarrollo
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Proyecto Alfa
+                                </td>
+
+
+                                <td>
+                                    Carlos Pérez
+                                </td>
+
+
+                                <td>
+                                    05/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="priority low">
+                                        Baja
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status pending">
+                                        Pendiente
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+
+                                            👁
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            title="Actualizar">
+
+                                            ✎
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+
+                            </tr>
+
+
+
+                            <!-- ==================================================
+                                 TAREA 6
+                            ================================================== -->
+
+                            <tr>
+
+
+                                <td>
+
+                                    <div class="task-name">
+
+                                        <div class="task-icon">
+                                            T
+                                        </div>
+
+
+                                        <div>
+
+                                            <strong>
+                                                Entrega de informe
+                                            </strong>
+
+                                            <span>
+                                                Documentación
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+
+                                <td>
+                                    Proyecto Beta
+                                </td>
+
+
+                                <td>
+                                    María Gómez
+                                </td>
+
+
+                                <td>
+                                    08/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="priority low">
+                                        Baja
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status completed">
+                                        Completada
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <div class="action-buttons">
+
+                                        <button
+                                            type="button"
+                                            title="Ver">
+
+                                            👁
+
+                                        </button>
+
+
+                                        <button
+                                            type="button"
+                                            title="Actualizar">
+
+                                            ✎
+
+                                        </button>
+
+                                    </div>
+
+                                </td>
+
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script
+        src="assets/js/tareas-supervisor.js">
+    </script>
+
+
+</body>
+
+</html>
