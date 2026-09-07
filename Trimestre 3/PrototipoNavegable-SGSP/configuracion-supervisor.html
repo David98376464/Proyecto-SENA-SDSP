@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Configuración</title>
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/configuracion-supervisor.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">PRINCIPAL</p>
+
+            <a href="dashboard-supervisor.html" class="menu-item">
+                <span class="menu-icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <p class="menu-title">GESTIÓN</p>
+
+            <a href="proyectos-supervisor.html" class="menu-item">
+                <span class="menu-icon">📁</span>
+                <span>Proyectos</span>
+            </a>
+
+            <a href="materiales-supervisor.html" class="menu-item">
+                <span class="menu-icon">📦</span>
+                <span>Materiales</span>
+            </a>
+
+            <a href="tareas-supervisor.html" class="menu-item">
+                <span class="menu-icon">✅</span>
+                <span>Tareas</span>
+            </a>
+
+
+            <p class="menu-title">SEGUIMIENTO</p>
+
+            <!-- Incidencias activa -->
+            <a href="incidencias-supervisor.html"
+               class="menu-item">
+
+                <span class="menu-icon">⚠️</span>
+                <span>Incidencias</span>
+
+            </a>
+
+            <a href="avances-supervisor.html" class="menu-item">
+                <span class="menu-icon">📈</span>
+                <span>Avance de proyectos</span>
+            </a>
+
+            <a href="reportes-supervisor.html" class="menu-item">
+                <span class="menu-icon">📊</span>
+                <span>Reportes</span>
+            </a>
+
+            <a href="gantt-supervisor.html" class="menu-item">
+                <span class="menu-icon">🗓️</span>
+                <span>Diagrama de Gantt</span>
+            </a>
+
+
+            <p class="menu-title">OTROS</p>
+
+            <a href="configuracion-supervisor.html" class="menu-item active">
+                <span class="menu-icon">⚙️</span>
+                <span>Configuración</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="logout-button">
+                <span>🚪</span>
+                Cerrar sesión
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- =================================================
+             ENCABEZADO
+        ================================================== -->
+
+        <header class="config-topbar">
+
+            <div class="config-page-title">
+
+                <h1>Configuración</h1>
+
+                <p>
+                    Administra tus preferencias y datos de cuenta
+                </p>
+
+            </div>
+
+
+            <!-- PARTE DERECHA -->
+
+            <div class="config-topbar-right">
+
+                <button
+                    class="config-notification-button"
+                    type="button"
+                    title="Notificaciones"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+
+                <div class="config-user-profile">
+
+                    <div class="config-user-avatar">
+                        SV
+                    </div>
+
+                    <div class="config-user-data">
+
+                        <strong>Supervisor</strong>
+
+                        <span>Supervisor de Obra</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENIDO DE CONFIGURACIÓN
+        ================================================== -->
+
+        <section class="config-content">
+
+
+            <!-- =================================================
+                 PERFIL
+            ================================================== -->
+
+            <div class="config-card">
+
+                <div class="config-card-header">
+
+                    <div class="config-card-icon blue">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>Información del perfil</h2>
+
+                        <p>
+                            Consulta y administra la información de tu cuenta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="config-profile">
+
+                    <div class="config-profile-avatar">
+                        SV
+                    </div>
+
+
+                    <div class="config-profile-info">
+
+                        <div class="config-field">
+
+                            <label for="nombreSupervisor">
+                                Nombre completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombreSupervisor"
+                                value="Supervisor"
+                            >
+
+                        </div>
+
+
+                        <div class="config-field">
+
+                            <label for="correoSupervisor">
+                                Correo electrónico
+                            </label>
+
+                            <input
+                                type="email"
+                                id="correoSupervisor"
+                                value="supervisor@sgsp.com"
+                            >
+
+                        </div>
+
+
+                        <div class="config-field">
+
+                            <label for="rolSupervisor">
+                                Rol
+                            </label>
+
+                            <input
+                                type="text"
+                                id="rolSupervisor"
+                                value="Supervisor de Obra"
+                                readonly
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 NOTIFICACIONES
+            ================================================== -->
+
+            <div class="config-card">
+
+                <div class="config-card-header">
+
+                    <div class="config-card-icon green">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>Notificaciones</h2>
+
+                        <p>
+                            Selecciona las notificaciones que deseas recibir.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="config-options">
+
+
+                    <!-- PROYECTOS -->
+
+                    <div class="config-option">
+
+                        <div class="config-option-info">
+
+                            <strong>
+                                Actualizaciones de proyectos
+                            </strong>
+
+                            <span>
+                                Recibir avisos cuando se actualice el avance
+                                de un proyecto.
+                            </span>
+
+                        </div>
+
+
+                        <label class="config-switch">
+
+                            <input
+                                type="checkbox"
+                                id="notificacionesProyectos"
+                                checked
+                            >
+
+                            <span class="config-slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- TAREAS -->
+
+                    <div class="config-option">
+
+                        <div class="config-option-info">
+
+                            <strong>
+                                Alertas de tareas
+                            </strong>
+
+                            <span>
+                                Recibir recordatorios sobre tareas pendientes.
+                            </span>
+
+                        </div>
+
+
+                        <label class="config-switch">
+
+                            <input
+                                type="checkbox"
+                                id="alertasTareas"
+                                checked
+                            >
+
+                            <span class="config-slider"></span>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- INCIDENCIAS -->
+
+                    <div class="config-option">
+
+                        <div class="config-option-info">
+
+                            <strong>
+                                Incidencias
+                            </strong>
+
+                            <span>
+                                Recibir notificaciones sobre nuevas
+                                incidencias registradas.
+                            </span>
+
+                        </div>
+
+
+                        <label class="config-switch">
+
+                            <input
+                                type="checkbox"
+                                id="notificacionesIncidencias"
+                                checked
+                            >
+
+                            <span class="config-slider"></span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SEGURIDAD
+            ================================================== -->
+
+            <div class="config-card">
+
+                <div class="config-card-header">
+
+                    <div class="config-card-icon orange">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>Seguridad</h2>
+
+                        <p>
+                            Actualiza la contraseña de tu cuenta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="config-security">
+
+
+                    <div class="config-field">
+
+                        <label for="passwordActual">
+                            Contraseña actual
+                        </label>
+
+                        <div class="config-password">
+
+                            <input
+                                type="password"
+                                id="passwordActual"
+                                placeholder="Ingresa tu contraseña actual"
+                            >
+
+                            <button
+                                type="button"
+                                class="config-password-button"
+                                data-target="passwordActual"
+                                title="Mostrar contraseña"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="config-field">
+
+                        <label for="passwordNueva">
+                            Nueva contraseña
+                        </label>
+
+                        <div class="config-password">
+
+                            <input
+                                type="password"
+                                id="passwordNueva"
+                                placeholder="Ingresa una nueva contraseña"
+                            >
+
+                            <button
+                                type="button"
+                                class="config-password-button"
+                                data-target="passwordNueva"
+                                title="Mostrar contraseña"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="config-field">
+
+                        <label for="passwordConfirmar">
+                            Confirmar nueva contraseña
+                        </label>
+
+                        <div class="config-password">
+
+                            <input
+                                type="password"
+                                id="passwordConfirmar"
+                                placeholder="Confirma tu nueva contraseña"
+                            >
+
+                            <button
+                                type="button"
+                                class="config-password-button"
+                                data-target="passwordConfirmar"
+                                title="Mostrar contraseña"
+                            >
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PREFERENCIAS
+            ================================================== -->
+
+            <div class="config-card">
+
+                <div class="config-card-header">
+
+                    <div class="config-card-icon purple">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+
+                    <div>
+
+                        <h2>Preferencias</h2>
+
+                        <p>
+                            Personaliza algunas opciones del sistema.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="config-preferences">
+
+                    <div class="config-field">
+
+                        <label for="idioma">
+                            Idioma
+                        </label>
+
+                        <select id="idioma">
+
+                            <option value="es" selected>
+                                Español
+                            </option>
+
+                            <option value="en">
+                                Inglés
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="config-field">
+
+                        <label for="vistaPredeterminada">
+                            Vista predeterminada del Gantt
+                        </label>
+
+                        <select id="vistaPredeterminada">
+
+                            <option value="week" selected>
+                                Semanas
+                            </option>
+
+                            <option value="month">
+                                Meses
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOTONES
+            ================================================== -->
+
+            <div class="config-actions">
+
+                <button
+                    type="button"
+                    class="config-cancel-button"
+                    id="cancelConfig"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="button"
+                    class="config-save-button"
+                    id="saveConfig"
+                >
+                    <i class="fa-solid fa-check"></i>
+                    Guardar cambios
+                </button>
+
+            </div>
+
+
+            <!-- MENSAJE -->
+
+            <div
+                class="config-message"
+                id="configMessage"
+            ></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="assets/js/configuracion-supervisor.js"></script>
+
+</body>
+</html>

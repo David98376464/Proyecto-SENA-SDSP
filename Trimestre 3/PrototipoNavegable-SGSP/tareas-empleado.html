@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Mis tareas</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS general -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS tareas empleado -->
+    <link rel="stylesheet" href="assets/css/tareas-empleado.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    
+                        <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+
+                </div>
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard-empleado.html" class="menu-item">
+                    <span class="menu-icon">🏠</span>
+                    <span>Inicio</span>
+                </a>
+
+                <a href="proyectos-empleado.html" class="menu-item">
+                    <span class="menu-icon">📁</span>
+                    <span>Mis proyectos</span>
+                </a>
+
+                <a href="tareas-empleado.html" class="menu-item active">
+                    <span class="menu-icon">✅</span>
+                    <span>Mis tareas</span>
+                </a>
+
+                <a href="materiales-empleado.html" class="menu-item">
+                    <span class="menu-icon">📦</span>
+                    <span>Materiales</span>
+                </a>
+
+                <a href="avances-empleado.html" class="menu-item">
+                    <span class="menu-icon">📈</span>
+                    <span>Avances</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="perfil-empleado.html" class="menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span>Configuracion</span>
+                </a>
+
+                <a href="index.html" class="menu-item logout">
+                    <span class="menu-icon">🚪</span>
+                    <span>Cerrar sesión</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             CONTENIDO
+        ================================================== -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="top-header">
+
+                <div>
+
+                    <h1>Mis tareas</h1>
+
+                    <p>
+                        Consulta y actualiza el estado de tus tareas asignadas.
+                    </p>
+
+                </div>
+
+
+                <div class="user-info">
+
+                    <div class="notification">
+
+                        <span>🔔</span>
+
+                        <span class="notification-dot"></span>
+
+                    </div>
+
+
+                    <div class="user-profile">
+
+                        <div class="user-avatar">
+                            JV
+                        </div>
+
+                        <div class="user-data">
+
+                            <strong>
+                                José Vega
+                            </strong>
+
+                            <span>
+                                Empleado
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 RESUMEN DE TAREAS
+            ================================================== -->
+
+            <section class="task-summary">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon total">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Total de tareas
+                        </span>
+
+                        <strong id="totalTareas">
+                            8
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon pending">
+                        ⏱
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Pendientes
+                        </span>
+
+                        <strong id="tareasPendientes">
+                            3
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon progress">
+                        ↗
+                    </div>
+
+                    <div>
+
+                        <span>
+                            En progreso
+                        </span>
+
+                        <strong id="tareasProgreso">
+                            2
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon completed">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Completadas
+                        </span>
+
+                        <strong id="tareasCompletadas">
+                            3
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SECCIÓN TAREAS
+            ================================================== -->
+
+            <section class="tasks-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Tareas asignadas
+                        </h2>
+
+                        <p>
+                            Administra las actividades que tienes pendientes.
+                        </p>
+
+                    </div>
+
+
+                    <div class="filters">
+
+                        <!-- BUSCADOR -->
+
+                        <div class="search-box">
+
+                            <span>⌕</span>
+
+                            <input
+                                type="text"
+                                id="buscarTarea"
+                                placeholder="Buscar tarea..."
+                            >
+
+                        </div>
+
+
+                        <!-- FILTRO -->
+
+                        <select id="filtroEstado">
+
+                            <option value="todos">
+                                Todos los estados
+                            </option>
+
+                            <option value="Pendiente">
+                                Pendiente
+                            </option>
+
+                            <option value="En progreso">
+                                En progreso
+                            </option>
+
+                            <option value="Completada">
+                                Completada
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     TABLA
+                ================================================== -->
+
+                <div class="tasks-container">
+
+                    <div class="table-responsive">
+
+                        <table class="tasks-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Tarea
+                                    </th>
+
+                                    <th>
+                                        Proyecto
+                                    </th>
+
+                                    <th>
+                                        Prioridad
+                                    </th>
+
+                                    <th>
+                                        Fecha límite
+                                    </th>
+
+                                    <th>
+                                        Estado
+                                    </th>
+
+                                    <th>
+                                        Acción
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="tasksBody">
+
+                                <!-- TAREA 1 -->
+
+                                <tr data-status="Pendiente">
+
+                                    <td>
+
+                                        <div class="task-name">
+
+                                            <div class="task-icon">
+                                                D
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Diseñar página principal
+                                                </strong>
+
+                                                <span>
+                                                    Diseño de interfaz
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="project-name">
+                                            Proyecto Alfa
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="priority high">
+                                            Alta
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="date">
+                                            30 Ago 2026
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status pending">
+                                            Pendiente
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="btn-status"
+                                            data-task="Diseñar página principal"
+                                        >
+                                            Actualizar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- TAREA 2 -->
+
+                                <tr data-status="En progreso">
+
+                                    <td>
+
+                                        <div class="task-name">
+
+                                            <div class="task-icon">
+                                                C
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Configurar estructura web
+                                                </strong>
+
+                                                <span>
+                                                    Desarrollo
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="project-name">
+                                            Proyecto Beta
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="priority high">
+                                            Alta
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="date">
+                                            02 Sep 2026
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status progress">
+                                            En progreso
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="btn-status"
+                                            data-task="Configurar estructura web"
+                                        >
+                                            Actualizar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- TAREA 3 -->
+
+                                <tr data-status="Pendiente">
+
+                                    <td>
+
+                                        <div class="task-name">
+
+                                            <div class="task-icon">
+                                                R
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Revisión de contenidos
+                                                </strong>
+
+                                                <span>
+                                                    Contenido
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="project-name">
+                                            Proyecto Gamma
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="priority medium">
+                                            Media
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="date">
+                                            05 Sep 2026
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status pending">
+                                            Pendiente
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="btn-status"
+                                            data-task="Revisión de contenidos"
+                                        >
+                                            Actualizar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- TAREA 4 -->
+
+                                <tr data-status="Completada">
+
+                                    <td>
+
+                                        <div class="task-name">
+
+                                            <div class="task-icon">
+                                                I
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Investigación de referencias
+                                                </strong>
+
+                                                <span>
+                                                    Investigación
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="project-name">
+                                            Proyecto Alfa
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="priority low">
+                                            Baja
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="date">
+                                            27 Ago 2026
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status completed">
+                                            Completada
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="btn-status"
+                                            data-task="Investigación de referencias"
+                                        >
+                                            Actualizar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- TAREA 5 -->
+
+                                <tr data-status="En progreso">
+
+                                    <td>
+
+                                        <div class="task-name">
+
+                                            <div class="task-icon">
+                                                P
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Preparar componentes
+                                                </strong>
+
+                                                <span>
+                                                    Desarrollo
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="project-name">
+                                            Proyecto Beta
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="priority medium">
+                                            Media
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="date">
+                                            04 Sep 2026
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status progress">
+                                            En progreso
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="btn-status"
+                                            data-task="Preparar componentes"
+                                        >
+                                            Actualizar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- TAREA 6 -->
+
+                                <tr data-status="Pendiente">
+
+                                    <td>
+
+                                        <div class="task-name">
+
+                                            <div class="task-icon">
+                                                T
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Crear pruebas funcionales
+                                                </strong>
+
+                                                <span>
+                                                    Pruebas
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="project-name">
+                                            Proyecto Alfa
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="priority high">
+                                            Alta
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="date">
+                                            08 Sep 2026
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status pending">
+                                            Pendiente
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="btn-status"
+                                            data-task="Crear pruebas funcionales"
+                                        >
+                                            Actualizar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- TAREA 7 -->
+
+                                <tr data-status="Completada">
+
+                                    <td>
+
+                                        <div class="task-name">
+
+                                            <div class="task-icon">
+                                                D
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Documentar cambios
+                                                </strong>
+
+                                                <span>
+                                                    Documentación
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="project-name">
+                                            Proyecto Gamma
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="priority low">
+                                            Baja
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="date">
+                                            26 Ago 2026
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status completed">
+                                            Completada
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="btn-status"
+                                            data-task="Documentar cambios"
+                                        >
+                                            Actualizar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- TAREA 8 -->
+
+                                <tr data-status="Completada">
+
+                                    <td>
+
+                                        <div class="task-name">
+
+                                            <div class="task-icon">
+                                                E
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Entrega de diseño
+                                                </strong>
+
+                                                <span>
+                                                    Diseño
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="project-name">
+                                            Proyecto Gamma
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="priority medium">
+                                            Media
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        <span class="date">
+                                            25 Ago 2026
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="task-status completed">
+                                            Completada
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="btn-status"
+                                            data-task="Entrega de diseño"
+                                        >
+                                            Actualizar
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- SIN RESULTADOS -->
+
+                    <div
+                        class="no-results"
+                        id="noResults"
+                    >
+
+                        <div>
+                            🔎
+                        </div>
+
+                        <h3>
+                            No se encontraron tareas
+                        </h3>
+
+                        <p>
+                            Intenta cambiar los filtros de búsqueda.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="assets/js/tareas-empleado.js"></script>
+
+</body>
+
+</html>

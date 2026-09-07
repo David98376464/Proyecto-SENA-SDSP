@@ -1,0 +1,1306 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #F4F7FB;
+    color: #1E293B;
+}
+
+
+/* =========================================================
+   CONTENEDOR GENERAL
+========================================================= */
+
+.dashboard-container {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.dashboard-container > .sidebar {
+    width: 365px !important;
+    min-width: 365px !important;
+    max-width: 365px !important;
+
+    height: 100vh !important;
+    min-height: 100vh !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    flex-shrink: 0 !important;
+
+    background: #FFFFFF;
+    border-right: 1px solid #E1E7EF;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   LOGO DEL SIDEBAR
+========================================================= */
+
+.dashboard-container > .sidebar > .sidebar-logo {
+    width: 100%;
+
+    height: 142px !important;
+    min-height: 142px !important;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0 !important;
+
+    background: #FFFFFF;
+    border-bottom: 1px solid #E1E7EF;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   ICONO DEL LOGO
+========================================================= */
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: #0B5EA8;
+    color: #FFFFFF;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   TEXTO DEL LOGO
+========================================================= */
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text strong {
+    font-size: 18px;
+    color: #1E3A5F;
+}
+
+.logo-text span {
+    font-size: 8px;
+    color: #94A3B8;
+}
+
+
+/* =========================================================
+   MENÚ DEL SIDEBAR
+   ESTE ES EL ÚNICO ELEMENTO QUE TENDRÁ SCROLL
+========================================================= */
+
+.dashboard-container > .sidebar > .sidebar-menu {
+    width: 100%;
+
+    flex: 1 1 auto !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+
+    padding: 10px 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+
+/* =========================================================
+   SCROLL DEL MENÚ
+========================================================= */
+
+.dashboard-container > .sidebar > .sidebar-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dashboard-container > .sidebar > .sidebar-menu::-webkit-scrollbar-track {
+    background: #F8FAFC;
+}
+
+.dashboard-container > .sidebar > .sidebar-menu::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 10px;
+}
+
+.dashboard-container > .sidebar > .sidebar-menu::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+}
+
+
+/* =========================================================
+   SECCIONES DEL MENÚ
+========================================================= */
+
+.menu-section {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.menu-title {
+    margin: 18px 15px 8px;
+
+    color: #8A9AB0;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   ELEMENTOS DEL MENÚ
+========================================================= */
+
+.menu-item {
+    width: 100%;
+    height: 58px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    color: #52657A;
+
+    font-size: 15px;
+    font-weight: 400;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   ICONOS DEL MENÚ
+========================================================= */
+
+.menu-icon {
+    width: 22px;
+    min-width: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.menu-item:hover {
+    background: #F1F7FC;
+    color: #0B5EA8;
+}
+
+
+/* =========================================================
+   ELEMENTO ACTIVO
+========================================================= */
+
+.menu-item.active {
+    background: #0B5EA8;
+    color: #FFFFFF;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PARTE INFERIOR
+   CERRAR SESIÓN SIEMPRE ABAJO
+========================================================= */
+
+.dashboard-container > .sidebar > .sidebar-bottom {
+    width: 100%;
+
+    min-height: 78px;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0 !important;
+
+    margin-top: 0 !important;
+
+    background: #FFFFFF;
+
+    border-top: 1px solid #E1E7EF;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CERRAR SESIÓN
+========================================================= */
+
+.logout:hover {
+    color: #DC2626;
+    background: #FEF2F2;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.dashboard-container > .main-content {
+    flex: 1 1 auto !important;
+
+    width: calc(100% - 365px);
+    max-width: calc(100% - 365px);
+
+    min-width: 0 !important;
+
+    height: 100vh;
+    min-height: 100vh;
+
+    padding: 25px 35px;
+
+    background: #F4F7FB;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   SCROLL DEL CONTENIDO PRINCIPAL
+========================================================= */
+
+.dashboard-container > .main-content::-webkit-scrollbar {
+    width: 7px;
+}
+
+.dashboard-container > .main-content::-webkit-scrollbar-track {
+    background: #F4F7FB;
+}
+
+.dashboard-container > .main-content::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header {
+    width: 100%;
+
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    margin-bottom: 8px;
+
+    gap: 25px;
+}
+
+.header-title {
+    min-width: 0;
+}
+
+.header-title h1 {
+    margin: 0;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    color: #17395F;
+}
+
+.header-title p {
+    margin: 5px 0 0;
+
+    color: #718198;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   ACCIONES DEL HEADER
+========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   NOTIFICACIONES
+========================================================= */
+
+.notification-btn {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #E1E7EF;
+    border-radius: 50%;
+
+    background: #FFFFFF;
+
+    color: #64748B;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 10px rgba(31, 55, 80, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.notification-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(31, 55, 80, 0.14);
+}
+
+
+/* =========================================================
+   USUARIO
+========================================================= */
+
+.header-user {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.header-avatar {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #1671B9;
+    color: #FFFFFF;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+.header-user > div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.header-user strong {
+    color: #253B56;
+
+    font-size: 14px;
+}
+
+.header-user span {
+    color: #7B899C;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   CONTROLES DEL GANTT
+========================================================= */
+
+.gantt-controls {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    margin-bottom: 22px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E3E8EF;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(35, 55, 75, 0.07);
+}
+
+
+/* =========================================================
+   GRUPOS DE CONTROL
+========================================================= */
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 220px;
+}
+
+.control-group label {
+    font-size: 11px;
+    font-weight: 500;
+
+    color: #64748B;
+}
+
+.control-group select {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 12px;
+
+    border: 1px solid #DCE3EB;
+    border-radius: 9px;
+
+    background: #FFFFFF;
+    color: #475569;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.control-group select:focus {
+    border-color: #1671B9;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 113, 185, 0.10);
+}
+
+
+/* =========================================================
+   BOTÓN ACTUALIZAR
+========================================================= */
+
+.update-gantt-btn {
+    height: 44px;
+
+    margin-left: auto;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #1671B9;
+    color: #FFFFFF;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.update-gantt-btn:hover {
+    background: #0D5D9C;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESUMEN DEL PROYECTO
+========================================================= */
+
+.project-summary {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 22px 25px;
+
+    margin-bottom: 25px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E1E6ED;
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 18px rgba(35, 55, 75, 0.07);
+}
+
+.project-summary-info {
+    min-width: 0;
+}
+
+.summary-label {
+    font-size: 11px;
+    color: #96A2B1;
+}
+
+.project-summary h2 {
+    margin: 4px 0 4px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #253B56;
+}
+
+.project-summary p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #718198;
+}
+
+
+/* =========================================================
+   PROGRESO DEL PROYECTO
+========================================================= */
+
+.project-progress {
+    width: 300px;
+
+    flex-shrink: 0;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.progress-header span {
+    font-size: 11px;
+    color: #68798E;
+}
+
+.progress-header strong {
+    font-size: 13px;
+    color: #1671B9;
+}
+
+.progress-track {
+    width: 100%;
+    height: 9px;
+
+    background: #EDF1F5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    background: #1671B9;
+
+    border-radius: 20px;
+
+    transition: width 0.8s ease;
+}
+
+
+/* =========================================================
+   TARJETA GANTT
+========================================================= */
+
+.gantt-card {
+    width: 100%;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E1E6ED;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(35, 55, 75, 0.07);
+}
+
+
+/* =========================================================
+   HEADER DEL GANTT
+========================================================= */
+
+.gantt-card-header {
+    min-height: 100px;
+
+    padding: 25px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    border-bottom: 1px solid #E8EDF2;
+}
+
+.gantt-card-header h2 {
+    margin: 0 0 6px;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    color: #253B56;
+}
+
+.gantt-card-header p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #7D8DA1;
+}
+
+
+/* =========================================================
+   LEYENDA
+========================================================= */
+
+.gantt-legend {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+.gantt-legend span {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    color: #68798E;
+
+    white-space: nowrap;
+}
+
+.legend-dot {
+    width: 10px;
+    height: 10px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+}
+
+.legend-dot.completed {
+    background: #15945B;
+}
+
+.legend-dot.progress {
+    background: #1671B9;
+}
+
+.legend-dot.pending {
+    background: #CBD5E1;
+}
+
+
+/* =========================================================
+   CONTENEDOR GANTT
+========================================================= */
+
+.gantt-container {
+    width: 100%;
+
+    display: flex;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+
+/* =========================================================
+   SCROLL HORIZONTAL DEL GANTT
+========================================================= */
+
+.gantt-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gantt-container::-webkit-scrollbar-track {
+    background: #F4F7FB;
+}
+
+.gantt-container::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   COLUMNA DE TAREAS
+========================================================= */
+
+.task-column {
+    width: 335px;
+    min-width: 335px;
+
+    flex-shrink: 0;
+
+    background: #FFFFFF;
+
+    border-right: 1px solid #E1E7EF;
+}
+
+
+/* =========================================================
+   CABECERA TAREA
+========================================================= */
+
+.task-header {
+    height: 64px;
+
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+
+    background: #F8FAFC;
+
+    border-bottom: 1px solid #E1E7EF;
+
+    color: #52657A;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FILA DE TAREA
+========================================================= */
+
+.task-row {
+    height: 76px;
+
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #EEF2F6;
+
+    background: #FFFFFF;
+}
+
+.task-info {
+    width: 100%;
+
+    min-width: 0;
+}
+
+.task-name {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #263C58;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.task-status {
+    font-size: 11px;
+
+    color: #96A2B1;
+}
+
+
+/* =========================================================
+   COLUMNA DE TIEMPO
+========================================================= */
+
+.timeline-column {
+    flex: 1 1 auto;
+
+    min-width: 1000px;
+
+    background: #FFFFFF;
+}
+
+
+/* =========================================================
+   HEADER DEL TIMELINE
+========================================================= */
+
+.timeline-header {
+    height: 64px;
+
+    display: grid;
+
+    background: #F8FAFC;
+
+    border-bottom: 1px solid #E1E7EF;
+}
+
+.timeline-period {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid #E1E7EF;
+
+    color: #607187;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CUERPO DEL TIMELINE
+========================================================= */
+
+.timeline-body {
+    position: relative;
+
+    background: #FFFFFF;
+}
+
+
+/* =========================================================
+   FILAS DEL TIMELINE
+========================================================= */
+
+.timeline-row {
+    position: relative;
+
+    height: 76px;
+
+    border-bottom: 1px solid #EEF2F6;
+
+    background-image:
+        linear-gradient(
+            to right,
+            #EEF2F6 1px,
+            transparent 1px
+        );
+
+    background-size: 100px 100%;
+}
+
+
+/* =========================================================
+   BARRAS DEL GANTT
+========================================================= */
+
+.timeline-bar {
+    position: absolute;
+
+    top: 26px;
+
+    height: 24px;
+
+    min-width: 30px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+
+    z-index: 2;
+}
+
+.timeline-bar:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+.timeline-bar.completed {
+    background: #15945B;
+}
+
+.timeline-bar.progress {
+    background: #1671B9;
+}
+
+.timeline-bar.pending {
+    background: #CBD5E1;
+}
+
+.timeline-bar.delayed {
+    background: #E07A24;
+}
+
+
+/* =========================================================
+   MENSAJE
+========================================================= */
+
+.gantt-message {
+    display: none;
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px 16px;
+
+    border-radius: 9px;
+
+    background: #EAF7EF;
+
+    color: #15945B;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — 1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .dashboard-container > .sidebar {
+        width: 300px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+    }
+
+    .dashboard-container > .main-content {
+        width: calc(100% - 300px);
+        max-width: calc(100% - 300px);
+
+        padding: 25px;
+    }
+
+    .project-summary {
+        align-items: flex-start;
+    }
+
+    .project-progress {
+        width: 260px;
+    }
+
+    .gantt-legend {
+        gap: 12px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 950px
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .dashboard-container > .sidebar {
+        width: 240px !important;
+        min-width: 240px !important;
+        max-width: 240px !important;
+    }
+
+    .dashboard-container > .main-content {
+        width: calc(100% - 240px);
+        max-width: calc(100% - 240px);
+
+        padding: 20px;
+    }
+
+    .header-title h1 {
+        font-size: 28px;
+    }
+
+    .header-title p {
+        font-size: 13px;
+    }
+
+    .project-summary {
+        flex-direction: column;
+    }
+
+    .project-progress {
+        width: 100%;
+    }
+
+    .gantt-card-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .gantt-legend {
+        flex-wrap: wrap;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 750px
+========================================================= */
+
+@media (max-width: 750px) {
+
+    .dashboard-container {
+        overflow: hidden;
+    }
+
+    .dashboard-container > .sidebar {
+        width: 72px !important;
+        min-width: 72px !important;
+        max-width: 72px !important;
+    }
+
+    .dashboard-container > .main-content {
+        width: calc(100% - 72px);
+        max-width: calc(100% - 72px);
+
+        padding: 18px;
+    }
+
+    .sidebar-logo {
+        padding: 0 !important;
+        justify-content: center !important;
+    }
+
+    .logo-text,
+    .menu-item > span:not(.menu-icon),
+    .menu-title {
+        display: none;
+    }
+
+    .menu-item {
+        justify-content: center;
+
+        padding: 0;
+
+        gap: 0;
+    }
+
+    .menu-icon {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .sidebar-bottom {
+        padding: 8px !important;
+    }
+
+    .header-user > div:last-child {
+        display: none;
+    }
+
+    .main-header {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .header-title h1 {
+        font-size: 24px;
+    }
+
+    .header-title p {
+        font-size: 12px;
+    }
+
+    .notification-btn {
+        width: 46px;
+        height: 46px;
+    }
+
+    .header-avatar {
+        width: 46px;
+        height: 46px;
+    }
+
+    .gantt-controls {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .control-group {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .update-gantt-btn {
+        width: 100%;
+
+        margin-left: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — 550px
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .dashboard-container > .sidebar {
+        width: 64px !important;
+        min-width: 64px !important;
+        max-width: 64px !important;
+    }
+
+    .dashboard-container > .main-content {
+        width: calc(100% - 64px);
+        max-width: calc(100% - 64px);
+
+        padding: 15px;
+    }
+
+    .main-header {
+        flex-direction: column;
+    }
+
+    .header-actions {
+        width: 100%;
+
+        justify-content: flex-end;
+    }
+
+    .header-title h1 {
+        font-size: 21px;
+    }
+
+    .project-summary {
+        padding: 20px;
+    }
+
+    .project-summary h2 {
+        font-size: 17px;
+    }
+
+    .gantt-card-header {
+        padding: 20px;
+    }
+
+    .gantt-card-header h2 {
+        font-size: 18px;
+    }
+
+    .gantt-card-header p {
+        font-size: 12px;
+    }
+
+    .gantt-legend {
+        gap: 10px;
+    }
+
+    .gantt-legend span {
+        font-size: 10px;
+    }
+}

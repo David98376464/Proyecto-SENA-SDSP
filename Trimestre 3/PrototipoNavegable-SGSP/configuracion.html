@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP - Configuración</title>
+
+    <!-- CSS GENERAL -->
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
+    <!-- CSS DEL MÓDULO -->
+    <link
+        rel="stylesheet"
+        href="assets/css/configuracion.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CONTENEDOR PRINCIPAL
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="assets/img/logo.pnj.jpeg"
+                    alt="SGSP"
+                    class="sgsp-logo">
+
+            </div>
+
+
+            <!-- MENÚ PRINCIPAL -->
+
+            <nav class="sidebar-menu">
+
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="dashboard-admin.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">🏠</span>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <!-- SECCIÓN GESTIÓN -->
+
+                <div class="menu-section-title">
+                    GESTIÓN
+                </div>
+
+
+                <!-- PROYECTOS -->
+
+                <a
+                    href="proyectos.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">📁</span>
+
+                    <span>Proyectos</span>
+
+                </a>
+
+
+                <!-- EMPLEADOS -->
+
+                <a
+                    href="empleados.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">👥</span>
+
+                    <span>Empleados</span>
+
+                </a>
+
+
+                <!-- TAREAS -->
+
+                <a
+                    href="tareas.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">✅</span>
+
+                    <span>Tareas</span>
+
+                </a>
+
+
+                <!-- MATERIALES -->
+
+                <a
+                    href="materiales.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">📦</span>
+
+                    <span>Materiales</span>
+
+                </a>
+
+
+                <!-- SECCIÓN SISTEMA -->
+
+                <div class="menu-section-title">
+                    SISTEMA
+                </div>
+
+
+                <!-- REPORTES -->
+
+                <a
+                    href="reportes.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">📊</span>
+
+                    <span>Reportes</span>
+
+                </a>
+
+
+                <!-- CONFIGURACIÓN -->
+
+                <a
+                    href="configuracion.html"
+                    class="menu-item active">
+
+                    <span class="menu-icon">⚙️</span>
+
+                    <span>Configuración</span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-footer">
+
+                <a
+                    href="#"
+                    class="logout-btn">
+
+                    <span class="logout-icon">🚪</span>
+
+                    <span>Cerrar sesión</span>
+
+                </a>
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 HEADER
+            ================================================== -->
+
+            <header class="main-header">
+
+
+                <div class="header-title">
+
+                    <h1>
+                        Configuración
+                    </h1>
+
+                    <p>
+                        Administra la configuración de tu cuenta y del sistema
+                    </p>
+
+                </div>
+
+
+                <div class="header-actions">
+
+
+                    <!-- NOTIFICACIONES -->
+
+                    <button
+                        type="button"
+                        class="notification-btn"
+                        title="Notificaciones">
+
+                        🔔
+
+                    </button>
+
+
+                    <!-- USUARIO -->
+
+                    <div class="header-user">
+
+
+                        <div class="header-avatar">
+                            A
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Administrador
+                            </strong>
+
+                            <span>
+                                Administrador
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 CONTENIDO DE CONFIGURACIÓN
+            ================================================== -->
+
+            <section class="configuration-content">
+
+
+                <!-- =============================================
+                     INFORMACIÓN DEL PERFIL
+                ============================================== -->
+
+                <div class="configuration-card">
+
+
+                    <div class="configuration-card-header">
+
+                        <div>
+
+                            <h2>
+                                Información del perfil
+                            </h2>
+
+                            <p>
+                                Actualiza la información de tu cuenta.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <form id="profileForm">
+
+
+                        <div class="form-row">
+
+
+                            <!-- NOMBRE -->
+
+                            <div class="form-group">
+
+                                <label for="fullName">
+                                    Nombre completo
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    value="Administrador">
+
+                            </div>
+
+
+                            <!-- CORREO -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Correo electrónico
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value="admin@sgsp.com">
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="form-row">
+
+
+                            <!-- TELÉFONO -->
+
+                            <div class="form-group">
+
+                                <label for="phone">
+                                    Teléfono
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Ingrese su teléfono">
+
+                            </div>
+
+
+                            <!-- ROL -->
+
+                            <div class="form-group">
+
+                                <label for="role">
+                                    Rol
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="role"
+                                    value="Administrador"
+                                    disabled>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="primary-btn">
+
+                            Guardar cambios
+
+                        </button>
+
+
+                    </form>
+
+
+                </div>
+
+<!-- =============================================
+     CAMBIAR CONTRASEÑA
+============================================== -->
+
+<div class="configuration-card">
+
+    <div class="configuration-card-header">
+
+        <div>
+
+            <h2>
+                Seguridad
+            </h2>
+
+            <p>
+                Cambia la contraseña de acceso al sistema.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <form id="passwordForm">
+
+
+        <!-- CONTRASEÑA ACTUAL -->
+
+        <div class="form-group">
+
+            <label for="currentPassword">
+                Contraseña actual
+            </label>
+
+            <div class="password-input">
+
+                <input
+                    type="password"
+                    id="currentPassword"
+                    name="currentPassword"
+                    placeholder="Ingrese su contraseña actual">
+
+                <button
+                    type="button"
+                    class="password-toggle"
+                    data-target="currentPassword"
+                    aria-label="Mostrar contraseña">
+
+                    👁
+
+                </button>
+
+            </div>
+
+            <span
+                class="form-error"
+                id="currentPasswordError">
+            </span>
+
+        </div>
+
+
+        <div class="form-row">
+
+
+            <!-- NUEVA CONTRASEÑA -->
+
+            <div class="form-group">
+
+                <label for="newPassword">
+                    Nueva contraseña
+                </label>
+
+                <div class="password-input">
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        name="newPassword"
+                        placeholder="Ingrese una nueva contraseña">
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="newPassword"
+                        aria-label="Mostrar contraseña">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+                <span
+                    class="form-error"
+                    id="newPasswordError">
+                </span>
+
+            </div>
+
+
+            <!-- CONFIRMAR CONTRASEÑA -->
+
+            <div class="form-group">
+
+                <label for="confirmPassword">
+                    Confirmar contraseña
+                </label>
+
+                <div class="password-input">
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirme su nueva contraseña">
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        data-target="confirmPassword"
+                        aria-label="Mostrar contraseña">
+
+                        👁
+
+                    </button>
+
+                </div>
+
+                <span
+                    class="form-error"
+                    id="confirmPasswordError">
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="primary-btn">
+
+            Cambiar contraseña
+
+        </button>
+
+
+</form>
+
+</div>
+
+
+
+                <!-- =============================================
+                     PREFERENCIAS
+                ============================================== -->
+
+                <div class="configuration-card">
+
+
+                    <div class="configuration-card-header">
+
+                        <div>
+
+                            <h2>
+                                Preferencias
+                            </h2>
+
+                            <p>
+                                Configura las preferencias del sistema.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NOTIFICACIONES -->
+
+                    <div class="preference-item">
+
+
+                        <div class="preference-info">
+
+                            <h3>
+                                Notificaciones
+                            </h3>
+
+                            <p>
+                                Recibir notificaciones importantes del sistema.
+                            </p>
+
+                        </div>
+
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="notifications"
+                                checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+
+                    </div>
+
+
+
+                    <!-- RECORDATORIOS -->
+
+                    <div class="preference-item">
+
+
+                        <div class="preference-info">
+
+                            <h3>
+                                Recordatorios
+                            </h3>
+
+                            <p>
+                                Recibir recordatorios sobre tareas pendientes.
+                            </p>
+
+                        </div>
+
+
+                        <label class="switch">
+
+                            <input
+                                type="checkbox"
+                                id="reminders"
+                                checked>
+
+                            <span class="slider"></span>
+
+                        </label>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="assets/js/configuracion.js">
+    </script>
+
+
+</body>
+
+</html>

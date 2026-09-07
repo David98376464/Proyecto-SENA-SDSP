@@ -1,0 +1,690 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Incidencias - Supervisor</title>
+
+    <!-- Fuente utilizada por el sistema -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS principal del proyecto -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS del rol Supervisor -->
+    <link rel="stylesheet" href="assets/css/supervisor.css">
+
+    <!-- CSS específico de Incidencias -->
+    <link rel="stylesheet" href="assets/css/incidencias-supervisor.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         BARRA LATERAL
+    ====================================================== -->
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+        </div>
+
+        <nav class="sidebar-menu">
+
+            <p class="menu-title">PRINCIPAL</p>
+
+            <a href="dashboard-supervisor.html" class="menu-item">
+                <span class="menu-icon">🏠</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <p class="menu-title">GESTIÓN</p>
+
+            <a href="proyectos-supervisor.html" class="menu-item">
+                <span class="menu-icon">📁</span>
+                <span>Proyectos</span>
+            </a>
+
+            <a href="materiales-supervisor.html" class="menu-item">
+                <span class="menu-icon">📦</span>
+                <span>Materiales</span>
+            </a>
+
+            <a href="tareas-supervisor.html" class="menu-item">
+                <span class="menu-icon">✅</span>
+                <span>Tareas</span>
+            </a>
+
+
+            <p class="menu-title">SEGUIMIENTO</p>
+
+            <!-- Incidencias activa -->
+            <a href="incidencias-supervisor.html"
+               class="menu-item active">
+
+                <span class="menu-icon">⚠️</span>
+                <span>Incidencias</span>
+
+            </a>
+
+            <a href="avances-supervisor.html" class="menu-item">
+                <span class="menu-icon">📈</span>
+                <span>Avance de proyectos</span>
+            </a>
+
+            <a href="reportes-supervisor.html" class="menu-item">
+                <span class="menu-icon">📊</span>
+                <span>Reportes</span>
+            </a>
+
+            <a href="gantt-supervisor.html" class="menu-item">
+                <span class="menu-icon">🗓️</span>
+                <span>Diagrama de Gantt</span>
+            </a>
+
+
+            <p class="menu-title">OTROS</p>
+
+            <a href="configuracion-supervisor.html" class="menu-item">
+                <span class="menu-icon">⚙️</span>
+                <span>Configuración</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="logout-button">
+                <span>🚪</span>
+                Cerrar sesión
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- ENCABEZADO -->
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>Incidencias</h1>
+
+                <p>
+                    Registra, consulta y realiza seguimiento
+                    de las incidencias de los proyectos
+                </p>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button type="button"
+                        class="notification-button"
+                        id="notificationButton">
+
+                    🔔
+
+                </button>
+
+
+                <div class="header-user">
+
+                    <div class="header-avatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Supervisor de Obra
+                        </strong>
+
+                        <span>
+                            Supervisor
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             BARRA DE BÚSQUEDA Y FILTROS
+        ================================================== -->
+
+        <section class="incidents-toolbar">
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    🔍
+                </span>
+
+                <input
+                    type="text"
+                    id="searchIncident"
+                    placeholder="Buscar incidencia..."
+                >
+
+            </div>
+
+
+            <select id="filterStatus">
+
+                <option value="all">
+                    Todos los estados
+                </option>
+
+                <option value="Pendiente">
+                    Pendiente
+                </option>
+
+                <option value="En revisión">
+                    En revisión
+                </option>
+
+                <option value="Resuelta">
+                    Resuelta
+                </option>
+
+            </select>
+
+
+            <select id="filterPriority">
+
+                <option value="all">
+                    Todas las prioridades
+                </option>
+
+                <option value="Alta">
+                    Alta
+                </option>
+
+                <option value="Media">
+                    Media
+                </option>
+
+                <option value="Baja">
+                    Baja
+                </option>
+
+            </select>
+
+
+            <button
+                class="btn-primary"
+                id="openIncidentModal">
+
+                + Registrar incidencia
+
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             PANEL DE INCIDENCIAS
+        ================================================== -->
+
+        <section class="incidents-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Incidencias de proyectos
+                    </h2>
+
+                    <p>
+                        Seguimiento de novedades y problemas
+                        reportados en obra
+                    </p>
+
+                </div>
+
+
+                <span
+                    class="incident-count"
+                    id="incidentCount">
+
+                    6 incidencias
+
+                </span>
+
+            </div>
+
+
+            <!-- RESUMEN -->
+
+            <div class="incident-summary">
+
+                <div class="summary-card">
+
+                    <span>
+                        Abiertas
+                    </span>
+
+                    <strong id="openCount">
+                        4
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-card warning">
+
+                    <span>
+                        Alta prioridad
+                    </span>
+
+                    <strong id="highCount">
+                        2
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-card success">
+
+                    <span>
+                        Resueltas
+                    </span>
+
+                    <strong id="resolvedCount">
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLA -->
+
+            <div class="table-container">
+
+                <table id="incidentsTable">
+
+                    <thead>
+
+                    <tr>
+
+                        <th>
+                            Incidencia
+                        </th>
+
+                        <th>
+                            Proyecto
+                        </th>
+
+                        <th>
+                            Reportado por
+                        </th>
+
+                        <th>
+                            Fecha
+                        </th>
+
+                        <th>
+                            Prioridad
+                        </th>
+
+                        <th>
+                            Estado
+                        </th>
+
+                        <th>
+                            Acciones
+                        </th>
+
+                    </tr>
+
+                    </thead>
+
+
+                    <tbody id="incidentsBody">
+
+                    </tbody>
+
+                </table>
+
+
+                <!-- Cuando no existen resultados -->
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                    hidden>
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <strong>
+                        No se encontraron incidencias
+                    </strong>
+
+                    <p>
+                        Prueba con otro término
+                        o cambia los filtros.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     MODAL PARA REGISTRAR / EDITAR INCIDENCIA
+========================================================= -->
+
+<div
+    class="modal-overlay"
+    id="incidentModal"
+    hidden>
+
+    <div class="modal-card">
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2 id="modalTitle">
+                    Registrar incidencia
+                </h2>
+
+                <p>
+                    Completa la información
+                    de la novedad presentada.
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="closeIncidentModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- FORMULARIO -->
+
+        <form id="incidentForm">
+
+            <!-- ID oculto para editar -->
+
+            <input
+                type="hidden"
+                id="incidentId"
+            >
+
+
+            <div class="form-grid">
+
+
+                <!-- TÍTULO -->
+
+                <div class="form-group">
+
+                    <label for="incidentName">
+                        Título de la incidencia
+                    </label>
+
+                    <input
+                        type="text"
+                        id="incidentName"
+                        required
+                        placeholder="Ej. Retraso en entrega de materiales"
+                    >
+
+                </div>
+
+
+                <!-- PROYECTO -->
+
+                <div class="form-group">
+
+                    <label for="incidentProject">
+                        Proyecto
+                    </label>
+
+                    <select
+                        id="incidentProject"
+                        required>
+
+                        <option value="">
+                            Seleccionar proyecto
+                        </option>
+
+                        <option>
+                            Proyecto Alfa
+                        </option>
+
+                        <option>
+                            Proyecto Beta
+                        </option>
+
+                        <option>
+                            Proyecto Gamma
+                        </option>
+
+                        <option>
+                            Proyecto Delta
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- CATEGORÍA -->
+
+                <div class="form-group">
+
+                    <label for="incidentCategory">
+                        Categoría
+                    </label>
+
+                    <select
+                        id="incidentCategory"
+                        required>
+
+                        <option>
+                            Materiales
+                        </option>
+
+                        <option>
+                            Seguridad
+                        </option>
+
+                        <option>
+                            Calidad
+                        </option>
+
+                        <option>
+                            Personal
+                        </option>
+
+                        <option>
+                            Avance
+                        </option>
+
+                        <option>
+                            Instalación
+                        </option>
+
+                        <option>
+                            Equipos
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PRIORIDAD -->
+
+                <div class="form-group">
+
+                    <label for="incidentPriority">
+                        Prioridad
+                    </label>
+
+                    <select
+                        id="incidentPriority"
+                        required>
+
+                        <option>
+                            Alta
+                        </option>
+
+                        <option>
+                            Media
+                        </option>
+
+                        <option>
+                            Baja
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- FECHA -->
+
+                <div class="form-group">
+
+                    <label for="incidentDate">
+                        Fecha
+                    </label>
+
+                    <input
+                        type="date"
+                        id="incidentDate"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- UBICACIÓN -->
+
+                <div class="form-group">
+
+                    <label for="incidentLocation">
+                        Ubicación
+                    </label>
+
+                    <input
+                        type="text"
+                        id="incidentLocation"
+                        placeholder="Ej. Bloque B - Segundo piso"
+                    >
+
+                </div>
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <div class="form-group full-width">
+
+                    <label for="incidentDescription">
+                        Descripción
+                    </label>
+
+                    <textarea
+                        id="incidentDescription"
+                        rows="4"
+                        required
+                        placeholder="Describe qué ocurrió y qué acción se recomienda..."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    id="cancelIncident">
+
+                    Cancelar
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="btn-primary">
+
+                    Guardar incidencia
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- MENSAJE TEMPORAL -->
+
+<div
+    class="toast"
+    id="toast">
+</div>
+
+
+<!-- JavaScript -->
+
+<script src="assets/js/incidencias-supervisor.js"></script>
+
+</body>
+</html>
+

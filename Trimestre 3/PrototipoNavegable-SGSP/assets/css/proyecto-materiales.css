@@ -1,0 +1,274 @@
+/* =========================================
+   ESTILOS: MATERIALES UTILIZADOS (Standalone)
+========================================= */
+
+.mat-bg {
+    background-color: #f4f6f9;
+    padding: 0;
+}
+
+.mat-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: #f39c12;
+}
+
+.mat-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mat-title h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+}
+
+.mat-card {
+    background: white;
+    margin: 0 40px 40px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 25px;
+}
+
+.mat-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mat-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-add-mat {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.btn-add-mat:hover { background: #e67e22; }
+
+.btn-back {
+    background: #707a8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-back:hover { background: #5a626e; }
+
+.mat-stats span {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mat-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.mat-table th {
+    background: #e2e8f0;
+    color: #64748b;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.mat-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 14px;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.mat-name-col {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mat-icon {
+    width: 35px;
+    height: 35px;
+    background: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Color negro normal para la cantidad */
+.text-normal {
+    color: #334155;
+    font-weight: 600;
+}
+
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.btn-delete:hover {
+    transform: scale(1.2);
+    color: #dc2626;
+}
+
+/* =========================================
+   ESTILOS PERSONALIZADOS PARA EL MODAL (Estilo imagen)
+========================================= */
+.custom-modal-box {
+    width: 100%;
+    max-width: 480px !important;
+    padding: 0 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.modal-top-banner {
+    background-color: white;
+    border: 2px solid #3498db;
+    margin: 20px 20px 10px 20px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-top-banner h3 {
+    color: #005b8f;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.close-modal-x {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-form-body {
+    padding: 10px 25px 25px 25px !important;
+}
+
+.form-row-custom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group-custom {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group-custom label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 0.5px;
+}
+
+.form-group-custom input, 
+.form-group-custom select {
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+}
+
+.form-group-custom input:focus, 
+.form-group-custom select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.modal-footer-custom {
+    text-align: center;
+    margin-top: 25px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 20px;
+}
+
+.btn-finalize {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 50px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(243, 156, 18, 0.3);
+    transition: 0.2s;
+}
+
+.btn-finalize:hover {
+    background-color: #e67e22;
+    transform: translateY(-1px);
+}
+
+.modal-note {
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+/* =========================================
+   CENTRADO DEL MODAL EN LA PANTALLA
+========================================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(3px);
+}
+
+.modal.show {
+    display: flex;
+}

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Materiales</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/materiales-empleado.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    
+                        <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+
+                </div>
+            </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard-empleado.html" class="menu-item">
+                <span class="menu-icon">🏠</span>
+                <span>Inicio</span>
+            </a>
+
+            <a href="proyectos-empleado.html" class="menu-item">
+                <span class="menu-icon">📁</span>
+                <span>Mis proyectos</span>
+            </a>
+
+            <a href="tareas-empleado.html" class="menu-item">
+                <span class="menu-icon">✅</span>
+                <span>Mis tareas</span>
+            </a>
+
+            <a href="materiales-empleado.html" class="menu-item active">
+                <span class="menu-icon">📦</span>
+                <span>Materiales</span>
+            </a>
+
+            <a href="avances-empleado.html" class="menu-item">
+                <span class="menu-icon">📈</span>
+                <span>Avances</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="perfil-empleado.html" class="menu-item">
+                <span class="menu-icon">⚙️</span>
+                <span>Configuracion</span>
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span class="menu-icon">🚪</span>
+                <span>Cerrar sesión</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= CONTENIDO ================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>Materiales</h1>
+
+                <p>
+                    Consulta los materiales asignados a tus proyectos.
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <div class="notification">
+
+                    <span>🔔</span>
+
+                    <span class="notification-dot"></span>
+
+                </div>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        JV
+                    </div>
+
+                    <div class="user-data">
+
+                        <strong>
+                            José Vega
+                        </strong>
+
+                        <span>
+                            Empleado
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= RESUMEN ================= -->
+
+        <section class="material-summary">
+
+            <div class="summary-card">
+
+                <div class="summary-icon total">
+                    ▤
+                </div>
+
+                <div>
+
+                    <span>
+                        Materiales asignados
+                    </span>
+
+                    <strong id="totalMateriales">
+                        8
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon available">
+                    ✓
+                </div>
+
+                <div>
+
+                    <span>
+                        Disponibles
+                    </span>
+
+                    <strong id="materialesDisponibles">
+                        5
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon used">
+                    ↗
+                </div>
+
+                <div>
+
+                    <span>
+                        En uso
+                    </span>
+
+                    <strong id="materialesUso">
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon finished">
+                    ✓
+                </div>
+
+                <div>
+
+                    <span>
+                        Agotados
+                    </span>
+
+                    <strong id="materialesAgotados">
+                        1
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MATERIALes ================= -->
+
+        <section class="materials-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Materiales asignados
+                    </h2>
+
+                    <p>
+                        Revisa las cantidades y el estado de cada material.
+                    </p>
+
+                </div>
+
+
+                <div class="filters">
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            id="buscarMaterial"
+                            placeholder="Buscar material..."
+                        >
+
+                    </div>
+
+
+                    <select id="filtroEstado">
+
+                        <option value="todos">
+                            Todos los estados
+                        </option>
+
+                        <option value="Disponible">
+                            Disponible
+                        </option>
+
+                        <option value="En uso">
+                            En uso
+                        </option>
+
+                        <option value="Agotado">
+                            Agotado
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= TABLA ================= -->
+
+            <div class="materials-container">
+
+                <div class="table-responsive">
+
+                    <table class="materials-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Material
+                                </th>
+
+                                <th>
+                                    Proyecto
+                                </th>
+
+                                <th>
+                                    Cantidad
+                                </th>
+
+                                <th>
+                                    Unidad
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Acción
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="materialsBody">
+
+                            <tr data-status="Disponible">
+
+                                <td>
+
+                                    <div class="material-name">
+
+                                        <div class="material-icon">
+                                            C
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Cable UTP
+                                            </strong>
+
+                                            <span>
+                                                Material eléctrico
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Proyecto Alfa
+                                </td>
+
+                                <td>
+                                    50
+                                </td>
+
+                                <td>
+                                    Metros
+                                </td>
+
+                                <td>
+
+                                    <span class="material-status available">
+                                        Disponible
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn-material"
+                                        data-material="Cable UTP"
+                                    >
+                                        Registrar uso
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-status="En uso">
+
+                                <td>
+
+                                    <div class="material-name">
+
+                                        <div class="material-icon">
+                                            T
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Tornillos
+                                            </strong>
+
+                                            <span>
+                                                Ferretería
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Proyecto Beta
+                                </td>
+
+                                <td>
+                                    120
+                                </td>
+
+                                <td>
+                                    Unidades
+                                </td>
+
+                                <td>
+
+                                    <span class="material-status used">
+                                        En uso
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn-material"
+                                        data-material="Tornillos"
+                                    >
+                                        Registrar uso
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-status="Disponible">
+
+                                <td>
+
+                                    <div class="material-name">
+
+                                        <div class="material-icon">
+                                            P
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Pintura blanca
+                                            </strong>
+
+                                            <span>
+                                                Acabados
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Proyecto Gamma
+                                </td>
+
+                                <td>
+                                    15
+                                </td>
+
+                                <td>
+                                    Galones
+                                </td>
+
+                                <td>
+
+                                    <span class="material-status available">
+                                        Disponible
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn-material"
+                                        data-material="Pintura blanca"
+                                    >
+                                        Registrar uso
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-status="Agotado">
+
+                                <td>
+
+                                    <div class="material-name">
+
+                                        <div class="material-icon">
+                                            M
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Madera
+                                            </strong>
+
+                                            <span>
+                                                Construcción
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Proyecto Alfa
+                                </td>
+
+                                <td>
+                                    0
+                                </td>
+
+                                <td>
+                                    Unidades
+                                </td>
+
+                                <td>
+
+                                    <span class="material-status finished">
+                                        Agotado
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn-material"
+                                        data-material="Madera"
+                                    >
+                                        Registrar uso
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-status="Disponible">
+
+                                <td>
+
+                                    <div class="material-name">
+
+                                        <div class="material-icon">
+                                            T
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Tubería PVC
+                                            </strong>
+
+                                            <span>
+                                                Instalaciones
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Proyecto Beta
+                                </td>
+
+                                <td>
+                                    30
+                                </td>
+
+                                <td>
+                                    Metros
+                                </td>
+
+                                <td>
+
+                                    <span class="material-status available">
+                                        Disponible
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn-material"
+                                        data-material="Tubería PVC"
+                                    >
+                                        Registrar uso
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-status="En uso">
+
+                                <td>
+
+                                    <div class="material-name">
+
+                                        <div class="material-icon">
+                                            C
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Cemento
+                                            </strong>
+
+                                            <span>
+                                                Construcción
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Proyecto Gamma
+                                </td>
+
+                                <td>
+                                    20
+                                </td>
+
+                                <td>
+                                    Bultos
+                                </td>
+
+                                <td>
+
+                                    <span class="material-status used">
+                                        En uso
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn-material"
+                                        data-material="Cemento"
+                                    >
+                                        Registrar uso
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-status="Disponible">
+
+                                <td>
+
+                                    <div class="material-name">
+
+                                        <div class="material-icon">
+                                            A
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Arena
+                                            </strong>
+
+                                            <span>
+                                                Construcción
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Proyecto Gamma
+                                </td>
+
+                                <td>
+                                    10
+                                </td>
+
+                                <td>
+                                    Toneladas
+                                </td>
+
+                                <td>
+
+                                    <span class="material-status available">
+                                        Disponible
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn-material"
+                                        data-material="Arena"
+                                    >
+                                        Registrar uso
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr data-status="Disponible">
+
+                                <td>
+
+                                    <div class="material-name">
+
+                                        <div class="material-icon">
+                                            L
+                                        </div>
+
+                                        <div>
+
+                                            <strong>
+                                                Ladrillos
+                                            </strong>
+
+                                            <span>
+                                                Construcción
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                </td>
+
+                                <td>
+                                    Proyecto Alfa
+                                </td>
+
+                                <td>
+                                    500
+                                </td>
+
+                                <td>
+                                    Unidades
+                                </td>
+
+                                <td>
+
+                                    <span class="material-status available">
+                                        Disponible
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button
+                                        class="btn-material"
+                                        data-material="Ladrillos"
+                                    >
+                                        Registrar uso
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                >
+
+                    <div>
+                        🔎
+                    </div>
+
+                    <h3>
+                        No se encontraron materiales
+                    </h3>
+
+                    <p>
+                        Intenta cambiar los filtros de búsqueda.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="assets/js/materiales-empleado.js"></script>
+
+</body>
+
+</html>

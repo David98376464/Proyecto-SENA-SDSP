@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP - Avance de proyectos</title>
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS DEL SUPERVISOR -->
+    <link rel="stylesheet" href="assets/css/supervisor.css">
+
+    <!-- CSS DE AVANCE -->
+    <link rel="stylesheet" href="assets/css/avances-supervisor.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- LOGO -->
+
+        <div class="sidebar-logo">
+
+            <img
+                src="assets/img/logo.pnj.jpeg"
+                alt="Logo SGSP"
+            >
+
+        </div>
+
+
+
+        <!-- MENÚ -->
+
+        <nav class="sidebar-menu">
+
+
+            <!-- PRINCIPAL -->
+
+            <div class="menu-section">
+
+                <p class="menu-title">
+                    PRINCIPAL
+                </p>
+
+
+                <a
+                    href="dashboard-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- GESTIÓN -->
+
+            <div class="menu-section">
+
+                <p class="menu-title">
+                    GESTIÓN
+                </p>
+
+
+                <a
+                    href="proyectos-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Proyectos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="materiales-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        📦
+                    </span>
+
+                    <span>
+                        Materiales
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="tareas-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        ✅
+                    </span>
+
+                    <span>
+                        Tareas
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- SEGUIMIENTO -->
+
+            <div class="menu-section">
+
+                <p class="menu-title">
+                    SEGUIMIENTO
+                </p>
+
+
+                <a
+                    href="incidencias-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        ⚠️
+                    </span>
+
+                    <span>
+                        Incidencias
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="avance-supervisor.html"
+                    class="menu-item active"
+                >
+
+                    <span class="menu-icon">
+                        📈
+                    </span>
+
+                    <span>
+                        Avance de proyectos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="reportes-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        📊
+                    </span>
+
+                    <span>
+                        Reportes
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="gantt-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        🗓️
+                    </span>
+
+                    <span>
+                        Diagrama de Gantt
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- OTROS -->
+
+            <div class="menu-section">
+
+                <p class="menu-title">
+                    OTROS
+                </p>
+
+
+                <a
+                    href="configuracion-supervisor.html"
+                    class="menu-item"
+                >
+
+                    <span class="menu-icon">
+                        ⚙️
+                    </span>
+
+                    <span>
+                        Configuración
+                    </span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+
+
+        <!-- CERRAR SESIÓN -->
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="index.html"
+                class="menu-item logout"
+            >
+
+                <span class="menu-icon">
+                    🚪
+                </span>
+
+                <span>
+                    Cerrar sesión
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             ENCABEZADO
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-title">
+
+                <h1>
+                    Avance de proyectos
+                </h1>
+
+                <p>
+                    Consulta y realiza seguimiento al progreso de los proyectos asignados
+                </p>
+
+            </div>
+
+
+
+            <!-- INFORMACIÓN DEL SUPERVISOR -->
+
+            <div class="topbar-right">
+
+
+                <button
+                    class="notification-button"
+                    title="Notificaciones"
+                >
+                    🔔
+                </button>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        S
+                    </div>
+
+
+                    <div class="user-data">
+
+                        <strong>
+                            Supervisor
+                        </strong>
+
+                        <span>
+                            Supervisor de Obra
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             RESUMEN
+        ================================================== -->
+
+        <section class="progress-stats">
+
+
+            <!-- TOTAL -->
+
+            <article class="progress-stat-card">
+
+                <div class="progress-stat-icon blue">
+                    📁
+                </div>
+
+                <div>
+
+                    <span>
+                        Proyectos asignados
+                    </span>
+
+                    <strong id="totalProjects">
+                        4
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- AVANCE PROMEDIO -->
+
+            <article class="progress-stat-card">
+
+                <div class="progress-stat-icon green">
+                    📈
+                </div>
+
+                <div>
+
+                    <span>
+                        Avance promedio
+                    </span>
+
+                    <strong id="averageProgress">
+                        64%
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- EN PROGRESO -->
+
+            <article class="progress-stat-card">
+
+                <div class="progress-stat-icon orange">
+                    🔄
+                </div>
+
+                <div>
+
+                    <span>
+                        En progreso
+                    </span>
+
+                    <strong id="activeProjects">
+                        2
+                    </strong>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- COMPLETADOS -->
+
+            <article class="progress-stat-card">
+
+                <div class="progress-stat-icon purple">
+                    ✅
+                </div>
+
+                <div>
+
+                    <span>
+                        Completados
+                    </span>
+
+                    <strong id="completedProjects">
+                        1
+                    </strong>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTENEDOR PRINCIPAL
+        ================================================== -->
+
+        <section class="progress-container">
+
+
+            <!-- ENCABEZADO -->
+
+            <div class="progress-header">
+
+
+                <div>
+
+                    <h2>
+                        Seguimiento del proyecto
+                    </h2>
+
+                    <p>
+                        Visualiza el avance actual de cada proyecto bajo tu supervisión
+                    </p>
+
+                </div>
+
+
+
+                <!-- BUSCADOR -->
+
+                <div class="progress-search">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="progressSearch"
+                        placeholder="Buscar proyecto..."
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FILTROS -->
+
+            <div class="progress-filters">
+
+
+                <button
+                    class="progress-filter active"
+                    data-filter="todos"
+                >
+                    Todos
+                </button>
+
+
+                <button
+                    class="progress-filter"
+                    data-filter="progreso"
+                >
+                    En progreso
+                </button>
+
+
+                <button
+                    class="progress-filter"
+                    data-filter="retrasado"
+                >
+                    Retrasados
+                </button>
+
+
+                <button
+                    class="progress-filter"
+                    data-filter="completado"
+                >
+                    Completados
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PROYECTOS
+            ================================================== -->
+
+            <div class="progress-projects" id="progressProjects">
+
+
+
+                <!-- PROYECTO 1 -->
+
+                <article
+                    class="progress-project-card"
+                    data-name="Construcción Torre Norte"
+                    data-status="progreso"
+                    data-progress="78"
+                >
+
+                    <div class="project-card-top">
+
+
+                        <div class="project-card-title">
+
+                            <div class="project-card-icon">
+                                🏗️
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Construcción Torre Norte
+                                </h3>
+
+                                <p>
+                                    Proyecto de construcción
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="project-status status-progress">
+                            En progreso
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="project-info">
+
+                        <div>
+                            <span>Responsable</span>
+                            <strong>Carlos Rodríguez</strong>
+                        </div>
+
+                        <div>
+                            <span>Fecha de finalización</span>
+                            <strong>30/09/2026</strong>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-label">
+
+                            <span>
+                                Avance general
+                            </span>
+
+                            <strong>
+                                78%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track">
+
+                            <div
+                                class="progress-bar"
+                                style="width: 78%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-card-footer">
+
+                        <span>
+                            Última actualización: Hoy
+                        </span>
+
+                        <button
+                            class="view-progress"
+                            data-project="Construcción Torre Norte"
+                        >
+                            Ver detalle
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROYECTO 2 -->
+
+                <article
+                    class="progress-project-card"
+                    data-name="Remodelación Oficina Central"
+                    data-status="progreso"
+                    data-progress="65"
+                >
+
+                    <div class="project-card-top">
+
+
+                        <div class="project-card-title">
+
+                            <div class="project-card-icon">
+                                🏢
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Remodelación Oficina Central
+                                </h3>
+
+                                <p>
+                                    Remodelación
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="project-status status-progress">
+                            En progreso
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="project-info">
+
+                        <div>
+                            <span>Responsable</span>
+                            <strong>Laura Martínez</strong>
+                        </div>
+
+                        <div>
+                            <span>Fecha de finalización</span>
+                            <strong>15/10/2026</strong>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-label">
+
+                            <span>
+                                Avance general
+                            </span>
+
+                            <strong>
+                                65%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track">
+
+                            <div
+                                class="progress-bar"
+                                style="width: 65%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-card-footer">
+
+                        <span>
+                            Última actualización: Ayer
+                        </span>
+
+                        <button
+                            class="view-progress"
+                            data-project="Remodelación Oficina Central"
+                        >
+                            Ver detalle
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROYECTO 3 -->
+
+                <article
+                    class="progress-project-card"
+                    data-name="Adecuación Parque Industrial"
+                    data-status="retrasado"
+                    data-progress="42"
+                >
+
+                    <div class="project-card-top">
+
+
+                        <div class="project-card-title">
+
+                            <div class="project-card-icon">
+                                🌳
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Adecuación Parque Industrial
+                                </h3>
+
+                                <p>
+                                    Adecuación de espacios
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="project-status status-warning">
+                            Retrasado
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="project-info">
+
+                        <div>
+                            <span>Responsable</span>
+                            <strong>Andrés Gómez</strong>
+                        </div>
+
+                        <div>
+                            <span>Fecha de finalización</span>
+                            <strong>20/09/2026</strong>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-label">
+
+                            <span>
+                                Avance general
+                            </span>
+
+                            <strong>
+                                42%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track">
+
+                            <div
+                                class="progress-bar warning"
+                                style="width: 42%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-card-footer">
+
+                        <span>
+                            Última actualización: 22/08/2026
+                        </span>
+
+                        <button
+                            class="view-progress"
+                            data-project="Adecuación Parque Industrial"
+                        >
+                            Ver detalle
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PROYECTO 4 -->
+
+                <article
+                    class="progress-project-card"
+                    data-name="Mejoramiento Zona Administrativa"
+                    data-status="completado"
+                    data-progress="100"
+                >
+
+                    <div class="project-card-top">
+
+
+                        <div class="project-card-title">
+
+                            <div class="project-card-icon">
+                                ✅
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Mejoramiento Zona Administrativa
+                                </h3>
+
+                                <p>
+                                    Mejoramiento de infraestructura
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="project-status status-completed">
+                            Completado
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="project-info">
+
+                        <div>
+                            <span>Responsable</span>
+                            <strong>María López</strong>
+                        </div>
+
+                        <div>
+                            <span>Fecha de finalización</span>
+                            <strong>10/08/2026</strong>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-label">
+
+                            <span>
+                                Avance general
+                            </span>
+
+                            <strong>
+                                100%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-track">
+
+                            <div
+                                class="progress-bar completed"
+                                style="width: 100%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-card-footer">
+
+                        <span>
+                            Última actualización: 10/08/2026
+                        </span>
+
+                        <button
+                            class="view-progress"
+                            data-project="Mejoramiento Zona Administrativa"
+                        >
+                            Ver detalle
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- SIN RESULTADOS -->
+
+            <div
+                class="no-results"
+                id="noResults"
+            >
+
+                <div>
+                    🔎
+                </div>
+
+                <h3>
+                    No se encontraron proyectos
+                </h3>
+
+                <p>
+                    Intenta cambiar el filtro o realizar otra búsqueda.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MODAL DETALLE
+    ====================================================== -->
+
+    <div
+        class="progress-modal"
+        id="progressModal"
+    >
+
+
+        <div class="progress-modal-content">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span>
+                        DETALLE DEL PROYECTO
+                    </span>
+
+                    <h2 id="modalProjectName">
+                        Proyecto
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    id="modalClose"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+
+            <div class="modal-body">
+
+
+                <div class="modal-summary">
+
+
+                    <div class="modal-summary-item">
+
+                        <span>
+                            Estado
+                        </span>
+
+                        <strong id="modalProjectStatus">
+                            En progreso
+                        </strong>
+
+                    </div>
+
+
+                    <div class="modal-summary-item">
+
+                        <span>
+                            Avance
+                        </span>
+
+                        <strong id="modalProjectProgress">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="modal-summary-item">
+
+                        <span>
+                            Tareas
+                        </span>
+
+                        <strong id="modalProjectTasks">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="modal-progress-section">
+
+                    <div class="modal-progress-title">
+
+                        <span>
+                            Avance general
+                        </span>
+
+                        <strong id="modalProgressNumber">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="modal-progress-track">
+
+                        <div
+                            class="modal-progress-bar"
+                            id="modalProgressBar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="modal-tasks">
+
+                    <h3>
+                        Resumen de tareas
+                    </h3>
+
+
+                    <div class="task-summary-list">
+
+
+                        <div class="task-summary-item">
+
+                            <span class="task-dot completed-dot"></span>
+
+                            <span>
+                                Tareas completadas
+                            </span>
+
+                            <strong id="completedTasks">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="task-summary-item">
+
+                            <span class="task-dot progress-dot"></span>
+
+                            <span>
+                                Tareas en progreso
+                            </span>
+
+                            <strong id="progressTasks">
+                                0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="task-summary-item">
+
+                            <span class="task-dot pending-dot"></span>
+
+                            <span>
+                                Tareas pendientes
+                            </span>
+
+                            <strong id="pendingTasks">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="modal-button"
+                    id="modalAccept"
+                >
+                    Entendido
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="assets/js/avances-supervisor.js"></script>
+
+</body>
+
+</html>

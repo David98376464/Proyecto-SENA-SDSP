@@ -1,0 +1,1452 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: #F5F7FA;
+    color: #374151;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.app-container {
+    display: flex;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 245px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF;
+
+    border-right: 1px solid #E5E7EB;
+
+    z-index: 100;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   LOGO SGSP
+   ========================================================= */
+
+.sidebar-logo {
+    height: 102px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    border-bottom: 1px solid #E5E7EB;
+
+    overflow: hidden;
+}
+
+.sgsp-logo {
+    width: 85px;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* =========================================================
+   MENÚ LATERAL
+   ========================================================= */
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    padding: 18px 12px 10px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN
+   ========================================================= */
+
+.menu-section-title {
+    margin: 13px 10px 7px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    color: #9CA3AF;
+}
+
+
+/* =========================================================
+   ELEMENTOS DEL MENÚ
+   ========================================================= */
+
+.menu-item {
+    width: 100%;
+
+    min-height: 47px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 14px;
+
+    border-radius: 8px;
+
+    color: #64748B;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================================
+   ICONOS DEL MENÚ
+   ========================================================= */
+
+.menu-icon {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   HOVER DEL MENÚ
+   ========================================================= */
+
+.menu-item:hover {
+    background: #F1F5F9;
+
+    color: #0B5EA8;
+}
+
+
+/* =========================================================
+   ELEMENTO ACTIVO
+   ========================================================= */
+
+.menu-item.active {
+    background: #0B5EA8;
+
+    color: #FFFFFF;
+
+    font-weight: 600;
+}
+
+.menu-item.active:hover {
+    background: #083C74;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================================
+   FOOTER DEL SIDEBAR
+   ========================================================= */
+
+.sidebar-footer {
+    margin-top: auto;
+
+    padding: 14px 12px 20px;
+
+    border-top: 1px solid #E5E7EB;
+}
+
+
+/* =========================================================
+   CERRAR SESIÓN
+   ========================================================= */
+
+.logout-btn {
+    width: 100%;
+
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 13px;
+
+    border-radius: 8px;
+
+    color: #64748B;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+    background: #FEF2F2;
+
+    color: #DC2626;
+}
+
+.logout-icon {
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+.main-content {
+    width: calc(100% - 245px);
+
+    min-height: 100vh;
+
+    margin-left: 245px;
+
+    padding: 0 28px 35px;
+}
+
+
+/* =========================================================
+   HEADER PRINCIPAL
+   ========================================================= */
+
+.main-header {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   TÍTULO DEL HEADER
+   ========================================================= */
+
+.header-title h1 {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    color: #1F2937;
+}
+
+.header-title p {
+    margin: 4px 0 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    color: #9CA3AF;
+}
+
+
+/* =========================================================
+   ACCIONES DEL HEADER
+   ========================================================= */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+/* =========================================================
+   BOTÓN NOTIFICACIONES
+   ========================================================= */
+
+.notification-btn {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 9px;
+
+    background: #FFFFFF;
+
+    color: #64748B;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.notification-btn:hover {
+    background: #F8FAFC;
+
+    border-color: #CBD5E1;
+}
+
+
+/* =========================================================
+   USUARIO DEL HEADER
+   ========================================================= */
+
+.header-user {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.header-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0B5EA8;
+
+    color: #FFFFFF;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.header-user > div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.header-user strong {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #1F2937;
+}
+
+.header-user span {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 8px;
+
+    color: #9CA3AF;
+}
+
+
+/* =========================================================
+   CONTENIDO DE REPORTES
+   ========================================================= */
+
+.reports-content {
+    width: 100%;
+
+    padding: 10px 0 30px;
+}
+
+
+/* =========================================================
+   BARRA DE FILTROS
+   ========================================================= */
+
+.reports-toolbar {
+    display: flex;
+    align-items: flex-end;
+
+    gap: 14px;
+
+    padding: 18px 20px;
+
+    margin-bottom: 24px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E8EDF3;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   FILTRO INDIVIDUAL
+   ========================================================= */
+
+.report-filter {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 190px;
+}
+
+.report-filter label {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    color: #64748B;
+}
+
+.report-filter select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 35px 0 13px;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 9px;
+
+    background: #FFFFFF;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    color: #475569;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.report-filter select:focus {
+    border-color: #2563EB;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   BOTÓN GENERAR REPORTE
+   ========================================================= */
+
+.generate-report-btn {
+    height: 42px;
+
+    margin-left: auto;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #2563EB;
+
+    color: #FFFFFF;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 10px rgba(37, 99, 235, 0.16);
+
+    transition: all 0.2s ease;
+}
+
+.generate-report-btn:hover {
+    background: #1D4ED8;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 14px rgba(37, 99, 235, 0.22);
+}
+
+.generate-report-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN
+   ========================================================= */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 14px;
+}
+
+.section-title h2 {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #1E293B;
+}
+
+.section-title p {
+    margin: 4px 0 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    color: #94A3B8;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.report-summary {
+    margin-bottom: 24px;
+}
+
+.summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+
+/* =========================================================
+   TARJETAS DEL RESUMEN
+   ========================================================= */
+
+.summary-card {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 90px;
+
+    padding: 18px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E8EDF3;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 18px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 22px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================================================
+   ICONOS DEL RESUMEN
+   ========================================================= */
+
+.summary-icon {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   COLORES POR CATEGORÍA
+   ========================================================= */
+
+.summary-icon.projects {
+    background: #EFF6FF;
+}
+
+.summary-icon.tasks {
+    background: #F0FDF4;
+}
+
+.summary-icon.employees {
+    background: #FAF5FF;
+}
+
+.summary-icon.materials {
+    background: #FFF7ED;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL RESUMEN
+   ========================================================= */
+
+.summary-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.summary-info span {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    color: #94A3B8;
+}
+
+.summary-info strong {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    color: #1E293B;
+}
+
+
+/* =========================================================
+   TARJETA PRINCIPAL DEL REPORTE
+   ========================================================= */
+
+.report-card {
+    width: 100%;
+
+    margin-bottom: 24px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E8EDF3;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   HEADER DEL REPORTE
+   ========================================================= */
+
+.report-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 21px 24px;
+
+    border-bottom: 1px solid #EDF1F5;
+}
+
+.report-card-header h2 {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #1E293B;
+}
+
+.report-card-header p {
+    margin: 4px 0 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+
+    color: #94A3B8;
+}
+
+
+/* =========================================================
+   BOTÓN EXPORTAR
+   ========================================================= */
+
+.export-report-btn {
+    height: 38px;
+
+    padding: 0 15px;
+
+    border: 1px solid #E2E8F0;
+
+    border-radius: 9px;
+
+    background: #FFFFFF;
+
+    color: #475569;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.export-report-btn:hover {
+    background: #F8FAFC;
+
+    border-color: #CBD5E1;
+
+    color: #1E293B;
+}
+
+
+/* =========================================================
+   TABLA
+   ========================================================= */
+
+.report-table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+#reportTable {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* =========================================================
+   ENCABEZADOS DE TABLA
+   ========================================================= */
+
+#reportTable thead {
+    background: #F8FAFC;
+}
+
+#reportTable th {
+    padding: 14px 18px;
+
+    border-bottom: 1px solid #E8EDF3;
+
+    text-align: left;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    color: #64748B;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CELDAS
+   ========================================================= */
+
+#reportTable td {
+    padding: 16px 18px;
+
+    border-bottom: 1px solid #EEF2F6;
+
+    font-size: 12px;
+
+    color: #475569;
+
+    vertical-align: middle;
+
+    white-space: nowrap;
+}
+
+#reportTable tbody tr {
+    transition: background 0.2s ease;
+}
+
+#reportTable tbody tr:hover {
+    background: #F8FAFC;
+}
+
+#reportTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL PROYECTO
+   ========================================================= */
+
+.report-project {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 200px;
+}
+
+.project-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #EFF6FF;
+
+    font-size: 17px;
+}
+
+.report-project div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.report-project strong {
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #1E293B;
+}
+
+.report-project span {
+    font-size: 10px;
+
+    color: #94A3B8;
+}
+
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+
+.report-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* Planeación */
+
+.report-status.planning {
+    background: #FFF7ED;
+
+    color: #EA580C;
+}
+
+
+/* En ejecución */
+
+.report-status.in-progress {
+    background: #EFF6FF;
+
+    color: #2563EB;
+}
+
+
+/* Finalizado */
+
+.report-status.completed {
+    background: #ECFDF5;
+
+    color: #059669;
+}
+
+
+/* Retrasado */
+
+.report-status.delayed {
+    background: #FEF2F2;
+
+    color: #DC2626;
+}
+
+
+/* =========================================================
+   BARRA DE PROGRESO
+   ========================================================= */
+
+.progress-container {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    min-width: 115px;
+}
+
+.progress-bar {
+    width: 75px;
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #E2E8F0;
+}
+
+.progress-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #2563EB;
+}
+
+.progress-container > span {
+    font-size: 11px;
+    font-weight: 500;
+
+    color: #475569;
+}
+
+
+/* =========================================================
+   FOOTER DE LA TABLA
+   ========================================================= */
+
+.report-card-footer {
+    display: flex;
+    align-items: center;
+
+    padding: 14px 24px;
+
+    border-top: 1px solid #EDF1F5;
+
+    background: #FFFFFF;
+}
+
+.report-card-footer span {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    color: #94A3B8;
+}
+
+
+/* =========================================================
+   INDICADORES INFERIORES
+   ========================================================= */
+
+.report-indicators {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   TARJETA DE INDICADOR
+   ========================================================= */
+
+.indicator-card {
+    padding: 20px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #E8EDF3;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   HEADER DEL INDICADOR
+   ========================================================= */
+
+.indicator-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.indicator-header h3 {
+    margin: 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #1E293B;
+}
+
+.indicator-header p {
+    margin: 3px 0 0;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    color: #94A3B8;
+}
+
+.indicator-header > span {
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   LISTA DE INDICADORES
+   ========================================================= */
+
+.indicator-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.indicator-item {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.indicator-item > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.indicator-item span {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    color: #64748B;
+}
+
+.indicator-item strong {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #334155;
+}
+
+
+/* =========================================================
+   BARRA DEL INDICADOR
+   ========================================================= */
+
+.indicator-progress {
+    width: 100%;
+    height: 7px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #E2E8F0;
+}
+
+.indicator-fill {
+    height: 100%;
+
+    border-radius: inherit;
+}
+
+
+/* Estados */
+
+.indicator-fill.completed {
+    background: #10B981;
+}
+
+.indicator-fill.progress {
+    background: #2563EB;
+}
+
+.indicator-fill.planning {
+    background: #F59E0B;
+}
+
+.indicator-fill.delayed {
+    background: #EF4444;
+}
+
+
+/* =========================================================
+   ACTIVIDAD RECIENTE
+   ========================================================= */
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #F8FAFC;
+
+    font-size: 15px;
+}
+
+.activity-item > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    flex: 1;
+}
+
+.activity-item strong {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    color: #334155;
+}
+
+.activity-item span {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 10px;
+
+    color: #94A3B8;
+}
+
+.activity-item time {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 9px;
+
+    color: #94A3B8;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .summary-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .reports-toolbar {
+        align-items: stretch;
+    }
+
+    .report-filter {
+        flex: 1;
+
+        min-width: 160px;
+    }
+
+    .generate-report-btn {
+        margin-left: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET PEQUEÑA
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .report-indicators {
+        grid-template-columns: 1fr;
+    }
+
+    .reports-toolbar {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .generate-report-btn {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - SIDEBAR Y MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        border-right: none;
+
+        border-bottom: 1px solid #E5E7EB;
+    }
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+
+        overflow-x: auto;
+    }
+
+    .menu-item {
+        white-space: nowrap;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 0 15px 25px;
+    }
+
+    .main-header {
+        min-height: 70px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .reports-content {
+        padding-bottom: 20px;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reports-toolbar {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .report-filter {
+        width: 100%;
+    }
+
+    .generate-report-btn {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .report-card-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+    .export-report-btn {
+        width: 100%;
+    }
+
+    .report-card-footer {
+        padding-left: 18px;
+
+        padding-right: 18px;
+    }
+
+    .indicator-card {
+        padding: 18px;
+    }
+}

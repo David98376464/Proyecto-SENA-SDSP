@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Avances</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/avances-empleado.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    
+                        <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+
+                </div>
+            </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard-empleado.html" class="menu-item">
+                <span class="menu-icon">🏠</span>
+                <span>Inicio</span>
+            </a>
+
+            <a href="proyectos-empleado.html" class="menu-item">
+                <span class="menu-icon">📁</span>
+                <span>Mis proyectos</span>
+            </a>
+
+            <a href="tareas-empleado.html" class="menu-item">
+                <span class="menu-icon">✅</span>
+                <span>Mis tareas</span>
+            </a>
+
+            <a href="materiales-empleado.html" class="menu-item">
+                <span class="menu-icon">📦</span>
+                <span>Materiales</span>
+            </a>
+
+            <a href="avances-empleado.html" class="menu-item active">
+                <span class="menu-icon">📈</span>
+                <span>Avances</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="perfil-empleado.html" class="menu-item">
+                <span class="menu-icon">⚙️</span>
+                <span>Configuracion</span>
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span class="menu-icon">🚪</span>
+                <span>Cerrar sesión</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTENIDO
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>Avances</h1>
+
+                <p>
+                    Registra y consulta el avance de tus actividades.
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <div class="notification">
+
+                    <span>🔔</span>
+
+                    <span class="notification-dot"></span>
+
+                </div>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        JV
+                    </div>
+
+                    <div class="user-data">
+
+                        <strong>
+                            José Vega
+                        </strong>
+
+                        <span>
+                            Empleado
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             RESUMEN
+        ====================================================== -->
+
+        <section class="progress-summary">
+
+            <div class="summary-card">
+
+                <div class="summary-icon total">
+                    ▣
+                </div>
+
+                <div>
+
+                    <span>
+                        Proyectos
+                    </span>
+
+                    <strong id="totalProyectos">
+                        3
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon average">
+                    ↗
+                </div>
+
+                <div>
+
+                    <span>
+                        Avance promedio
+                    </span>
+
+                    <strong id="avancePromedio">
+                        64%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon completed">
+                    ✓
+                </div>
+
+                <div>
+
+                    <span>
+                        Tareas completadas
+                    </span>
+
+                    <strong id="tareasCompletadas">
+                        5
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <div class="summary-icon pending">
+                    ⏱
+                </div>
+
+                <div>
+
+                    <span>
+                        Tareas pendientes
+                    </span>
+
+                    <strong id="tareasPendientes">
+                        3
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             AVANCE DE PROYECTOS
+        ====================================================== -->
+
+        <section class="progress-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Avance de mis proyectos
+                    </h2>
+
+                    <p>
+                        Consulta el progreso actual de cada proyecto.
+                    </p>
+
+                </div>
+
+
+                <div class="filters">
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            type="text"
+                            id="buscarProyecto"
+                            placeholder="Buscar proyecto..."
+                        >
+
+                    </div>
+
+
+                    <select id="filtroProyecto">
+
+                        <option value="todos">
+                            Todos
+                        </option>
+
+                        <option value="En ejecución">
+                            En ejecución
+                        </option>
+
+                        <option value="En revisión">
+                            En revisión
+                        </option>
+
+                        <option value="Finalizado">
+                            Finalizado
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TARJETAS
+            ================================================== -->
+
+            <div class="projects-grid" id="projectsGrid">
+
+                <!-- PROYECTO ALFA -->
+
+                <article
+                    class="progress-card"
+                    data-status="En ejecución"
+                    data-project="Proyecto Alfa"
+                >
+
+                    <div class="card-top">
+
+                        <div class="project-info">
+
+                            <div class="project-icon">
+                                A
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Proyecto Alfa
+                                </h3>
+
+                                <span>
+                                    Desarrollo web
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="project-status execution">
+                            En ejecución
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-info">
+
+                        <div class="progress-label">
+
+                            <span>
+                                Avance general
+                            </span>
+
+                            <strong class="percentage">
+                                72%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill"
+                                style="width: 72%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details">
+
+                        <div>
+
+                            <span>
+                                Tareas
+                            </span>
+
+                            <strong>
+                                4
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Completadas
+                            </span>
+
+                            <strong>
+                                3
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Fecha límite
+                            </span>
+
+                            <strong>
+                                15 Sep 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="btn-update"
+                        data-project="Proyecto Alfa"
+                    >
+                        Actualizar avance
+                    </button>
+
+                </article>
+
+
+                <!-- PROYECTO BETA -->
+
+                <article
+                    class="progress-card"
+                    data-status="En ejecución"
+                    data-project="Proyecto Beta"
+                >
+
+                    <div class="card-top">
+
+                        <div class="project-info">
+
+                            <div class="project-icon">
+                                B
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Proyecto Beta
+                                </h3>
+
+                                <span>
+                                    Aplicación empresarial
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="project-status execution">
+                            En ejecución
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-info">
+
+                        <div class="progress-label">
+
+                            <span>
+                                Avance general
+                            </span>
+
+                            <strong class="percentage">
+                                55%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill"
+                                style="width: 55%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details">
+
+                        <div>
+
+                            <span>
+                                Tareas
+                            </span>
+
+                            <strong>
+                                3
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Completadas
+                            </span>
+
+                            <strong>
+                                1
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Fecha límite
+                            </span>
+
+                            <strong>
+                                20 Sep 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="btn-update"
+                        data-project="Proyecto Beta"
+                    >
+                        Actualizar avance
+                    </button>
+
+                </article>
+
+
+                <!-- PROYECTO GAMMA -->
+
+                <article
+                    class="progress-card"
+                    data-status="En revisión"
+                    data-project="Proyecto Gamma"
+                >
+
+                    <div class="card-top">
+
+                        <div class="project-info">
+
+                            <div class="project-icon">
+                                G
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    Proyecto Gamma
+                                </h3>
+
+                                <span>
+                                    Plataforma digital
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="project-status review">
+                            En revisión
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-info">
+
+                        <div class="progress-label">
+
+                            <span>
+                                Avance general
+                            </span>
+
+                            <strong class="percentage">
+                                65%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill"
+                                style="width: 65%;"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-details">
+
+                        <div>
+
+                            <span>
+                                Tareas
+                            </span>
+
+                            <strong>
+                                3
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Completadas
+                            </span>
+
+                            <strong>
+                                2
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Fecha límite
+                            </span>
+
+                            <strong>
+                                10 Sep 2026
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="btn-update"
+                        data-project="Proyecto Gamma"
+                    >
+                        Actualizar avance
+                    </button>
+
+                </article>
+
+            </div>
+
+
+            <div
+                class="no-results"
+                id="noResults"
+            >
+
+                <div>
+                    🔎
+                </div>
+
+                <h3>
+                    No se encontraron proyectos
+                </h3>
+
+                <p>
+                    Intenta cambiar los filtros de búsqueda.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ÚLTIMOS REGISTROS
+        ====================================================== -->
+
+        <section class="history-section">
+
+            <div class="section-header simple">
+
+                <div>
+
+                    <h2>
+                        Últimos registros
+                    </h2>
+
+                    <p>
+                        Historial de actualizaciones realizadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="history-container">
+
+                <table class="history-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Proyecto
+                            </th>
+
+                            <th>
+                                Avance anterior
+                            </th>
+
+                            <th>
+                                Nuevo avance
+                            </th>
+
+                            <th>
+                                Fecha
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="historyBody">
+
+                        <tr>
+
+                            <td>
+                                Proyecto Alfa
+                            </td>
+
+                            <td>
+                                65%
+                            </td>
+
+                            <td>
+                                <span class="new-progress">
+                                    72%
+                                </span>
+                            </td>
+
+                            <td>
+                                26 Ago 2026
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Proyecto Gamma
+                            </td>
+
+                            <td>
+                                58%
+                            </td>
+
+                            <td>
+                                <span class="new-progress">
+                                    65%
+                                </span>
+                            </td>
+
+                            <td>
+                                25 Ago 2026
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Proyecto Beta
+                            </td>
+
+                            <td>
+                                45%
+                            </td>
+
+                            <td>
+                                <span class="new-progress">
+                                    55%
+                                </span>
+                            </td>
+
+                            <td>
+                                24 Ago 2026
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="assets/js/avances-empleado.js"></script>
+
+</body>
+
+</html>
