@@ -1,0 +1,101 @@
+/*==================================================
+    RESET GENERAL
+==================================================*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*==================================================
+    VARIABLES GLOBALES
+==================================================*/
+
+:root{
+
+    /* Colores Principales */
+    --color-primary: #0B5EA8;
+    --color-primary-dark: #083C74;
+    --color-primary-light: #2F80ED;
+
+    /* Colores Neutros */
+    --color-white: #FFFFFF;
+    --color-black: #1F2937;
+    --color-text: #374151;
+    --color-gray: #6B7280;
+    --color-light: #F5F7FA;
+    --color-border: #E5E7EB;
+
+    /* Estados */
+    --color-success: #16A34A;
+    --color-warning: #F59E0B;
+    --color-danger: #DC2626;
+
+    /* Tipografía */
+    --font-family: 'Poppins', sans-serif;
+
+    /* Tamaños */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    /* Sombras */
+    --shadow-sm: 0 2px 8px rgba(0,0,0,.08);
+    --shadow-md: 0 6px 18px rgba(0,0,0,.12);
+    --shadow-lg: 0 12px 30px rgba(0,0,0,.18);
+
+    /* Transiciones */
+    --transition: all .3s ease;
+
+}
+
+/*==================================================
+    ESTILOS GENERALES
+==================================================*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--font-family);
+    background: var(--color-light);
+    color: var(--color-text);
+    min-height: 100vh;
+}
+
+/*==================================================
+    ELEMENTOS
+==================================================*/
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+button{
+    font-family: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+input,
+select,
+textarea{
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+ul,
+ol{
+    list-style: none;
+}

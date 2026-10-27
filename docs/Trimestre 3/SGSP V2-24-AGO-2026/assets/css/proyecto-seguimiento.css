@@ -1,0 +1,426 @@
+/* ==================================================
+   ESTILOS BASE PARA SEGUIMIENTO
+================================================== */
+.seg-bg {
+    background-color: #f8fafc;
+    padding: 0;
+}
+
+/* ==================================================
+   HEADER Y TABS (Adaptado al diseño limpio)
+================================================== */
+.project-top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.project-title-area h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 5px 0;
+}
+
+.project-id {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.project-status-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+}
+
+.status-badge.green {
+    background: #dcfce7;
+    color: #16a34a;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.status-badge .dot {
+    width: 6px;
+    height: 6px;
+    background: #16a34a;
+    border-radius: 50%;
+}
+
+.project-tabs {
+    display: flex;
+    gap: 30px;
+    padding: 0 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tab-btn {
+    padding: 15px 0;
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    color: #0073a8;
+    border-bottom: 2px solid #0073a8;
+    font-weight: 600;
+}
+
+/* ==================================================
+   CUADRÍCULA PRINCIPAL
+================================================== */
+.seguimiento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 30px 40px;
+}
+
+.mt-20 { margin-top: 20px; }
+.padding-0 { padding: 0 !important; }
+.padding-20 { padding: 20px !important; }
+
+.seg-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-title {
+    font-size: 15px;
+    color: #334155;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.card-title-upper {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.card-header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.gray-bg {
+    background-color: #f8fafc;
+}
+
+/* ==================================================
+   BARRA DE PROGRESO
+================================================== */
+.progress-top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.badge-blue-light {
+    background: #e0f2fe;
+    color: #0284c7;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.progress-percent {
+    font-weight: 700;
+}
+
+.progress-bar-bg {
+    width: 100%;
+    height: 12px;
+    background: #f1f5f9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #0073a8;
+    border-radius: 10px;
+}
+
+.days-left {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+
+.days-left strong { color: #334155; }
+
+/* ==================================================
+   PERSONAL EN SITIO
+================================================== */
+.personnel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.personnel-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.role-badge {
+    border: 1px solid #e2e8f0;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+/* ==================================================
+   ASIGNAR TAREAS
+================================================== */
+.card-header-blue {
+    background: #0073a8;
+    padding: 20px 25px;
+}
+
+.card-header-blue h3 {
+    margin: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.task-label {
+    display: block;
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.task-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input-group input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    background: #f8fafc;
+    outline: none;
+}
+
+.task-input-group input:focus {
+    border-color: #0073a8;
+}
+
+.btn-add-orange {
+    background: #f39c12;
+    color: white;
+    border: none;
+    width: 44px;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.btn-add-orange:hover { background: #e67e22; }
+
+/* ==================================================
+   INCIDENCIAS O NOVEDADES
+================================================== */
+.badge-blue-dark {
+    background: #0073a8;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.incidence-list-clean {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.incidence-list-clean li {
+    display: flex;
+    align-items: center;
+    padding: 18px 25px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+}
+
+.inc-date {
+    color: #0073a8;
+    font-weight: 600;
+    width: 100px;
+}
+
+.inc-desc {
+    flex: 1;
+    color: #475569;
+}
+
+.inc-details {
+    color: #0073a8;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.incidence-action {
+    padding: 25px;
+}
+
+.btn-orange-full {
+    width: 100%;
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(243, 156, 18, 0.2);
+    transition: 0.2s;
+}
+
+.btn-orange-full:hover {
+    background: #e67e22;
+    transform: translateY(-1px);
+}
+
+.btn-orange-full .plus-icon {
+    background: rgba(255,255,255,0.3);
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+/* ==================================================
+   SEGUIMIENTO DE TAREAS
+================================================== */
+.view-more {
+    color: #0073a8;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f1f5f9;
+    padding: 15px;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.task-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.task-info span {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.badge-pending {
+    background: #fffbeb;
+    color: #f59e0b;
+    border: 1px solid #fef3c7;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.badge-in-progress {
+    background: #eff6ff;
+    color: #3b82f6;
+    border: 1px solid #dbeafe;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.task-progress-bottom {
+    font-size: 13px;
+    color: #64748b;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+.task-progress-bottom strong {
+    color: #0073a8;
+}

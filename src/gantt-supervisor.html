@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Diagrama de Gantt</title>
+
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/gantt-supervisor.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-diagram-project"></i>
+            </div>
+
+            <div class="logo-text">
+                <strong>SGSP</strong>
+                <span>Gestión de Proyectos</span>
+            </div>
+        </div>
+
+        < <!-- MENÚ -->
+        <nav class="sidebar-menu">
+
+            <!-- PRINCIPAL -->
+            <div class="menu-section">
+
+                <p class="menu-title">PRINCIPAL</p>
+
+                <a href="dashboard-supervisor.html" class="menu-item">
+                    <span class="menu-icon">🏠</span>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <!-- GESTIÓN -->
+            <div class="menu-section">
+
+                <p class="menu-title">GESTIÓN</p>
+
+                <a href="proyectos-supervisor.html" class="menu-item">
+                    <span class="menu-icon">📁</span>
+                    <span>Proyectos</span>
+                </a>
+
+                <a href="materiales-supervisor.html" class="menu-item">
+                    <span class="menu-icon">📦</span>
+                    <span>Materiales</span>
+                </a>
+
+                <a href="tareas-supervisor.html" class="menu-item">
+                    <span class="menu-icon">✅</span>
+                    <span>Tareas</span>
+                </a>
+
+            </div>
+
+
+            <!-- SEGUIMIENTO -->
+            <div class="menu-section">
+
+                <p class="menu-title">SEGUIMIENTO</p>
+
+                <a href="incidencias-supervisor.html" class="menu-item">
+                    <span class="menu-icon">⚠️</span>
+                    <span>Incidencias</span>
+                </a>
+
+                <a href="avances-supervisor.html" class="menu-item ">
+                    <span class="menu-icon">📈</span>
+                    <span>Avance de proyectos</span>
+                </a>
+
+                <a href="reportes-supervisor.html" class="menu-item">
+                    <span class="menu-icon">📊</span>
+                    <span>Reportes</span>
+                </a>
+
+                <a href="gantt-supervisor.html" class="menu-item active">
+                    <span class="menu-icon">🗓️</span>
+                    <span>Diagrama de Gantt</span>
+                </a>
+
+            </div>
+
+
+            <!-- OTROS -->
+            <div class="menu-section">
+
+                <p class="menu-title">OTROS</p>
+
+                <a href="configuracion-supervisor.html" class="menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span>Configuración</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- CERRAR SESIÓN -->
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="menu-item logout">
+                <span class="menu-icon">🚪</span>
+                <span>Cerrar sesión</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="main-header">
+
+            <div class="header-title">
+                <h1>Diagrama de Gantt</h1>
+                <p>Planificación y seguimiento de actividades</p>
+            </div>
+
+            <div class="header-actions">
+
+                <button class="notification-btn" title="Notificaciones">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+
+                <div class="header-user">
+
+                    <div class="header-avatar">
+                        SV
+                    </div>
+
+                    <div>
+                        <strong>Supervisor</strong>
+                        <span>Supervisor de Obra</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTROLES
+        ================================================== -->
+
+        <section class="gantt-controls">
+
+            <div class="control-group">
+
+                <label for="projectSelect">
+                    Proyecto
+                </label>
+
+                <select id="projectSelect">
+                    <option value="proyecto-1">
+                        Construcción Edificio Central
+                    </option>
+
+                    <option value="proyecto-2">
+                        Remodelación Oficina Administrativa
+                    </option>
+
+                    <option value="proyecto-3">
+                        Adecuación Área Comercial
+                    </option>
+
+                    <option value="proyecto-4">
+                        Construcción Zona Recreativa
+                    </option>
+                </select>
+
+            </div>
+
+
+            <div class="control-group">
+
+                <label for="viewSelect">
+                    Vista
+                </label>
+
+                <select id="viewSelect">
+
+                    <option value="week">
+                        Semanas
+                    </option>
+
+                    <option value="month">
+                        Meses
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="update-gantt-btn"
+                id="updateGanttBtn"
+            >
+                <i class="fa-solid fa-rotate"></i>
+                Actualizar
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMACIÓN DEL PROYECTO
+        ================================================== -->
+
+        <section class="project-summary">
+
+            <div class="project-summary-info">
+
+                <span class="summary-label">
+                    Proyecto seleccionado
+                </span>
+
+                <h2 id="projectName">
+                    Construcción Edificio Central
+                </h2>
+
+                <p id="projectDates">
+                    01 de agosto de 2026 — 30 de noviembre de 2026
+                </p>
+
+            </div>
+
+
+            <div class="project-progress">
+
+                <div class="progress-header">
+
+                    <span>Avance general</span>
+
+                    <strong id="projectProgress">
+                        45%
+                    </strong>
+
+                </div>
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-fill"
+                        id="projectProgressBar"
+                        style="width: 45%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             GANTT
+        ================================================== -->
+
+        <section class="gantt-card">
+
+            <div class="gantt-card-header">
+
+                <div>
+
+                    <h2>
+                        Cronograma del proyecto
+                    </h2>
+
+                    <p>
+                        Seguimiento de tareas y fechas programadas
+                    </p>
+
+                </div>
+
+                <div class="gantt-legend">
+
+                    <span>
+                        <i class="legend-dot completed"></i>
+                        Completada
+                    </span>
+
+                    <span>
+                        <i class="legend-dot progress"></i>
+                        En progreso
+                    </span>
+
+                    <span>
+                        <i class="legend-dot pending"></i>
+                        Pendiente
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="gantt-container">
+
+                <!-- LISTA DE TAREAS -->
+
+                <div class="task-column">
+
+                    <div class="task-header">
+                        Tarea
+                    </div>
+
+                    <div id="taskList"></div>
+
+                </div>
+
+
+                <!-- CRONOGRAMA -->
+
+                <div class="timeline-column">
+
+                    <div
+                        class="timeline-header"
+                        id="timelineHeader"
+                    ></div>
+
+                    <div
+                        class="timeline-body"
+                        id="timelineBody"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             MENSAJE
+        ================================================== -->
+
+        <div
+            class="gantt-message"
+            id="ganttMessage"
+        ></div>
+
+    </main>
+
+</div>
+
+
+<script src="assets/js/gantt-supervisor.js"></script>
+
+</body>
+</html>

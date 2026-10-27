@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Mi perfil</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/perfil-empleado.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    
+                        <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+
+                </div>
+            </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a href="dashboard-empleado.html" class="menu-item">
+                <span class="menu-icon">🏠</span>
+                <span>Inicio</span>
+            </a>
+
+            <a href="proyectos-empleado.html" class="menu-item">
+                <span class="menu-icon">📁</span>
+                <span>Mis proyectos</span>
+            </a>
+
+            <a href="tareas-empleado.html" class="menu-item">
+                <span class="menu-icon">✅</span>
+                <span>Mis tareas</span>
+            </a>
+
+            <a href="materiales-empleado.html" class="menu-item">
+                <span class="menu-icon">📦</span>
+                <span>Materiales</span>
+            </a>
+
+            <a href="avances-empleado.html" class="menu-item">
+                <span class="menu-icon">📈</span>
+                <span>Avances</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="perfil-empleado.html" class="menu-item active">
+                <span class="menu-icon">⚙️</span>
+                <span>Configuracion</span>
+            </a>
+
+            <a href="index.html" class="menu-item logout">
+                <span class="menu-icon">🚪</span>
+                <span>Cerrar sesión</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+
+                <h1>Mi perfil</h1>
+
+                <p>
+                    Consulta y administra tu información personal.
+                </p>
+
+            </div>
+
+
+            <div class="user-info">
+
+                <div class="notification">
+
+                    <span>🔔</span>
+
+                    <span class="notification-dot"></span>
+
+                </div>
+
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        JV
+                    </div>
+
+                    <div class="user-data">
+
+                        <strong>
+                            José Vega
+                        </strong>
+
+                        <span>
+                            Empleado
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PERFIL -->
+
+        <section class="profile-layout">
+
+            <!-- TARJETA PRINCIPAL -->
+
+            <div class="profile-card">
+
+                <div class="profile-cover"></div>
+
+
+                <div class="profile-main">
+
+                    <div class="profile-avatar">
+                        JV
+                    </div>
+
+
+                    <div class="profile-name">
+
+                        <h2>
+                            José Fernando Vega
+                        </h2>
+
+                        <span>
+                            Empleado de campo
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-actions">
+
+                    <button
+                        class="btn-primary"
+                        id="editarPerfil"
+                    >
+                        Editar perfil
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMACIÓN PERSONAL -->
+
+            <div class="information-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Información personal
+                        </h2>
+
+                        <p>
+                            Datos registrados en el sistema.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form id="perfilForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>
+                                Nombre completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nombre"
+                                value="José Fernando Vega"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Documento
+                            </label>
+
+                            <input
+                                type="text"
+                                id="documento"
+                                value="1000000000"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Correo electrónico
+                            </label>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                value="jose.vega@sgsp.com"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Teléfono
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                value="300 000 0000"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Cargo
+                            </label>
+
+                            <input
+                                type="text"
+                                value="Empleado de campo"
+                                disabled
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Rol
+                            </label>
+
+                            <input
+                                type="text"
+                                value="Empleado"
+                                disabled
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="form-actions"
+                        id="formActions"
+                    >
+
+                        <button
+                            type="button"
+                            class="btn-secondary"
+                            id="cancelarEdicion"
+                        >
+                            Cancelar
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="btn-primary"
+                        >
+                            Guardar cambios
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- SEGURIDAD -->
+
+            <div class="security-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Seguridad
+                        </h2>
+
+                        <p>
+                            Administra las opciones de seguridad de tu cuenta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="security-option">
+
+                    <div class="security-info">
+
+                        <div class="security-icon">
+                            🔒
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Contraseña
+                            </strong>
+
+                            <span>
+                                Cambia tu contraseña de acceso.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        class="btn-outline"
+                        id="cambiarPassword"
+                    >
+                        Cambiar contraseña
+                    </button>
+
+                </div>
+
+
+                <div class="security-option">
+
+                    <div class="security-info">
+
+                        <div class="security-icon">
+                            🔔
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Notificaciones
+                            </strong>
+
+                            <span>
+                                Recibe avisos sobre tus tareas y proyectos.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="notificaciones"
+                            checked
+                        >
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- MODAL CONTRASEÑA -->
+
+<div
+    class="modal-overlay"
+    id="passwordModal"
+>
+
+    <div class="modal">
+
+        <div class="modal-header">
+
+            <h3>
+                Cambiar contraseña
+            </h3>
+
+            <button
+                class="modal-close"
+                id="cerrarModal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="passwordForm">
+
+            <div class="form-group">
+
+                <label>
+                    Contraseña actual
+                </label>
+
+                <input
+                    type="password"
+                    id="passwordActual"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Nueva contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="passwordNueva"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Confirmar contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="passwordConfirmar"
+                    required
+                >
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="btn-secondary"
+                    id="cancelarPassword"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn-primary"
+                >
+                    Actualizar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="assets/js/perfil-empleado.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP - Reportes del Supervisor</title>
+
+    <!-- FUENTE -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS GENERAL -->
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
+    <!-- CSS DEL SUPERVISOR -->
+    <link
+        rel="stylesheet"
+        href="assets/css/supervisor.css">
+
+    <!-- CSS DEL MÓDULO -->
+    <link
+        rel="stylesheet"
+        href="assets/css/reportes-supervisor.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CONTENEDOR
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="assets/img/logo.pnj.jpeg"
+                    alt="SGSP"
+                    class="sgsp-logo">
+
+            </div>
+
+
+
+            <!-- MENÚ -->
+
+            <nav class="sidebar-menu">
+
+
+                <!-- PRINCIPAL -->
+
+                <div class="menu-section-title">
+                    PRINCIPAL
+                </div>
+
+
+                <a
+                    href="dashboard-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+
+                <!-- GESTIÓN -->
+
+                <div class="menu-section-title">
+                    GESTIÓN
+                </div>
+
+
+                <a
+                    href="proyectos-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Proyectos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="materiales-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📦
+                    </span>
+
+                    <span>
+                        Materiales
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="tareas-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        ✅
+                    </span>
+
+                    <span>
+                        Tareas
+                    </span>
+
+                </a>
+
+
+
+                <!-- SEGUIMIENTO -->
+
+                <div class="menu-section-title">
+                    SEGUIMIENTO
+                </div>
+
+
+                <a
+                    href="incidencias-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        ⚠️
+                    </span>
+
+                    <span>
+                        Incidencias
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="avances-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📈
+                    </span>
+
+                    <span>
+                        Avance de proyectos
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="reportes-supervisor.html"
+                    class="menu-item active">
+
+                    <span class="menu-icon">
+                        📊
+                    </span>
+
+                    <span>
+                        Reportes
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="gantt-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        🗓️
+                    </span>
+
+                    <span>
+                        Diagrama de Gantt
+                    </span>
+
+                </a>
+
+
+
+                <!-- OTROS -->
+
+                <div class="menu-section-title">
+                    OTROS
+                </div>
+
+
+                <a
+                    href="configuracion-supervisor.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        ⚙️
+                    </span>
+
+                    <span>
+                        Configuración
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-footer">
+
+                <a
+                    href="index.html"
+                    class="logout-btn">
+
+                    <span class="logout-icon">
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             CONTENIDO
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- HEADER -->
+
+            <header class="main-header">
+
+
+                <div class="header-title">
+
+                    <h1>
+                        Reportes
+                    </h1>
+
+                    <p>
+                        Consulta y genera reportes de los proyectos asignados
+                    </p>
+
+                </div>
+
+
+
+                <div class="header-actions">
+
+                    <button
+                        type="button"
+                        class="notification-btn"
+                        title="Notificaciones">
+
+                        🔔
+
+                    </button>
+
+
+                    <div class="header-user">
+
+                        <div class="header-avatar">
+                            S
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Supervisor
+                            </strong>
+
+                            <span>
+                                Supervisor de Obra
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 CONTENIDO DE REPORTES
+            ================================================== -->
+
+            <section class="reports-content">
+
+
+                <!-- FILTROS -->
+
+                <div class="reports-toolbar">
+
+
+                    <div class="report-filter">
+
+                        <label for="reportType">
+                            Tipo de reporte
+                        </label>
+
+                        <select id="reportType">
+
+                            <option value="proyectos">
+                                Proyectos
+                            </option>
+
+                            <option value="tareas">
+                                Tareas
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="report-filter">
+
+                        <label for="reportProject">
+                            Proyecto
+                        </label>
+
+                        <select id="reportProject">
+
+                            <option value="all">
+                                Todos los proyectos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="report-filter">
+
+                        <label for="reportPeriod">
+                            Periodo
+                        </label>
+
+                        <select id="reportPeriod">
+
+                            <option value="all">
+                                Todo el periodo
+                            </option>
+
+                            <option value="month">
+                                Este mes
+                            </option>
+
+                            <option value="quarter">
+                                Este trimestre
+                            </option>
+
+                            <option value="year">
+                                Este año
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <button
+                        type="button"
+                        id="generateReportBtn"
+                        class="generate-report-btn">
+
+                        📊
+                        Generar reporte
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RESUMEN
+                ================================================== -->
+
+                <section class="report-summary">
+
+
+                    <div class="section-title">
+
+                        <div>
+
+                            <h2>
+                                Resumen del supervisor
+                            </h2>
+
+                            <p>
+                                Información de los proyectos bajo tu supervisión
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="summary-grid">
+
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon projects">
+                                📁
+                            </div>
+
+                            <div class="summary-info">
+
+                                <span>
+                                    Proyectos
+                                </span>
+
+                                <strong id="totalProjects">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon tasks">
+                                ✓
+                            </div>
+
+                            <div class="summary-info">
+
+                                <span>
+                                    Tareas
+                                </span>
+
+                                <strong id="totalTasks">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon progress">
+                                📈
+                            </div>
+
+                            <div class="summary-info">
+
+                                <span>
+                                    Avance promedio
+                                </span>
+
+                                <strong id="averageProgress">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon incidents">
+                                ⚠️
+                            </div>
+
+                            <div class="summary-info">
+
+                                <span>
+                                    Retrasados
+                                </span>
+
+                                <strong id="delayedProjects">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     REPORTE
+                ================================================== -->
+
+                <section class="report-card">
+
+
+                    <div class="report-card-header">
+
+
+                        <div>
+
+                            <h2 id="reportTitle">
+                                Reporte de proyectos
+                            </h2>
+
+                            <p id="reportDescription">
+                                Resumen del estado actual de los proyectos asignados
+                            </p>
+
+                        </div>
+
+
+
+                        <button
+                            type="button"
+                            id="exportReportBtn"
+                            class="export-report-btn">
+
+                            📥
+                            Exportar a Excel
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- TABLA -->
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead id="reportTableHead">
+
+                                <tr>
+
+                                    <th>
+                                        Proyecto
+                                    </th>
+
+                                    <th>
+                                        Tipo
+                                    </th>
+
+                                    <th>
+                                        Estado
+                                    </th>
+
+                                    <th>
+                                        Avance
+                                    </th>
+
+                                    <th>
+                                        Responsable
+                                    </th>
+
+                                    <th>
+                                        Fecha final
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="reportTableBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- MENSAJE -->
+
+                    <div
+                        class="report-message"
+                        id="reportMessage">
+
+                        Reporte actualizado correctamente.
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         LIBRERÍA SHEETJS
+    ====================================================== -->
+
+    <script
+        src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js">
+    </script>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+        src="assets/js/reportes-supervisor.js">
+    </script>
+
+
+</body>
+
+</html>

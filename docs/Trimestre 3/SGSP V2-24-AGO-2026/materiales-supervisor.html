@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Materiales | Supervisor - SGSP</title>
+
+    <!-- CSS GENERAL DEL SUPERVISOR -->
+    <link rel="stylesheet" href="assets/css/supervisor.css">
+
+    <!-- CSS DE ESTA PÁGINA -->
+    <link rel="stylesheet" href="assets/css/materiales-supervisor.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+        <div class="sidebar-logo">
+            <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+        </div>
+
+
+        <!-- MENÚ -->
+        <nav class="sidebar-menu">
+
+            <!-- PRINCIPAL -->
+            <div class="menu-section">
+
+                <span class="menu-title">
+                    PRINCIPAL
+                </span>
+
+                <a href="dashboard-supervisor.html" class="menu-item">
+                    <span class="menu-icon">🏠</span>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <!-- GESTIÓN -->
+            <div class="menu-section">
+
+                <span class="menu-title">
+                    GESTIÓN
+                </span>
+
+                <a href="proyectos-supervisor.html" class="menu-item">
+                    <span class="menu-icon">📁</span>
+                    <span>Proyectos</span>
+                </a>
+
+                <a href="materiales-supervisor.html" class="menu-item active">
+                    <span class="menu-icon">📦</span>
+                    <span>Materiales</span>
+                </a>
+
+                <a href="tareas-supervisor.html" class="menu-item">
+                    <span class="menu-icon">✅</span>
+                    <span>Tareas</span>
+                </a>
+
+            </div>
+
+
+            <!-- SEGUIMIENTO -->
+            <div class="menu-section">
+
+                <span class="menu-title">
+                    SEGUIMIENTO
+                </span>
+
+                <a href="incidencias-supervisor.html" class="menu-item">
+                    <span class="menu-icon">⚠️</span>
+                    <span>Incidencias</span>
+                </a>
+
+                <a href="avance-supervisor.html" class="menu-item">
+                    <span class="menu-icon">📈</span>
+                    <span>Avance de proyectos</span>
+                </a>
+
+            </div>
+
+
+            <!-- INFORMACIÓN -->
+            <div class="menu-section">
+
+                <span class="menu-title">
+                    INFORMACIÓN
+                </span>
+
+                <a href="reportes-supervisor.html" class="menu-item">
+                    <span class="menu-icon">📊</span>
+                    <span>Reportes</span>
+                </a>
+
+                <a href="gantt-supervisor.html" class="menu-item">
+                    <span class="menu-icon">🗓️</span>
+                    <span>Diagrama de Gantt</span>
+                </a>
+
+            </div>
+
+
+            <!-- OTROS -->
+            <div class="menu-section">
+
+                <span class="menu-title">
+                    OTROS
+                </span>
+
+                <a href="configuracion-supervisor.html" class="menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span>Configuración</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- CERRAR SESIÓN -->
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="menu-item logout">
+                <span class="menu-icon">🚪</span>
+                <span>Cerrar sesión</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             ENCABEZADO
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <h1>Materiales</h1>
+
+                <p>
+                    Consulta y controla los materiales de tus proyectos
+                </p>
+
+            </div>
+
+
+            <!-- PERFIL -->
+            <div class="topbar-right">
+
+                <button class="notification-button" type="button">
+                    🔔
+                </button>
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        S
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>
+                            Supervisor
+                        </strong>
+
+                        <span>
+                            Supervisor de Obra
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             TARJETAS DE RESUMEN
+        ================================================== -->
+
+        <section class="materials-summary">
+
+
+            <!-- TOTAL -->
+            <div class="summary-card">
+
+                <div class="summary-icon blue">
+                    📦
+                </div>
+
+                <div class="summary-info">
+
+                    <span>
+                        Total de materiales
+                    </span>
+
+                    <strong>
+                        156
+                    </strong>
+
+                    <small>
+                        Inventario registrado
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISPONIBLES -->
+            <div class="summary-card">
+
+                <div class="summary-icon green">
+                    ✅
+                </div>
+
+                <div class="summary-info">
+
+                    <span>
+                        Disponibles
+                    </span>
+
+                    <strong>
+                        128
+                    </strong>
+
+                    <small>
+                        Stock suficiente
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- STOCK BAJO -->
+            <div class="summary-card">
+
+                <div class="summary-icon orange">
+                    ⚠️
+                </div>
+
+                <div class="summary-info">
+
+                    <span>
+                        Stock bajo
+                    </span>
+
+                    <strong>
+                        18
+                    </strong>
+
+                    <small>
+                        Requieren atención
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- AGOTADOS -->
+            <div class="summary-card">
+
+                <div class="summary-icon purple">
+                    🚫
+                </div>
+
+                <div class="summary-info">
+
+                    <span>
+                        Agotados
+                    </span>
+
+                    <strong>
+                        10
+                    </strong>
+
+                    <small>
+                        Sin existencias
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INVENTARIO
+        ================================================== -->
+
+        <section class="materials-section">
+
+
+            <!-- CABECERA -->
+            <div class="section-header">
+
+                <div>
+
+                    <h2>
+                        Inventario de materiales
+                    </h2>
+
+                    <p>
+                        Materiales disponibles para los proyectos bajo tu supervisión
+                    </p>
+
+                </div>
+
+
+                <!-- BUSCADOR -->
+                <div class="search-box">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="materialSearch"
+                        placeholder="Buscar material..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FILTROS
+            ================================================== -->
+
+            <div class="filter-container">
+
+                <button
+                    type="button"
+                    class="filter-button active"
+                    data-filter="todos">
+
+                    Todos
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-filter="disponible">
+
+                    Disponibles
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-filter="bajo">
+
+                    Stock bajo
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-button"
+                    data-filter="agotado">
+
+                    Agotados
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 TABLA
+            ================================================== -->
+
+            <div class="materials-table-container">
+
+                <table class="materials-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Material
+                            </th>
+
+                            <th>
+                                Proyecto
+                            </th>
+
+                            <th>
+                                Disponible
+                            </th>
+
+                            <th>
+                                Mínimo
+                            </th>
+
+                            <th>
+                                Estado
+                            </th>
+
+                            <th>
+                                Acción
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- MATERIAL 1 -->
+                        <tr
+                            class="material-row"
+                            data-name="Cemento gris"
+                            data-status="disponible"
+                        >
+
+                            <td>
+
+                                <div class="material-name">
+
+                                    <div class="material-icon">
+                                        🧱
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Cemento gris
+                                        </strong>
+
+                                        <span>
+                                            Bulto 50 kg
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Proyecto Villa Esperanza
+                            </td>
+
+
+                            <td>
+                                <strong>85</strong>
+                            </td>
+
+
+                            <td>
+                                30
+                            </td>
+
+
+                            <td>
+
+                                <span class="status available">
+                                    Disponible
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-material"
+                                    type="button"
+                                    data-material="Cemento gris"
+                                >
+                                    Ver detalle
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- MATERIAL 2 -->
+                        <tr
+                            class="material-row"
+                            data-name="Varilla de acero"
+                            data-status="bajo"
+                        >
+
+                            <td>
+
+                                <div class="material-name">
+
+                                    <div class="material-icon">
+                                        🔩
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Varilla de acero
+                                        </strong>
+
+                                        <span>
+                                            3/8 pulgadas
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Edificio San José
+                            </td>
+
+
+                            <td>
+                                <strong>18</strong>
+                            </td>
+
+
+                            <td>
+                                25
+                            </td>
+
+
+                            <td>
+
+                                <span class="status low">
+                                    Stock bajo
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-material"
+                                    type="button"
+                                    data-material="Varilla de acero"
+                                >
+                                    Ver detalle
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- MATERIAL 3 -->
+                        <tr
+                            class="material-row"
+                            data-name="Arena"
+                            data-status="agotado"
+                        >
+
+                            <td>
+
+                                <div class="material-name">
+
+                                    <div class="material-icon">
+                                        🏖️
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Arena
+                                        </strong>
+
+                                        <span>
+                                            Metro cúbico
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Proyecto Los Pinos
+                            </td>
+
+
+                            <td>
+                                <strong>0</strong>
+                            </td>
+
+
+                            <td>
+                                20
+                            </td>
+
+
+                            <td>
+
+                                <span class="status empty">
+                                    Agotado
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-material"
+                                    type="button"
+                                    data-material="Arena"
+                                >
+                                    Ver detalle
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- MATERIAL 4 -->
+                        <tr
+                            class="material-row"
+                            data-name="Ladrillo"
+                            data-status="disponible"
+                        >
+
+                            <td>
+
+                                <div class="material-name">
+
+                                    <div class="material-icon">
+                                        🧱
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Ladrillo
+                                        </strong>
+
+                                        <span>
+                                            Ladrillo común
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Urbanización El Lago
+                            </td>
+
+
+                            <td>
+                                <strong>450</strong>
+                            </td>
+
+
+                            <td>
+                                100
+                            </td>
+
+
+                            <td>
+
+                                <span class="status available">
+                                    Disponible
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-material"
+                                    type="button"
+                                    data-material="Ladrillo"
+                                >
+                                    Ver detalle
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- MATERIAL 5 -->
+                        <tr
+                            class="material-row"
+                            data-name="Grava"
+                            data-status="bajo"
+                        >
+
+                            <td>
+
+                                <div class="material-name">
+
+                                    <div class="material-icon">
+                                        🪨
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Grava
+                                        </strong>
+
+                                        <span>
+                                            Metro cúbico
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Proyecto Villa Esperanza
+                            </td>
+
+
+                            <td>
+                                <strong>12</strong>
+                            </td>
+
+
+                            <td>
+                                20
+                            </td>
+
+
+                            <td>
+
+                                <span class="status low">
+                                    Stock bajo
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-material"
+                                    type="button"
+                                    data-material="Grava"
+                                >
+                                    Ver detalle
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- MATERIAL 6 -->
+                        <tr
+                            class="material-row"
+                            data-name="Pintura blanca"
+                            data-status="disponible"
+                        >
+
+                            <td>
+
+                                <div class="material-name">
+
+                                    <div class="material-icon">
+                                        🎨
+                                    </div>
+
+                                    <div>
+
+                                        <strong>
+                                            Pintura blanca
+                                        </strong>
+
+                                        <span>
+                                            Galón
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+
+                            <td>
+                                Edificio San José
+                            </td>
+
+
+                            <td>
+                                <strong>35</strong>
+                            </td>
+
+
+                            <td>
+                                10
+                            </td>
+
+
+                            <td>
+
+                                <span class="status available">
+                                    Disponible
+                                </span>
+
+                            </td>
+
+
+                            <td>
+
+                                <button
+                                    class="view-material"
+                                    type="button"
+                                    data-material="Pintura blanca"
+                                >
+                                    Ver detalle
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MODAL DE MATERIAL
+        ================================================== -->
+
+        <div
+            class="material-modal"
+            id="materialModal"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    id="modalClose"
+                    aria-label="Cerrar"
+                >
+                    ×
+                </button>
+
+
+                <div class="modal-icon">
+                    📦
+                </div>
+
+
+                <h2 id="modalTitle">
+                    Material
+                </h2>
+
+
+                <div class="modal-details">
+
+                    <div>
+                        <span>Proyecto</span>
+                        <strong id="modalProject">
+                            -
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Disponible</span>
+                        <strong id="modalAvailable">
+                            -
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Stock mínimo</span>
+                        <strong id="modalMinimum">
+                            -
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Estado</span>
+                        <strong id="modalStatus">
+                            -
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="modal-button"
+                    id="modalAccept"
+                >
+                    Entendido
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="assets/js/materiales-supervisor.js"></script>
+
+</body>
+
+</html>
