@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGSP | Materiales Utilizados</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard-admin.css">
+    <link rel="stylesheet" href="assets/css/proyecto-materiales.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <!-- ==================================================
+             BARRA LATERAL
+        ================================================== -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+            </div>
+            
+            <nav class="sidebar-menu">
+                <p class="menu-title">PRINCIPAL</p>
+                <a href="dashboard-admin.html" class="menu-item"><span class="menu-icon">🏠</span><span>Dashboard</span></a>
+                
+                <p class="menu-title">GESTIÓN</p>
+                <a href="proyectos.html" class="menu-item active"><span class="menu-icon">📁</span><span>Proyectos</span></a>
+                <a href="empleados.html" class="menu-item"><span class="menu-icon">👥</span><span>Empleados</span></a>
+                <a href="tareas.html" class="menu-item"><span class="menu-icon">✅</span><span>Tareas</span></a>
+                <a href="materiales.html" class="menu-item"><span class="menu-icon">📦</span><span>Materiales</span></a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="logout-button"><span>🚪</span>Cerrar sesión</a>
+            </div>
+        </aside>
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+        <main class="main-content mat-bg">
+
+            <!-- CABECERA SUPERIOR -->
+            <div class="mat-header-bar">
+                <div class="mat-title">
+                    <span class="menu-icon-top">📦</span>
+                    <h2>MATERIALES UTILIZADOS EN OBRA</h2>
+                </div>
+            </div>
+
+            <!-- TARJETA DE CONTENIDO -->
+            <div class="mat-card">
+                <div class="mat-card-top">
+                    <div class="mat-actions">
+                        <button class="btn-add-mat" id="btnAddMat">+ Agregar material</button>
+                        <a href="proyecto-detalle.html" class="btn-back">Volver al resumen</a>
+                    </div>
+                    <div class="mat-stats">
+                        <span id="matCount">3 Registros de uso</span>
+                    </div>
+                </div>
+
+                <!-- TABLA SIMPLIFICADA -->
+                <div class="table-container">
+                    <table class="mat-table" id="matTable">
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>Cantidad Utilizada</th>
+                                <th>Unidad</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="mat-name-col">
+                                        <div class="mat-icon">🧱</div>
+                                        <strong>Cemento</strong>
+                                    </div>
+                                </td>
+                                <td><strong class="text-normal">10</strong></td>
+                                <td>Bultos</td>
+                                <td><button class="btn-delete" title="Eliminar registro">🗑</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="mat-name-col">
+                                        <div class="mat-icon">🎨</div>
+                                        <strong>Pintura blanca</strong>
+                                    </div>
+                                </td>
+                                <td><strong class="text-normal">2</strong></td>
+                                <td>Galones</td>
+                                <td><button class="btn-delete" title="Eliminar registro">🗑</button></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="mat-name-col">
+                                        <div class="mat-icon">⚡</div>
+                                        <strong>Cable eléctrico</strong>
+                                    </div>
+                                </td>
+                                <td><strong class="text-normal">5</strong></td>
+                                <td>Rollos</td>
+                                <td><button class="btn-delete" title="Eliminar registro">🗑</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- ==================================================
+         MODAL AGREGAR CANTIDAD DE MATERIAL
+    ================================================== -->
+    <div class="modal" id="modalMat">
+        <div class="modal-content custom-modal-box">
+            
+            <div class="modal-top-banner">
+                <h3>Agregar material</h3>
+            </div>
+
+            <button type="button" class="close-modal-x" id="closeModalMat">×</button>
+            
+            <form id="formMat" class="modal-form-body">
+                
+                <div class="form-row-custom">
+                    <div class="form-group-custom">
+                        <label>TIPO MATERIAL</label>
+                        <input type="text" id="useMatName" required placeholder="Ej. Tomacorriente Duplex">
+                    </div>
+                    
+                    <div class="form-group-custom">
+                        <label>CANTIDAD</label>
+                        <input type="number" id="useMatQty" min="1" value="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group-custom full-width" style="margin-top: 15px;">
+                    <label>UNIDAD DE MEDIDA</label>
+                    <select id="useMatUnit" required>
+                        <option value="">Seleccione una unidad...</option>
+                        <option value="Unidades">Unidades</option>
+                        <option value="Bultos">Bultos</option>
+                        <option value="Galones">Galones</option>
+                        <option value="Rollos">Rollos</option>
+                        <option value="Metros">Metros</option>
+                        <option value="Kilos">Kilos</option>
+                    </select>
+                </div>
+                
+                <div class="modal-footer-custom">
+                    <button type="submit" class="btn-finalize">FINALIZAR</button>
+                    <p class="modal-note">Confirme la operación para actualizar el inventario de obra.</p>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/proyecto-materiales.js"></script>
+</body>
+</html>

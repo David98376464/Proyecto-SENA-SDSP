@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Materiales</title>
+
+
+    <!-- Google Fonts -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- CSS GLOBAL -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
+
+    <!-- CSS DASHBOARD -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/dashboard-admin.css">
+
+
+    <!-- CSS MATERIALES -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/materiales.css">
+
+</head>
+
+
+<body>
+
+
+    <main class="dashboard-container">
+
+
+        <!-- ==================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-logo">
+
+                <img
+                    src="assets/img/logo.pnj.jpeg"
+                    alt="Logo SGSP">
+
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <nav class="sidebar-menu">
+
+
+                <!-- DASHBOARD -->
+
+                <a
+                    href="dashboard-admin.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        🏠
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- GESTIÓN -->
+
+                <span class="menu-title">
+                    GESTIÓN
+                </span>
+
+
+                <!-- PROYECTOS -->
+
+                <a
+                    href="proyectos.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📁
+                    </span>
+
+                    <span>
+                        Proyectos
+                    </span>
+
+                </a>
+
+
+                <!-- EMPLEADOS -->
+
+                <a
+                    href="empleados.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        👥
+                    </span>
+
+                    <span>
+                        Empleados
+                    </span>
+
+                </a>
+
+
+                <!-- TAREAS -->
+
+                <a
+                    href="tareas.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        ✅
+                    </span>
+
+                    <span>
+                        Tareas
+                    </span>
+
+                </a>
+
+
+                <!-- MATERIALES -->
+
+                <a
+                    href="materiales.html"
+                    class="menu-item active">
+
+                    <span class="menu-icon">
+                        📦
+                    </span>
+
+                    <span>
+                        Materiales
+                    </span>
+
+                </a>
+
+
+                <!-- SISTEMA -->
+
+                <span class="menu-title">
+                    SISTEMA
+                </span>
+
+
+                <!-- REPORTES -->
+
+                <a
+                    href="reportes.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        📊
+                    </span>
+
+                    <span>
+                        Reportes
+                    </span>
+
+                </a>
+
+
+                <!-- CONFIGURACIÓN -->
+
+                <a
+                    href="configuracion.html"
+                    class="menu-item">
+
+                    <span class="menu-icon">
+                        ⚙️
+                    </span>
+
+                    <span>
+                        Configuración
+                    </span>
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- CERRAR SESIÓN -->
+
+            <div class="sidebar-bottom">
+
+                <button
+                    type="button"
+                    id="logoutBtn"
+                    class="logout-button">
+
+                    <span>
+                        🚪
+                    </span>
+
+                    <span>
+                        Cerrar sesión
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </aside>
+
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <section class="main-content">
+
+
+            <!-- ==================================================
+                 HEADER
+            ================================================== -->
+
+            <header class="dashboard-header">
+
+
+                <div>
+
+                    <h1>
+                        Materiales
+                    </h1>
+
+                    <p>
+                        Gestiona los materiales utilizados en los proyectos.
+                    </p>
+
+                </div>
+
+
+                <!-- USUARIO -->
+
+                <div class="header-actions">
+
+
+                    <div class="header-user">
+
+
+                        <div class="header-avatar">
+                            A
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Administrador
+                            </strong>
+
+                            <span>
+                                Administrador
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+            <!-- ==================================================
+                 CONTENIDO DE MATERIALES
+            ================================================== -->
+
+            <div class="materials-content">
+
+
+                <!-- ==================================================
+                     BARRA DE HERRAMIENTAS
+                ================================================== -->
+
+                <div class="materials-toolbar">
+
+
+                    <!-- BUSCADOR -->
+
+                    <div class="material-search">
+
+                        <span>
+                            🔎
+                        </span>
+
+                        <input
+                            type="text"
+                            id="searchMaterial"
+                            placeholder="Buscar material...">
+
+                    </div>
+
+
+                    <!-- FILTRO ESTADO -->
+
+                    <select
+                        id="filterMaterialStatus">
+
+                        <option value="all">
+                            Todos los estados
+                        </option>
+
+                        <option value="Disponible">
+                            Disponibles
+                        </option>
+
+                        <option value="Bajo stock">
+                            Bajo stock
+                        </option>
+
+                        <option value="Agotado">
+                            Agotados
+                        </option>
+
+                    </select>
+
+
+                    <!-- FILTRO PROYECTO -->
+
+                    <select
+                        id="filterMaterialProject">
+
+                        <option value="all">
+                            Todos los proyectos
+                        </option>
+
+                        <option value="Proyecto Alfa">
+                            Proyecto Alfa
+                        </option>
+
+                        <option value="Proyecto Beta">
+                            Proyecto Beta
+                        </option>
+
+                        <option value="Proyecto Gamma">
+                            Proyecto Gamma
+                        </option>
+
+                        <option value="Proyecto Delta">
+                            Proyecto Delta
+                        </option>
+
+                    </select>
+
+
+                    <!-- NUEVO MATERIAL -->
+
+                    <button
+                        type="button"
+                        id="newMaterialBtn"
+                        class="new-material-btn">
+
+                        ➕
+
+                        Nuevo material
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- ==================================================
+                     TARJETA
+                ================================================== -->
+
+                <div class="materials-card">
+
+
+                    <!-- ENCABEZADO -->
+
+                    <div class="materials-card-header">
+
+
+                        <div>
+
+                            <h2>
+                                Lista de materiales
+                            </h2>
+
+                            <p id="materialCount">
+                                6 materiales
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- ==================================================
+                         TABLA
+                    ================================================== -->
+
+                    <div class="table-container">
+
+
+                        <table>
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Material
+                                    </th>
+
+                                    <th>
+                                        Categoría
+                                    </th>
+
+                                    <th>
+                                        Proyecto
+                                    </th>
+
+                                    <th>
+                                        Cantidad
+                                    </th>
+
+                                    <th>
+                                        Unidad
+                                    </th>
+
+                                    <th>
+                                        Estado
+                                    </th>
+
+                                    <th>
+                                        Acciones
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="materialsBody">
+
+
+                                <!-- ==================================================
+                                     MATERIAL 1
+                                ================================================== -->
+
+                                <tr>
+
+
+                                    <td>
+
+                                        <div class="material-info">
+
+
+                                            <div class="material-icon">
+                                                🧱
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong>
+                                                    Cemento
+                                                </strong>
+
+                                                <span>
+                                                    Cemento para construcción
+                                                </span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Construcción
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Alfa
+                                    </td>
+
+
+                                    <td>
+                                        50
+                                    </td>
+
+
+                                    <td>
+                                        Bultos
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="material-status available">
+                                            Disponible
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="material-actions">
+
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+
+                                                👁
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+
+                                                ✎
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+
+                                                🗑
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     MATERIAL 2
+                                ================================================== -->
+
+                                <tr>
+
+
+                                    <td>
+
+                                        <div class="material-info">
+
+
+                                            <div class="material-icon">
+                                                🔩
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong>
+                                                    Tornillos
+                                                </strong>
+
+                                                <span>
+                                                    Tornillos metálicos
+                                                </span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Ferretería
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Beta
+                                    </td>
+
+
+                                    <td>
+                                        120
+                                    </td>
+
+
+                                    <td>
+                                        Unidades
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="material-status available">
+                                            Disponible
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="material-actions">
+
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+
+                                                👁
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+
+                                                ✎
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+
+                                                🗑
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     MATERIAL 3
+                                ================================================== -->
+
+                                <tr>
+
+
+                                    <td>
+
+                                        <div class="material-info">
+
+
+                                            <div class="material-icon">
+                                                🎨
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong>
+                                                    Pintura blanca
+                                                </strong>
+
+                                                <span>
+                                                    Pintura para interiores
+                                                </span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Acabados
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Gamma
+                                    </td>
+
+
+                                    <td>
+                                        8
+                                    </td>
+
+
+                                    <td>
+                                        Galones
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="material-status low">
+                                            Bajo stock
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="material-actions">
+
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+
+                                                👁
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+
+                                                ✎
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+
+                                                🗑
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     MATERIAL 4
+                                ================================================== -->
+
+                                <tr>
+
+
+                                    <td>
+
+                                        <div class="material-info">
+
+
+                                            <div class="material-icon">
+                                                🪵
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong>
+                                                    Madera
+                                                </strong>
+
+                                                <span>
+                                                    Tablas de madera
+                                                </span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Carpintería
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Delta
+                                    </td>
+
+
+                                    <td>
+                                        35
+                                    </td>
+
+
+                                    <td>
+                                        Unidades
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="material-status available">
+                                            Disponible
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="material-actions">
+
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+
+                                                👁
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+
+                                                ✎
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+
+                                                🗑
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     MATERIAL 5
+                                ================================================== -->
+
+                                <tr>
+
+
+                                    <td>
+
+                                        <div class="material-info">
+
+
+                                            <div class="material-icon">
+                                                ⚡
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong>
+                                                    Cable eléctrico
+                                                </strong>
+
+                                                <span>
+                                                    Cable para instalaciones eléctricas
+                                                </span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Electricidad
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Alfa
+                                    </td>
+
+
+                                    <td>
+                                        15
+                                    </td>
+
+
+                                    <td>
+                                        Rollos
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="material-status low">
+                                            Bajo stock
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="material-actions">
+
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+
+                                                👁
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+
+                                                ✎
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+
+                                                🗑
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                                <!-- ==================================================
+                                     MATERIAL 6
+                                ================================================== -->
+
+                                <tr>
+
+
+                                    <td>
+
+                                        <div class="material-info">
+
+
+                                            <div class="material-icon">
+                                                🚰
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong>
+                                                    Tubería PVC
+                                                </strong>
+
+                                                <span>
+                                                    Tubería para instalaciones hidráulicas
+                                                </span>
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Plomería
+                                    </td>
+
+
+                                    <td>
+                                        Proyecto Beta
+                                    </td>
+
+
+                                    <td>
+                                        0
+                                    </td>
+
+
+                                    <td>
+                                        Unidades
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="material-status empty">
+                                            Agotado
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="material-actions">
+
+
+                                            <button
+                                                type="button"
+                                                title="Ver">
+
+                                                👁
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Editar">
+
+                                                ✎
+
+                                            </button>
+
+
+                                            <button
+                                                type="button"
+                                                title="Eliminar">
+
+                                                🗑
+
+                                            </button>
+
+
+                                        </div>
+
+                                    </td>
+
+
+                                </tr>
+
+
+                            </tbody>
+
+
+                        </table>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+    <!-- ==================================================
+     MODALES DE MATERIALES
+================================================== -->
+
+<!-- MODAL VER MATERIAL -->
+<div id="viewMaterialModal" class="material-modal">
+
+    <div class="material-modal-content">
+
+        <div class="material-modal-header">
+
+            <div>
+                <h2>Información del material</h2>
+                <p>Detalle del material seleccionado</p>
+            </div>
+
+            <button
+                type="button"
+                class="material-modal-close"
+                data-close-modal>
+                ×
+            </button>
+
+        </div>
+
+        <div class="material-detail">
+
+            <div class="material-detail-icon" id="viewMaterialIcon">
+                📦
+            </div>
+
+            <div>
+                <h3 id="viewMaterialName">Material</h3>
+                <p id="viewMaterialDescription">
+                    Descripción del material
+                </p>
+            </div>
+
+        </div>
+
+        <div class="material-detail-grid">
+
+            <div>
+                <span>Categoría</span>
+                <strong id="viewMaterialCategory">-</strong>
+            </div>
+
+            <div>
+                <span>Proyecto</span>
+                <strong id="viewMaterialProject">-</strong>
+            </div>
+
+            <div>
+                <span>Cantidad</span>
+                <strong id="viewMaterialQuantity">-</strong>
+            </div>
+
+            <div>
+                <span>Unidad</span>
+                <strong id="viewMaterialUnit">-</strong>
+            </div>
+
+            <div>
+                <span>Estado</span>
+                <strong id="viewMaterialStatus">-</strong>
+            </div>
+
+        </div>
+
+        <div class="material-modal-footer">
+
+            <button
+                type="button"
+                class="modal-secondary-btn"
+                data-close-modal>
+                Cerrar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==================================================
+     MODAL NUEVO / EDITAR
+================================================== -->
+
+<div id="materialFormModal" class="material-modal">
+
+    <div class="material-modal-content">
+
+        <div class="material-modal-header">
+
+            <div>
+                <h2 id="materialFormTitle">
+                    Nuevo material
+                </h2>
+
+                <p id="materialFormSubtitle">
+                    Registra un nuevo material para el proyecto.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                class="material-modal-close"
+                data-close-modal>
+                ×
+            </button>
+
+        </div>
+
+
+        <form id="materialForm">
+
+            <div class="material-form-grid">
+
+                <div class="material-form-group">
+
+                    <label for="materialName">
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        id="materialName"
+                        required
+                        placeholder="Ej. Cemento">
+
+                </div>
+
+
+                <div class="material-form-group">
+
+                    <label for="materialCategory">
+                        Categoría
+                    </label>
+
+                    <input
+                        type="text"
+                        id="materialCategory"
+                        required
+                        placeholder="Ej. Construcción">
+
+                </div>
+
+
+                <div class="material-form-group full">
+
+                    <label for="materialDescription">
+                        Descripción
+                    </label>
+
+                    <input
+                        type="text"
+                        id="materialDescription"
+                        required
+                        placeholder="Descripción del material">
+
+                </div>
+
+
+                <div class="material-form-group">
+
+                    <label for="materialProject">
+                        Proyecto
+                    </label>
+
+                    <select
+                        id="materialProject"
+                        required>
+
+                        <option value="">
+                            Selecciona un proyecto
+                        </option>
+
+                        <option value="Proyecto Alfa">
+                            Proyecto Alfa
+                        </option>
+
+                        <option value="Proyecto Beta">
+                            Proyecto Beta
+                        </option>
+
+                        <option value="Proyecto Gamma">
+                            Proyecto Gamma
+                        </option>
+
+                        <option value="Proyecto Delta">
+                            Proyecto Delta
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="material-form-group">
+
+                    <label for="materialQuantity">
+                        Cantidad
+                    </label>
+
+                    <input
+                        type="number"
+                        id="materialQuantity"
+                        min="0"
+                        required
+                        placeholder="0">
+
+                </div>
+
+
+                <div class="material-form-group">
+
+                    <label for="materialUnit">
+                        Unidad
+                    </label>
+
+                    <input
+                        type="text"
+                        id="materialUnit"
+                        required
+                        placeholder="Ej. Bultos">
+
+                </div>
+
+
+                <div class="material-form-group">
+
+                    <label for="materialStatus">
+                        Estado
+                    </label>
+
+                    <select
+                        id="materialStatus"
+                        required>
+
+                        <option value="Disponible">
+                            Disponible
+                        </option>
+
+                        <option value="Bajo stock">
+                            Bajo stock
+                        </option>
+
+                        <option value="Agotado">
+                            Agotado
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="material-modal-footer">
+
+                <button
+                    type="button"
+                    class="modal-secondary-btn"
+                    data-close-modal>
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="modal-primary-btn"
+                    id="saveMaterialBtn">
+                    Crear material
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script src="assets/js/materiales.js"></script>
+
+
+</body>
+
+</html>

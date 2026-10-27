@@ -1,0 +1,249 @@
+/* =========================================
+   ESTILOS ESPECÍFICOS: DETALLE DE PROYECTO
+========================================= */
+.detail-bg {
+    background-color: #f4f6f9;
+    padding: 0; /* Quitamos el padding por defecto para que el header ocupe todo el ancho */
+}
+
+/* Cabecera Naranja */
+.project-top-header {
+    background-color: #f39c12; /* Color naranja de la imagen */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.project-title-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-toggle-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.project-title-area h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.project-id {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.project-status-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.status-select {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Pestañas (Tabs) */
+.project-tabs {
+    display: flex;
+    background-color: white;
+    border-bottom: 2px solid #ddd;
+    padding: 0 30px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #0073a8; /* Azul de la pestaña activa */
+    color: white;
+    border-bottom: 3px solid #005580;
+}
+
+.tab-content {
+    display: none;
+    padding: 30px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Grid Layout */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.mt-20 { margin-top: 20px; }
+.h-100 { height: 100%; display: flex; flex-direction: column; }
+.d-flex-col { display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+
+/* Tarjetas (Cards) */
+.detail-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-header-gray {
+    background-color: #707a8a; /* Gris azulado de la imagen */
+    color: white;
+    padding: 12px 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Fechas y Textos */
+.date-row, .contact-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: #333;
+}
+
+.contact-row {
+    justify-content: flex-start;
+    gap: 15px;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.line-below { border-bottom: 1px solid #eee; margin-bottom: 15px; padding-bottom: 15px; }
+.line-above { border-top: 1px solid #eee; margin-top: 15px; padding-top: 15px; }
+
+/* Barra de progreso */
+.progress-section { margin-top: 10px; }
+.progress-bar-container {
+    width: 100%;
+    height: 25px;
+    background-color: #e9ecef;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.progress-fill {
+    height: 100%;
+    background-color: #005b8f; /* Azul oscuro */
+}
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+}
+.text-blue { color: #005b8f; }
+.text-gray { color: #777; }
+
+/* Perfil Persona */
+.person-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.person-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #0073a8;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.person-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.person-info { display: flex; flex-direction: column; }
+.person-info .role { font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; }
+.person-info strong { font-size: 1.1rem; color: #333; }
+
+/* Lista de Incidencias */
+.incidence-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.incidence-list li {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+.incidence-date {
+    width: 100px;
+    font-weight: 500;
+    color: #0073a8;
+}
+
+/* Botón Naranja Grande */
+.button-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+.btn-register-incidence {
+    background-color: #f39c12;
+    color: black;
+    font-weight: 700;
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 15px 20px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0px black; /* Efecto de sombra dura de la imagen */
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.btn-register-incidence:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px black;
+}
+.btn-icon {
+    background-color: white;
+    color: black;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* Responsive básico */
+@media (max-width: 900px) {
+    .detail-grid { grid-template-columns: 1fr; }
+}

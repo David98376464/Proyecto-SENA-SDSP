@@ -1,0 +1,871 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP - Supervisor de Obra</title>
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS DEL SUPERVISOR -->
+    <link rel="stylesheet" href="assets/css/supervisor.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <!-- LOGO -->
+        <div class="sidebar-logo">
+
+            <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+
+        </div>
+
+
+        <!-- MENÚ -->
+        <nav class="sidebar-menu">
+
+            <!-- PRINCIPAL -->
+            <div class="menu-section">
+
+                <p class="menu-title">PRINCIPAL</p>
+
+                <a href="#" class="menu-item active">
+                    <span class="menu-icon">🏠</span>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <!-- GESTIÓN -->
+            <div class="menu-section">
+
+                <p class="menu-title">GESTIÓN</p>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">📁</span>
+                    <span>Proyectos</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">📦</span>
+                    <span>Materiales</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">✅</span>
+                    <span>Tareas</span>
+                </a>
+
+            </div>
+
+
+            <!-- SEGUIMIENTO -->
+            <div class="menu-section">
+
+                <p class="menu-title">SEGUIMIENTO</p>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">⚠️</span>
+                    <span>Incidencias</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">📈</span>
+                    <span>Avance de proyectos</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">📊</span>
+                    <span>Reportes</span>
+                </a>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">🗓️</span>
+                    <span>Diagrama de Gantt</span>
+                </a>
+
+            </div>
+
+
+            <!-- OTROS -->
+            <div class="menu-section">
+
+                <p class="menu-title">OTROS</p>
+
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span>Configuración</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- CERRAR SESIÓN -->
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="menu-item logout">
+                <span class="menu-icon">🚪</span>
+                <span>Cerrar sesión</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             ENCABEZADO
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="page-title">
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Bienvenido al Sistema de Gestión y Seguimiento de Proyectos
+                </p>
+
+            </div>
+
+
+            <!-- INFORMACIÓN DEL SUPERVISOR -->
+
+            <div class="topbar-right">
+
+                <!-- NOTIFICACIONES -->
+
+                <button class="notification-button" title="Notificaciones">
+                    🔔
+                </button>
+
+
+                <!-- USUARIO -->
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">
+                        S
+                    </div>
+
+                    <div class="user-data">
+
+                        <strong>Supervisor</strong>
+
+                        <span>
+                            Supervisor de Obra
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             TARJETAS PRINCIPALES
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <!-- PROYECTOS -->
+
+            <article class="stat-card">
+
+                <div class="stat-icon blue">
+                    📁
+                </div>
+
+                <div class="stat-info">
+
+                    <span class="stat-title">
+                        Proyectos asignados
+                    </span>
+
+                    <strong class="stat-number">
+                        4
+                    </strong>
+
+                    <small class="stat-description">
+                        Proyectos bajo supervisión
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TAREAS -->
+
+            <article class="stat-card">
+
+                <div class="stat-icon green">
+                    ✅
+                </div>
+
+                <div class="stat-info">
+
+                    <span class="stat-title">
+                        Tareas pendientes
+                    </span>
+
+                    <strong class="stat-number">
+                        12
+                    </strong>
+
+                    <small class="stat-description">
+                        4 vencen esta semana
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- INCIDENCIAS -->
+
+            <article class="stat-card">
+
+                <div class="stat-icon orange">
+                    ⚠️
+                </div>
+
+                <div class="stat-info">
+
+                    <span class="stat-title">
+                        Incidencias abiertas
+                    </span>
+
+                    <strong class="stat-number">
+                        3
+                    </strong>
+
+                    <small class="stat-description">
+                        Requieren revisión
+                    </small>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- MATERIALES -->
+
+            <article class="stat-card">
+
+                <div class="stat-icon purple">
+                    📦
+                </div>
+
+                <div class="stat-info">
+
+                    <span class="stat-title">
+                        Materiales disponibles
+                    </span>
+
+                    <strong class="stat-number">
+                        86%
+                    </strong>
+
+                    <small class="stat-description">
+                        Inventario disponible
+                    </small>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTENIDO INFERIOR
+        ================================================== -->
+
+        <section class="dashboard-content">
+
+
+            <!-- =================================================
+                 PROYECTOS EN SEGUIMIENTO
+            ================================================== -->
+
+            <div class="content-card projects-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Proyectos en seguimiento
+                        </h2>
+
+                        <p>
+                            Estado actual de los proyectos asignados
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="view-link">
+                        Ver todos
+                    </a>
+
+                </div>
+
+
+
+                <!-- TABLA -->
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Proyecto
+                                </th>
+
+                                <th>
+                                    Ubicación
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Avance
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <!-- PROYECTO 1 -->
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        Proyecto Villa Esperanza
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Cúcuta
+                                </td>
+
+                                <td>
+
+                                    <span class="status status-progress">
+                                        En progreso
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="progress-wrapper">
+
+                                        <div class="progress">
+
+                                            <div
+                                                class="progress-bar"
+                                                style="width: 75%;">
+                                            </div>
+
+                                        </div>
+
+                                        <span>
+                                            75%
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- PROYECTO 2 -->
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        Edificio San José
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Villa del Rosario
+                                </td>
+
+                                <td>
+
+                                    <span class="status status-completed">
+                                        Completado
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="progress-wrapper">
+
+                                        <div class="progress">
+
+                                            <div
+                                                class="progress-bar"
+                                                style="width: 100%;">
+                                            </div>
+
+                                        </div>
+
+                                        <span>
+                                            100%
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- PROYECTO 3 -->
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        Proyecto Los Pinos
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Los Patios
+                                </td>
+
+                                <td>
+
+                                    <span class="status status-warning">
+                                        Retrasado
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="progress-wrapper">
+
+                                        <div class="progress">
+
+                                            <div
+                                                class="progress-bar"
+                                                style="width: 35%;">
+                                            </div>
+
+                                        </div>
+
+                                        <span>
+                                            35%
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+
+
+                            <!-- PROYECTO 4 -->
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        Urbanización El Lago
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Cúcuta
+                                </td>
+
+                                <td>
+
+                                    <span class="status status-progress">
+                                        En progreso
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <div class="progress-wrapper">
+
+                                        <div class="progress">
+
+                                            <div
+                                                class="progress-bar"
+                                                style="width: 60%;">
+                                            </div>
+
+                                        </div>
+
+                                        <span>
+                                            60%
+                                        </span>
+
+                                    </div>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ACTIVIDAD RECIENTE
+            ================================================== -->
+
+            <div class="content-card activity-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Actividad reciente
+                        </h2>
+
+                        <p>
+                            Últimos movimientos
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="activity-list">
+
+
+                    <!-- ACTIVIDAD 1 -->
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon blue">
+                            +
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                Nuevo proyecto asignado
+                            </strong>
+
+                            <span>
+                                Proyecto Urbanización El Lago
+                            </span>
+
+                            <small>
+                                Hace 10 minutos
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIVIDAD 2 -->
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon green">
+                            ✓
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                Tarea completada
+                            </strong>
+
+                            <span>
+                                Instalación eléctrica
+                            </span>
+
+                            <small>
+                                Hace 35 minutos
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIVIDAD 3 -->
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon orange">
+                            !
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                Nueva incidencia
+                            </strong>
+
+                            <span>
+                                Retraso en materiales
+                            </span>
+
+                            <small>
+                                Hace 1 hora
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIVIDAD 4 -->
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon purple">
+                            📦
+                        </div>
+
+                        <div class="activity-info">
+
+                            <strong>
+                                Material actualizado
+                            </strong>
+
+                            <span>
+                                Cemento recibido
+                            </span>
+
+                            <small>
+                                Hace 2 horas
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PARTE INFERIOR
+        ================================================== -->
+
+        <section class="bottom-grid">
+
+
+            <!-- ALERTAS -->
+
+            <div class="content-card alerts-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            🔔 Alertas
+                        </h2>
+
+                        <p>
+                            Situaciones que requieren atención
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="alerts-list">
+
+
+                    <div class="alert-item warning">
+
+                        <div class="alert-icon">
+                            ⚠️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Material con bajo inventario
+                            </strong>
+
+                            <p>
+                                El cemento presenta pocas unidades disponibles.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="alert-item danger">
+
+                        <div class="alert-icon">
+                            🚨
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Incidencia pendiente
+                            </strong>
+
+                            <p>
+                                Hay una incidencia que requiere revisión.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESUMEN DE AVANCE -->
+
+            <div class="content-card progress-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Avance general
+                        </h2>
+
+                        <p>
+                            Progreso promedio de tus proyectos
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="overall-progress">
+
+                    <div class="overall-progress-header">
+
+                        <strong>
+                            Avance promedio
+                        </strong>
+
+                        <span>
+                            65%
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress large">
+
+                        <div
+                            class="progress-bar"
+                            style="width: 65%;">
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        El avance general de los proyectos
+                        se encuentra dentro de lo esperado.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="assets/js/supervisor.js"></script>
+
+</body>
+
+</html>
+```

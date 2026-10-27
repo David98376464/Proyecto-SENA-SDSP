@@ -1,0 +1,170 @@
+/* =========================================
+   ESTILOS: PERSONAL ASIGNADO (Standalone)
+========================================= */
+
+.personal-bg {
+    background-color: #f4f6f9;
+    padding: 0;
+}
+
+/* Cabecera Superior */
+.personal-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: transparent;
+    color: #0073a8;
+}
+
+.personal-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-icon-top {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.personal-title h2 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.personal-user-icon {
+    background: #0073a8;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Tarjeta Principal */
+.personal-card {
+    background: white;
+    margin: 0 40px 40px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 25px;
+}
+
+.personal-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Botones */
+.personal-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-add-personal {
+    background: #0073a8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.btn-add-personal:hover { background: #005b8f; }
+
+.btn-back {
+    background: #707a8a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-back:hover { background: #5a626e; }
+
+/* Estadísticas (MainContent) */
+.personal-stats h3 {
+    color: #cbd5e1;
+    margin: 0 0 5px 0;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.personal-stats span {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Tabla */
+.personal-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.personal-table th {
+    background: #e2e8f0;
+    color: #64748b;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.personal-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+    color: #334155;
+}
+
+/* Badges / Etiquetas */
+.badge-oficio {
+    padding: 5px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    display: inline-block;
+}
+
+.badge-oficio.ing {
+    background: #f39c12;
+}
+
+.badge-oficio.gray {
+    background: #94a3b8;
+}
+
+/* Botón Eliminar Fila */
+.btn-delete {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.btn-delete:hover {
+    transform: scale(1.2);
+    color: #dc2626;
+}
