@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGSP | Seguimiento y Cronograma</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard-admin.css"> 
+    <link rel="stylesheet" href="assets/css/proyecto-seguimiento.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <!-- ==================================================
+             BARRA LATERAL
+        ================================================== -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+            </div>
+            
+            <nav class="sidebar-menu">
+                <a href="dashboard-admin.html" class="menu-item"><span class="menu-icon">🏠</span><span>Inicio</span></a>
+                <a href="proyectos.html" class="menu-item active"><span class="menu-icon">📁</span><span>Proyectos</span></a>
+                <a href="empleados.html" class="menu-item"><span class="menu-icon">👥</span><span>Empleados</span></a>
+                <a href="materiales.html" class="menu-item"><span class="menu-icon">📦</span><span>Materiales</span></a>
+                <a href="clientes.html" class="menu-item"><span class="menu-icon">👤</span><span>Clientes</span></a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="user-profile-small">
+                    <div class="avatar-small">UA</div>
+                    <div class="user-info-small">
+                        <strong>Usuario Administrador</strong>
+                        <span>admin@empresa.com</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+        <main class="main-content seg-bg">
+
+            <!-- CABECERA DEL PROYECTO -->
+            <header class="project-top-header">
+                <div class="project-title-area">
+                    <div>
+                        <h1 id="det-projectName">Detalle del proyecto: Cargando...</h1>
+                        <span class="project-id" id="det-projectId">ID: --</span>
+                    </div>
+                </div>
+                <div class="project-status-area">
+                    <span class="status-label">Estado actual:</span>
+                    <div class="status-badge green">
+                        <span class="dot"></span> <span id="det-projectStatus">En obra</span> <span class="arrow">v</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- PESTAÑAS (Tabs) -->
+            <nav class="project-tabs">
+                <a href="proyecto-detalle.html" class="tab-btn">General</a>
+                <a href="proyecto-personal.html" class="tab-btn">Personal Asignado</a>
+                <a href="proyecto-materiales.html" class="tab-btn">Materiales Utilizados</a>
+                <a href="proyecto-seguimiento.html" class="tab-btn active">Seguimiento y cronograma</a>
+            </nav>
+
+            <!-- CUADRÍCULA DE SEGUIMIENTO -->
+            <section class="seguimiento-grid">
+                
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="seg-col-left">
+                    
+                    <!-- Progreso General -->
+                    <div class="seg-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Progreso General</h3>
+                            <div class="progress-top-info">
+                                <span class="badge-blue-light">COMPLETADO</span>
+                                <span class="progress-percent text-blue">65%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" style="width: 65%;"></div>
+                            </div>
+                            <p class="days-left">Días restantes: <strong>22</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Personal en Sitio -->
+                    <div class="seg-card mt-20">
+                        <div class="card-body">
+                            <h3 class="card-title">Personal en Sitio</h3>
+                            <ul class="personnel-list" id="personnelList">
+                                <li>
+                                    <span>Carlos Gómez</span>
+                                    <span class="role-badge">Director</span>
+                                </li>
+                                <li>
+                                    <span>Ana Martínez</span>
+                                    <span class="role-badge">Supervisor</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Asignar Tareas -->
+                    <div class="seg-card mt-20 no-padding">
+                        <div class="card-header-blue">
+                            <h3>ASIGNAR TAREAS</h3>
+                        </div>
+                        <div class="card-body padding-20">
+                            <label class="task-label">NUEVA TAREA</label>
+                            <div class="task-input-group">
+                                <input type="text" id="newTaskInput" placeholder="Ej: Pintado de fachada sur">
+                                <button type="button" id="btnAddTask" class="btn-add-orange">+</button>
+                            </div>
+                            <label class="task-label mt-20">TAREAS POR ASIGNAR</label>
+                            <div class="unassigned-tasks" id="unassignedTasks">
+                                <!-- Se llenará con JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="seg-col-right">
+
+                    <!-- Incidencias o Novedades -->
+                    <div class="seg-card">
+                        <div class="card-header-flex">
+                            <h3 class="card-title-upper">INCIDENCIAS O NOVEDADES</h3>
+                            <span class="badge-blue-dark">3 REGISTROS</span>
+                        </div>
+                        <div class="card-body padding-0">
+                            <ul class="incidence-list-clean">
+                                <li>
+                                    <span class="inc-date">02/02/2026</span>
+                                    <span class="inc-desc">Consumibles dañados</span>
+                                    <a href="#" class="inc-details">Detalles v</a>
+                                </li>
+                                <li>
+                                    <span class="inc-date">14/02/2026</span>
+                                    <span class="inc-desc">Demora de material</span>
+                                    <a href="#" class="inc-details">Detalles v</a>
+                                </li>
+                                <li>
+                                    <span class="inc-date">20/02/2026</span>
+                                    <span class="inc-desc">Perdida de herramienta</span>
+                                    <a href="#" class="inc-details">Detalles v</a>
+                                </li>
+                            </ul>
+                            <div class="incidence-action">
+                                <button type="button" class="btn-orange-full">
+                                    <span class="plus-icon">+</span> Registrar incidencia o novedad
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seguimiento de Tareas -->
+                    <div class="seg-card mt-20">
+                        <div class="card-header-flex gray-bg">
+                            <h3 class="card-title-upper">SEGUIMIENTO DE TAREAS</h3>
+                            <a href="#" class="view-more">Ver más v</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="task-list" id="activeTasks">
+                                <!-- Tarea 1 -->
+                                <div class="task-item">
+                                    <div class="task-info">
+                                        <h4>Revisión y validación técnica final</h4>
+                                        <span>Asignado a: Carlos Gómez (Ing Civil)</span>
+                                    </div>
+                                    <span class="badge-pending">PENDIENTE</span>
+                                </div>
+                                <!-- Tarea 2 -->
+                                <div class="task-item">
+                                    <div class="task-info">
+                                        <h4>Instalación de tomacorrientes</h4>
+                                        <span>Asignado a: Santiago Moreno (Electricista)</span>
+                                    </div>
+                                    <span class="badge-in-progress">EN PROCESO</span>
+                                </div>
+                                <!-- Tarea 3 -->
+                                <div class="task-item">
+                                    <div class="task-info">
+                                        <h4>Instalación de cableado eléctrico</h4>
+                                        <span>Asignado a: Santiago Moreno (Electricista)</span>
+                                    </div>
+                                    <span class="badge-in-progress">EN PROCESO</span>
+                                </div>
+                            </div>
+                            <div class="task-progress-bottom">
+                                Progreso: <strong>5/8 Tareas</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/proyecto-seguimiento.js"></script>
+</body>
+</html>

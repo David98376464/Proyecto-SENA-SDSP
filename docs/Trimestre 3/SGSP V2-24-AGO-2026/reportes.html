@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP - Reportes</title>
+
+    <!-- CSS GENERAL -->
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
+    <!-- CSS DEL MÓDULO -->
+    <link
+        rel="stylesheet"
+        href="assets/css/reportes.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CONTENEDOR PRINCIPAL
+    ====================================================== -->
+
+    <div class="app-container">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+    <!-- LOGO -->
+    <div class="sidebar-logo">
+
+        <img
+            src="assets/img/logo.pnj.jpeg"
+            alt="SGSP"
+            class="sgsp-logo">
+
+    </div>
+
+
+    <!-- MENÚ PRINCIPAL -->
+    <nav class="sidebar-menu">
+
+
+        <!-- DASHBOARD -->
+        <a
+            href="dashboard-admin.html"
+            class="menu-item">
+
+            <span class="menu-icon">🏠</span>
+
+            <span>Dashboard</span>
+
+        </a>
+
+
+        <!-- SECCIÓN GESTIÓN -->
+        <div class="menu-section-title">
+            GESTIÓN
+        </div>
+
+
+        <!-- PROYECTOS -->
+        <a
+            href="proyectos.html"
+            class="menu-item">
+
+            <span class="menu-icon">📁</span>
+
+            <span>Proyectos</span>
+
+        </a>
+
+
+        <!-- EMPLEADOS -->
+        <a
+            href="empleados.html"
+            class="menu-item">
+
+            <span class="menu-icon">👥</span>
+
+            <span>Empleados</span>
+
+        </a>
+
+
+        <!-- TAREAS -->
+        <a
+            href="tareas.html"
+            class="menu-item">
+
+            <span class="menu-icon">✅</span>
+
+            <span>Tareas</span>
+
+        </a>
+
+
+        <!-- MATERIALES -->
+        <a
+            href="materiales.html"
+            class="menu-item">
+
+            <span class="menu-icon">📦</span>
+
+            <span>Materiales</span>
+
+        </a>
+
+
+        <!-- SECCIÓN SISTEMA -->
+        <div class="menu-section-title">
+            SISTEMA
+        </div>
+
+
+        <!-- REPORTES -->
+        <a
+            href="reportes.html"
+            class="menu-item active">
+
+            <span class="menu-icon">📊</span>
+
+            <span>Reportes</span>
+
+        </a>
+
+
+        <!-- CONFIGURACIÓN -->
+        <a
+            href="configuracion.html"
+            class="menu-item">
+
+            <span class="menu-icon">⚙️</span>
+
+            <span>Configuración</span>
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- CERRAR SESIÓN -->
+    <div class="sidebar-footer">
+
+        <a
+            href="#"
+            id="logoutBtn"
+            class="logout-btn">
+
+            <span class="logout-icon">🚪</span>
+
+            <span>Cerrar sesión</span>
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+        <!-- =================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 HEADER
+            ================================================== -->
+
+            <header class="main-header">
+
+
+                <div class="header-title">
+
+                    <h1>
+                        Reportes
+                    </h1>
+
+                    <p>
+                        Consulta y genera reportes del sistema
+                    </p>
+
+                </div>
+
+
+                <div class="header-actions">
+
+                    <button
+                        type="button"
+                        class="notification-btn"
+                        title="Notificaciones">
+
+                        🔔
+
+                    </button>
+
+
+                    <div class="header-user">
+
+                        <div class="header-avatar">
+                            A
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Administrador
+                            </strong>
+
+                            <span>
+                                Administrador
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 CONTENIDO DE REPORTES
+            ================================================== -->
+
+            <section class="reports-content">
+
+
+                <!-- =================================================
+                     FILTROS
+                ================================================== -->
+
+                <div class="reports-toolbar">
+
+
+                    <div class="report-filter">
+
+                        <label for="reportType">
+                            Tipo de reporte
+                        </label>
+
+                        <select id="reportType">
+
+                            <option value="proyectos">
+                                Proyectos
+                            </option>
+
+                            <option value="tareas">
+                                Tareas
+                            </option>
+
+                            <option value="empleados">
+                                Empleados
+                            </option>
+
+                            <option value="materiales">
+                                Materiales
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="report-filter">
+
+                        <label for="reportProject">
+                            Proyecto
+                        </label>
+
+                        <select id="reportProject">
+
+                            <option value="all">
+                                Todos los proyectos
+                            </option>
+
+                            <option value="Proyecto Alfa">
+                                Proyecto Alfa
+                            </option>
+
+                            <option value="Proyecto Beta">
+                                Proyecto Beta
+                            </option>
+
+                            <option value="Proyecto Gamma">
+                                Proyecto Gamma
+                            </option>
+
+                            <option value="Proyecto Delta">
+                                Proyecto Delta
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="report-filter">
+
+                        <label for="reportPeriod">
+                            Periodo
+                        </label>
+
+                        <select id="reportPeriod">
+
+                            <option value="all">
+                                Todo el periodo
+                            </option>
+
+                            <option value="month">
+                                Este mes
+                            </option>
+
+                            <option value="quarter">
+                                Este trimestre
+                            </option>
+
+                            <option value="year">
+                                Este año
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="generateReportBtn"
+                        class="generate-report-btn">
+
+                        📊
+                        Generar reporte
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RESUMEN GENERAL
+                ================================================== -->
+
+                <section class="report-summary">
+
+
+                    <div class="section-title">
+
+                        <div>
+
+                            <h2>
+                                Resumen general
+                            </h2>
+
+                            <p>
+                                Información consolidada del sistema
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-grid">
+
+
+                        <!-- PROYECTOS -->
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon projects">
+                                📁
+                            </div>
+
+                            <div class="summary-info">
+
+                                <span>
+                                    Proyectos
+                                </span>
+
+                                <strong id="totalProjects">
+                                    8
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TAREAS -->
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon tasks">
+                                ✓
+                            </div>
+
+                            <div class="summary-info">
+
+                                <span>
+                                    Tareas
+                                </span>
+
+                                <strong id="totalTasks">
+                                    6
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMPLEADOS -->
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon employees">
+                                👥
+                            </div>
+
+                            <div class="summary-info">
+
+                                <span>
+                                    Empleados
+                                </span>
+
+                                <strong id="totalEmployees">
+                                    12
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MATERIALES -->
+
+                        <div class="summary-card">
+
+                            <div class="summary-icon materials">
+                                📦
+                            </div>
+
+                            <div class="summary-info">
+
+                                <span>
+                                    Materiales
+                                </span>
+
+                                <strong id="totalMaterials">
+                                    35
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     REPORTE PRINCIPAL
+                ================================================== -->
+
+                <section class="report-card">
+
+
+                    <!-- HEADER -->
+
+                    <div class="report-card-header">
+
+
+                        <div>
+
+                            <h2 id="reportTitle">
+                                Reporte de proyectos
+                            </h2>
+
+                            <p id="reportDescription">
+                                Resumen del estado actual de los proyectos
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="exportReportBtn"
+                            class="export-report-btn">
+
+                            📥
+                            Exportar
+
+                        </button>
+
+
+                    </div>
+
+
+
+                    <!-- TABLA -->
+
+                    <div class="report-table-container">
+
+                        <table id="reportTable">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Proyecto
+                                    </th>
+
+                                    <th>
+                                        Estado
+                                    </th>
+
+                                    <th>
+                                        Avance
+                                    </th>
+
+                                    <th>
+                                        Tareas
+                                    </th>
+
+                                    <th>
+                                        Responsable
+                                    </th>
+
+                                    <th>
+                                        Fecha finalización
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="reportTableBody">
+
+
+                                <!-- PROYECTO 1 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="report-project">
+
+                                            <div class="project-icon">
+                                                📁
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Proyecto Alfa
+                                                </strong>
+
+                                                <span>
+                                                    Obra civil
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="report-status in-progress">
+                                            En ejecución
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="progress-container">
+
+                                            <div class="progress-bar">
+
+                                                <div
+                                                    class="progress-fill"
+                                                    style="width: 75%;">
+                                                </div>
+
+                                            </div>
+
+                                            <span>
+                                                75%
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        8
+                                    </td>
+
+
+                                    <td>
+                                        Carlos Pérez
+                                    </td>
+
+
+                                    <td>
+                                        30/09/2026
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- PROYECTO 2 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="report-project">
+
+                                            <div class="project-icon">
+                                                📁
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Proyecto Beta
+                                                </strong>
+
+                                                <span>
+                                                    Ingeniería
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="report-status planning">
+                                            Planeación
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="progress-container">
+
+                                            <div class="progress-bar">
+
+                                                <div
+                                                    class="progress-fill"
+                                                    style="width: 30%;">
+                                                </div>
+
+                                            </div>
+
+                                            <span>
+                                                30%
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        5
+                                    </td>
+
+
+                                    <td>
+                                        María Gómez
+                                    </td>
+
+
+                                    <td>
+                                        15/11/2026
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- PROYECTO 3 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="report-project">
+
+                                            <div class="project-icon">
+                                                📁
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Proyecto Gamma
+                                                </strong>
+
+                                                <span>
+                                                    Construcción
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="report-status completed">
+                                            Finalizado
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="progress-container">
+
+                                            <div class="progress-bar">
+
+                                                <div
+                                                    class="progress-fill"
+                                                    style="width: 100%;">
+                                                </div>
+
+                                            </div>
+
+                                            <span>
+                                                100%
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        11
+                                    </td>
+
+
+                                    <td>
+                                        Juan Rodríguez
+                                    </td>
+
+
+                                    <td>
+                                        10/08/2026
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- PROYECTO 4 -->
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="report-project">
+
+                                            <div class="project-icon">
+                                                📁
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Proyecto Delta
+                                                </strong>
+
+                                                <span>
+                                                    Mantenimiento
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="report-status delayed">
+                                            Retrasado
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="progress-container">
+
+                                            <div class="progress-bar">
+
+                                                <div
+                                                    class="progress-fill"
+                                                    style="width: 45%;">
+                                                </div>
+
+                                            </div>
+
+                                            <span>
+                                                45%
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        6
+                                    </td>
+
+
+                                    <td>
+                                        Ana Martínez
+                                    </td>
+
+
+                                    <td>
+                                        20/10/2026
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- FOOTER -->
+
+                    <div class="report-card-footer">
+
+                        <span id="reportResultCount">
+                            Mostrando 4 proyectos
+                        </span>
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     INDICADORES
+                ================================================== -->
+
+                <section class="report-indicators">
+
+
+                    <div class="indicator-card">
+
+                        <div class="indicator-header">
+
+                            <div>
+
+                                <h3>
+                                    Avance de proyectos
+                                </h3>
+
+                                <p>
+                                    Distribución por estado
+                                </p>
+
+                            </div>
+
+                            <span>
+                                📈
+                            </span>
+
+                        </div>
+
+
+                        <div class="indicator-list">
+
+
+                            <div class="indicator-item">
+
+                                <div>
+
+                                    <span>
+                                        Finalizados
+                                    </span>
+
+                                    <strong>
+                                        25%
+                                    </strong>
+
+                                </div>
+
+                                <div class="indicator-progress">
+
+                                    <div
+                                        class="indicator-fill completed"
+                                        style="width: 25%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="indicator-item">
+
+                                <div>
+
+                                    <span>
+                                        En ejecución
+                                    </span>
+
+                                    <strong>
+                                        50%
+                                    </strong>
+
+                                </div>
+
+                                <div class="indicator-progress">
+
+                                    <div
+                                        class="indicator-fill progress"
+                                        style="width: 50%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="indicator-item">
+
+                                <div>
+
+                                    <span>
+                                        Planeación
+                                    </span>
+
+                                    <strong>
+                                        15%
+                                    </strong>
+
+                                </div>
+
+                                <div class="indicator-progress">
+
+                                    <div
+                                        class="indicator-fill planning"
+                                        style="width: 15%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="indicator-item">
+
+                                <div>
+
+                                    <span>
+                                        Retrasados
+                                    </span>
+
+                                    <strong>
+                                        10%
+                                    </strong>
+
+                                </div>
+
+                                <div class="indicator-progress">
+
+                                    <div
+                                        class="indicator-fill delayed"
+                                        style="width: 10%;">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIVIDAD -->
+
+                    <div class="indicator-card">
+
+                        <div class="indicator-header">
+
+                            <div>
+
+                                <h3>
+                                    Actividad reciente
+                                </h3>
+
+                                <p>
+                                    Últimas actualizaciones
+                                </p>
+
+                            </div>
+
+                            <span>
+                                🕐
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    ✓
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Tarea completada
+                                    </strong>
+
+                                    <span>
+                                        Proyecto Alfa
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    Hace 2h
+                                </time>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    📦
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Material actualizado
+                                    </strong>
+
+                                    <span>
+                                        Proyecto Beta
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    Hace 5h
+                                </time>
+
+                            </div>
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon">
+                                    👤
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Empleado asignado
+                                    </strong>
+
+                                    <span>
+                                        Proyecto Gamma
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    Ayer
+                                </time>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <!-- Librería SheetJS para generar archivos Excel -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+    <!-- JavaScript de Reportes  -->
+    <script src="assets/js/reportes.js"></script>
+
+
+</body>
+
+</html>

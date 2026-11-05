@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGSP | Detalle del Proyecto</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard-admin.css"> 
+    <link rel="stylesheet" href="assets/css/proyecto-detalle.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <!-- ==================================================
+             BARRA LATERAL
+        ================================================== -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+            </div>
+            
+            <nav class="sidebar-menu">
+                <p class="menu-title">PRINCIPAL</p>
+                <a href="dashboard-admin.html" class="menu-item"><span class="menu-icon">🏠</span><span>Dashboard</span></a>
+                
+                <p class="menu-title">GESTIÓN</p>
+                <a href="proyectos.html" class="menu-item active"><span class="menu-icon">📁</span><span>Proyectos</span></a>
+                <a href="empleados.html" class="menu-item"><span class="menu-icon">👥</span><span>Empleados</span></a>
+                <a href="tareas.html" class="menu-item"><span class="menu-icon">✅</span><span>Tareas</span></a>
+                <a href="materiales.html" class="menu-item"><span class="menu-icon">📦</span><span>Materiales</span></a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="logout-button"><span>🚪</span>Cerrar sesión</a>
+            </div>
+        </aside>
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+        <main class="main-content detail-bg">
+
+            <!-- CABECERA DEL PROYECTO (Naranja) -->
+            <header class="project-top-header">
+                <div class="project-title-area">
+                    <span class="menu-toggle-icon">≡</span>
+                    <div>
+                        <h1 id="det-projectName">Nombre del proyecto</h1>
+                        <span class="project-id" id="det-projectId">ID: --</span>
+                        <span class="project-id" id="det-projectClient" style="margin-left: 15px; color: #ffeaa7;">Cliente: --</span>
+                    </div>
+                </div>
+                <div class="project-status-area">
+                    <label for="statusSelect">Estado actual</label>
+                    <select id="statusSelect" class="status-select">
+                        <option value="En progreso">En progreso</option>
+                        <option value="Pausado">Pausado</option>
+                        <option value="Completado">Completado</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- PESTAÑAS (Tabs) -->
+            <nav class="project-tabs">
+                <a href="proyecto-detalle.html" class="tab-btn active" style="text-decoration: none;">Resumen General</a>
+                <a href="proyecto-personal.html" class="tab-btn" style="text-decoration: none;">Personal Asignado</a>
+                <a href="proyecto-materiales.html" class="tab-btn" style="text-decoration: none;">Materiales Utilizados</a>
+                <a href="#" class="tab-btn" style="text-decoration: none;">Seguimiento y cronograma</a>
+            </nav>
+
+            <!-- CONTENIDO DE LAS PESTAÑAS -->
+            <section class="tab-content active" id="resumen">
+                <div class="detail-grid">
+                    
+                    <!-- COLUMNA IZQUIERDA -->
+                    <div class="left-column">
+                        
+                        <!-- Tarjeta: Bloque de fechas -->
+                        <article class="detail-card">
+                            <div class="card-header-gray">
+                                <span>📅</span> Bloque de fechas
+                            </div>
+                            <div class="card-body">
+                                <div class="date-row">
+                                    <strong>Inicio:</strong>
+                                    <span>15/01/2026</span>
+                                </div>
+                                <div class="date-row line-below">
+                                    <strong>Fin estimado:</strong>
+                                    <span>25/02/2026</span>
+                                </div>
+                                
+                                <div class="progress-section">
+                                    <strong>Barra de progreso</strong>
+                                    <div class="progress-bar-container">
+                                        <div class="progress-fill" style="width: 65%;"></div>
+                                    </div>
+                                    <div class="progress-labels">
+                                        <span class="text-blue"><strong>65% completado</strong></span>
+                                        <span class="text-gray">21 días restantes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Tarjeta: Personal Responsable -->
+                        <article class="detail-card mt-20">
+                            <div class="card-header-gray">
+                                <span>👤</span> Personal responsable
+                            </div>
+                            <div class="card-body">
+                                <div class="person-profile">
+                                    <div class="person-avatar">
+                                        <img src="assets/img/default-avatar.png" alt="Avatar">
+                                    </div>
+                                    <div class="person-info">
+                                        <span class="role text-blue">DIRECTOR / RESPONSABLE</span>
+                                        <strong id="det-projectManager">Cargando...</strong>
+                                    </div>
+                                </div>
+                                <div class="contact-row line-above">
+                                    <span>📞</span> 3265485295
+                                </div>
+                                <div class="contact-row">
+                                    <span>✉️</span> carlosgomezSNS@gmail.com
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- COLUMNA DERECHA -->
+                    <div class="right-column">
+                        
+                        <!-- Tarjeta: Incidencias -->
+                        <article class="detail-card h-100">
+                            <div class="card-header-gray">
+                                <span>⚠️</span> Incidencias o novedades
+                            </div>
+                            <div class="card-body d-flex-col">
+                                <ul class="incidence-list">
+                                    <li>
+                                        <span class="incidence-date">02/02/2026</span>
+                                        <span class="incidence-desc">Consumibles dañados</span>
+                                    </li>
+                                    <li>
+                                        <span class="incidence-date">14/02/2026</span>
+                                        <span class="incidence-desc">Demora de material</span>
+                                    </li>
+                                    <li>
+                                        <span class="incidence-date">20/02/2026</span>
+                                        <span class="incidence-desc">Perdida de herramienta</span>
+                                    </li>
+                                </ul>
+                                
+                                <div class="button-container">
+                                    <button class="btn-register-incidence" id="btnRegisterIncidence">
+                                        <span class="btn-icon">+</span> REGISTRAR INCIDENCIA O NOVEDAD
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/proyecto-detalle.js"></script>
+</body>
+</html>

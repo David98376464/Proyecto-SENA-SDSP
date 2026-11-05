@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGSP | Personal Asignado</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard-admin.css">
+    <link rel="stylesheet" href="assets/css/proyecto-personal.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <!-- ==================================================
+             BARRA LATERAL
+        ================================================== -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+            </div>
+            
+            <nav class="sidebar-menu">
+                <p class="menu-title">PRINCIPAL</p>
+                <a href="dashboard-admin.html" class="menu-item"><span class="menu-icon">🏠</span><span>Dashboard</span></a>
+                
+                <p class="menu-title">GESTIÓN</p>
+                <a href="proyectos.html" class="menu-item active"><span class="menu-icon">📁</span><span>Proyectos</span></a>
+                <a href="empleados.html" class="menu-item"><span class="menu-icon">👥</span><span>Empleados</span></a>
+                <a href="tareas.html" class="menu-item"><span class="menu-icon">✅</span><span>Tareas</span></a>
+                <a href="materiales.html" class="menu-item"><span class="menu-icon">📦</span><span>Materiales</span></a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="index.html" class="logout-button"><span>🚪</span>Cerrar sesión</a>
+            </div>
+        </aside>
+
+        <!-- ==================================================
+             CONTENIDO PRINCIPAL
+        ================================================== -->
+        <main class="main-content personal-bg">
+
+            <!-- CABECERA SUPERIOR -->
+            <div class="personal-header-bar">
+                <div class="personal-title">
+                    <span class="menu-icon-top">≡</span>
+                    <h2>PERSONAL ASIGNADO</h2>
+                </div>
+                <div class="personal-user-icon">JD</div>
+            </div>
+
+            <!-- TARJETA DE CONTENIDO (MainContent) -->
+            <div class="personal-card">
+                <div class="personal-card-top">
+                    <div class="personal-actions">
+                        <button class="btn-add-personal" id="btnAddPersonal">+ Agregar personal</button>
+                        <a href="proyecto-detalle.html" class="btn-back">Volver</a>
+                    </div>
+                    <div class="personal-stats">
+                        <span id="empleadosCount">0 Empleados asignados</span>
+                    </div>
+                </div>
+
+                <!-- TABLA DEL PROYECTO (Se llenará sola con el JS) -->
+                <div class="table-container">
+                    <table class="personal-table" id="personalTable">
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>Nombre de empleado</th>
+                                <th>Número de empleado</th>
+                                <th>Oficio / Cargo</th>
+                                <th>Inicio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- El JavaScript rellenará esto dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- ==================================================
+         MODAL SELECCIONAR EMPLEADO DE LA EMPRESA
+    ================================================== -->
+    <div class="modal" id="modalPersonal" style="display: none; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; background: rgba(15, 23, 42, 0.55); backdrop-filter: blur(3px);">
+        
+        <div class="modal-content custom-modal-box" style="width: 100%; max-width: 600px; background: #ffffff; border-radius: 12px; position: relative; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);">
+            
+            <div class="modal-top-banner" style="background-color: white; border: 2px solid #3498db; margin: 20px; padding: 15px; border-radius: 8px; text-align: center;">
+                <h3 style="color: #005b8f; font-size: 20px; margin: 0; font-weight: 700;">Seleccionar empleado de la empresa</h3>
+            </div>
+            
+            <button type="button" class="close-modal-x" id="closeModalPersonal" style="position: absolute; top: 10px; right: 15px; background: transparent; border: none; font-size: 24px; cursor: pointer; color: #666;">×</button>
+            
+            <div style="padding: 10px 25px 25px 25px;">
+                <p style="font-size: 12px; color: #64748b; margin-bottom: 15px; text-align: center;">Haz clic en el botón "+" para incorporar al empleado al proyecto actual:</p>
+                
+                <div class="table-container" style="max-height: 350px; overflow-y: auto; border: 1px solid #e2e8f0; border-radius: 6px;">
+                    <table class="personal-table" id="empresaListTable" style="margin: 0;">
+                        <thead style="position: sticky; top: 0; z-index: 1;">
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Cargo</th>
+                                <th>Documento</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Lista general cargada dinámicamente desde empleados.html -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/proyecto-personal.js"></script>
+</body>
+</html>

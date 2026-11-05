@@ -1,0 +1,940 @@
+/* =========================================================
+   SGSP - MATERIALES
+   Estilo visual basado en el diseño general de Figma
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.materials-content {
+    width: 100%;
+    padding: 10px 0 30px;
+}
+
+
+/* =========================================================
+   BARRA DE HERRAMIENTAS
+   ========================================================= */
+
+.materials-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUSCADOR
+   ========================================================= */
+
+.material-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.material-search span {
+    position: absolute;
+    left: 15px;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.material-search input {
+    width: 100%;
+    height: 44px;
+    padding: 0 16px 0 44px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #334155;
+
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.material-search input::placeholder {
+    color: #94a3b8;
+}
+
+.material-search input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   FILTROS
+   ========================================================= */
+
+.materials-toolbar select {
+    height: 44px;
+    min-width: 175px;
+
+    padding: 0 38px 0 14px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    background-color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #475569;
+
+    cursor: pointer;
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+.materials-toolbar select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   BOTÓN NUEVO MATERIAL
+   ========================================================= */
+
+.new-material-btn {
+    height: 44px;
+
+    margin-left: auto;
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.18);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.new-material-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.22);
+}
+
+.new-material-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TARJETA PRINCIPAL
+   ========================================================= */
+
+.materials-card {
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 1px solid #e8edf3;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   ENCABEZADO DE LA TARJETA
+   ========================================================= */
+
+.materials-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.materials-card-header h2 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #1e293b;
+}
+
+.materials-card-header p {
+    margin: 4px 0 0;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   CONTENEDOR DE TABLA
+   ========================================================= */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLA
+   ========================================================= */
+
+.materials-card table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   ENCABEZADOS
+   ========================================================= */
+
+.materials-card thead {
+    background: #f8fafc;
+}
+
+.materials-card th {
+    padding: 14px 18px;
+
+    border-bottom: 1px solid #e8edf3;
+
+    text-align: left;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    color: #64748b;
+
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   FILAS
+   ========================================================= */
+
+.materials-card tbody tr {
+    transition: background 0.2s ease;
+}
+
+.materials-card tbody tr:hover {
+    background: #f8fafc;
+}
+
+.materials-card td {
+    padding: 16px 18px;
+
+    border-bottom: 1px solid #eef2f6;
+
+    font-size: 13px;
+
+    color: #475569;
+
+    vertical-align: middle;
+}
+
+.materials-card tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL MATERIAL
+   ========================================================= */
+
+.material-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 220px;
+}
+
+.material-info > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.material-info strong {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #1e293b;
+}
+
+.material-info span {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   ICONO DEL MATERIAL
+   ========================================================= */
+
+.material-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eff6ff;
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   ESTADOS
+   ========================================================= */
+
+.material-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* DISPONIBLE */
+
+.material-status.available {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+
+/* BAJO STOCK */
+
+.material-status.low {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+
+/* AGOTADO */
+
+.material-status.empty {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+
+/* =========================================================
+   ACCIONES
+   ========================================================= */
+
+.material-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.material-actions button {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.material-actions button:hover {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .materials-toolbar {
+        align-items: stretch;
+    }
+
+    .material-search {
+        width: 100%;
+        max-width: none;
+    }
+
+    .materials-toolbar select {
+        flex: 1;
+    }
+
+    .new-material-btn {
+        margin-left: 0;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .materials-content {
+        padding-bottom: 20px;
+    }
+
+    .materials-toolbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .material-search,
+    .materials-toolbar select,
+    .new-material-btn {
+        width: 100%;
+    }
+
+    .new-material-btn {
+        margin-left: 0;
+    }
+
+    .materials-card-header {
+        padding: 18px;
+    }
+
+    .materials-card th,
+    .materials-card td {
+        padding: 12px 14px;
+    }
+
+    .material-info {
+        min-width: 190px;
+    }
+}
+
+/* =========================================================
+   MODALES DE MATERIALES
+   ========================================================= */
+
+.material-modal {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.45);
+
+    z-index: 9999;
+
+    backdrop-filter: blur(3px);
+}
+
+.material-modal.show {
+    display: flex;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.material-modal-content {
+    width: 100%;
+    max-width: 560px;
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.18);
+
+    overflow: hidden;
+
+    animation: materialModalAppear 0.2s ease;
+}
+
+@keyframes materialModalAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.material-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 22px 24px;
+
+    border-bottom: 1px solid #edf1f5;
+}
+
+.material-modal-header h2 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    color: #1e293b;
+}
+
+.material-modal-header p {
+    margin: 4px 0 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   CERRAR
+   ========================================================= */
+
+.material-modal-close {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.material-modal-close:hover {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+
+/* =========================================================
+   DETALLE
+   ========================================================= */
+
+.material-detail {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 22px 24px;
+
+    background: #f8fafc;
+}
+
+.material-detail-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    font-size: 23px;
+}
+
+.material-detail h3 {
+    margin: 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #1e293b;
+}
+
+.material-detail p {
+    margin: 3px 0 0;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   GRID DE INFORMACIÓN
+   ========================================================= */
+
+.material-detail-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    padding: 22px 24px;
+}
+
+.material-detail-grid div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.material-detail-grid span {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.material-detail-grid strong {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #334155;
+}
+
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+#materialForm {
+    width: 100%;
+}
+
+.material-form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    padding: 22px 24px;
+}
+
+.material-form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.material-form-group.full {
+    grid-column: 1 / -1;
+}
+
+.material-form-group label {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    color: #475569;
+}
+
+.material-form-group input,
+.material-form-group select {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    color: #334155;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+.material-form-group input:focus,
+.material-form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.material-modal-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    padding: 16px 24px;
+
+    border-top: 1px solid #edf1f5;
+}
+
+
+/* =========================================================
+   BOTONES DEL MODAL
+   ========================================================= */
+
+.modal-secondary-btn,
+.modal-primary-btn {
+    height: 40px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.modal-secondary-btn {
+    border: 1px solid #e2e8f0;
+
+    background: #ffffff;
+
+    color: #64748b;
+}
+
+.modal-secondary-btn:hover {
+    background: #f8fafc;
+    color: #334155;
+}
+
+.modal-primary-btn {
+    border: none;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.16);
+}
+
+.modal-primary-btn:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .material-modal {
+        padding: 12px;
+    }
+
+    .material-detail-grid,
+    .material-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .material-form-group.full {
+        grid-column: auto;
+    }
+
+    .material-modal-header,
+    .material-detail,
+    .material-detail-grid,
+    .material-form-grid {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .material-modal-footer {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+}
+
+/* =====================================================
+   CERRAR SESIÓN
+===================================================== */
+
+.logout-button {
+    width: 100%;
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 12px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #dc2626;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+    background: rgba(220, 38, 38, 0.06);
+
+    color: #dc2626;
+}
+
+
+/* Icono de cerrar sesión */
+
+.logout-button span:first-child {
+    width: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+
+/* Texto */
+
+.logout-button span:last-child {
+    font-size: 13px;
+}

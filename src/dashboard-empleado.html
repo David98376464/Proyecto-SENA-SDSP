@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Dashboard Empleado</title>
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS general -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS del empleado -->
+    <link rel="stylesheet" href="assets/css/dashboard-empleado.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- =========================
+             MENÚ LATERAL
+        ========================== -->
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    
+                        <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+
+                </div>
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard-empleado.html" class="menu-item active">
+                    <span class="menu-icon">🏠</span>
+                    <span>Inicio</span>
+                </a>
+
+                <a href="proyectos-empleado.html" class="menu-item">
+                    <span class="menu-icon">📁</span>
+                    <span>Mis proyectos</span>
+                </a>
+
+                <a href="tareas-empleado.html" class="menu-item">
+                    <span class="menu-icon">✅</span>
+                    <span>Mis tareas</span>
+                </a>
+
+                <a href="materiales-empleado.html" class="menu-item">
+                    <span class="menu-icon">📦</span>
+                    <span>Materiales</span>
+                </a>
+
+                <a href="avances-empleado.html" class="menu-item">
+                    <span class="menu-icon">📈</span>
+                    <span>Avances</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <a href="perfil-empleado.html" class="menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span>Configuracion</span>
+                </a>
+
+                <a href="index.html" class="menu-item logout">
+                    <span class="menu-icon">🚪</span>
+                    <span>Cerrar sesión</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             CONTENIDO PRINCIPAL
+        ========================== -->
+        <main class="main-content">
+
+            <!-- HEADER -->
+            <header class="top-header">
+
+                <div>
+                    <h1>Bienvenido, José</h1>
+                    <p>Consulta y gestiona tus actividades dentro de los proyectos.</p>
+                </div>
+
+                <div class="user-info">
+
+                    <div class="notification">
+                        <span>🔔</span>
+                        <span class="notification-dot"></span>
+                    </div>
+
+                    <div class="user-profile">
+                        <div class="user-avatar">JV</div>
+
+                        <div class="user-data">
+                            <strong>José Vega</strong>
+                            <span>Empleado</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 RESUMEN
+            ========================== -->
+            <section class="dashboard-section">
+
+                <div class="section-title">
+                    <div>
+                        <h2>Resumen general</h2>
+                        <p>Estado actual de tus actividades</p>
+                    </div>
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <!-- PROYECTOS -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon projects">
+                            📁
+                        </div>
+
+                        <div class="stat-info">
+                            <span>Proyectos asignados</span>
+                            <strong>3</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- TAREAS -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon tasks">
+                            ✓
+                        </div>
+
+                        <div class="stat-info">
+                            <span>Tareas asignadas</span>
+                            <strong>8</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- PENDIENTES -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon pending">
+                            ⏱
+                        </div>
+
+                        <div class="stat-info">
+                            <span>Tareas pendientes</span>
+                            <strong>3</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- COMPLETADAS -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon completed">
+                            ✓
+                        </div>
+
+                        <div class="stat-info">
+                            <span>Tareas completadas</span>
+                            <strong>5</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 CONTENIDO INFERIOR
+            ========================== -->
+            <section class="dashboard-grid">
+
+                <!-- MIS TAREAS -->
+                <div class="dashboard-card tasks-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Mis tareas</h3>
+                            <p>Tareas que requieren tu atención</p>
+                        </div>
+
+                        <a href="tareas-empleado.html">Ver todas</a>
+
+                    </div>
+
+
+                    <div class="task-list">
+
+                        <div class="task-item">
+
+                            <div class="task-status pending-status"></div>
+
+                            <div class="task-content">
+                                <strong>Diseñar página principal</strong>
+                                <span>Proyecto Alfa</span>
+                            </div>
+
+                            <div class="task-date">
+                                <span>Fecha límite</span>
+                                <strong>30 Ago</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="task-item">
+
+                            <div class="task-status progress-status"></div>
+
+                            <div class="task-content">
+                                <strong>Configurar estructura web</strong>
+                                <span>Proyecto Beta</span>
+                            </div>
+
+                            <div class="task-date">
+                                <span>Fecha límite</span>
+                                <strong>02 Sep</strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="task-item">
+
+                            <div class="task-status pending-status"></div>
+
+                            <div class="task-content">
+                                <strong>Revisión de contenidos</strong>
+                                <span>Proyecto Gamma</span>
+                            </div>
+
+                            <div class="task-date">
+                                <span>Fecha límite</span>
+                                <strong>05 Sep</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROGRESO -->
+                <div class="dashboard-card progress-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <h3>Progreso de proyectos</h3>
+                            <p>Avance de tus proyectos asignados</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-progress">
+
+                        <div class="progress-info">
+                            <div>
+                                <strong>Proyecto Alfa</strong>
+                                <span>75%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="progress-info">
+                            <div>
+                                <strong>Proyecto Beta</strong>
+                                <span>50%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 50%;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="progress-info">
+                            <div>
+                                <strong>Proyecto Gamma</strong>
+                                <span>35%</span>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 ACTIVIDAD RECIENTE
+            ========================== -->
+            <section class="dashboard-card recent-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Actividad reciente</h3>
+                        <p>Últimas acciones realizadas</p>
+                    </div>
+
+                </div>
+
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            ✓
+                        </div>
+
+                        <div class="activity-text">
+                            <strong>Completaste una tarea</strong>
+                            <span>Diseño de interfaz — Proyecto Alfa</span>
+                        </div>
+
+                        <time>Hoy, 10:30 AM</time>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            ↗
+                        </div>
+
+                        <div class="activity-text">
+                            <strong>Actualizaste un avance</strong>
+                            <span>Proyecto Beta — 50%</span>
+                        </div>
+
+                        <time>Ayer, 3:45 PM</time>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            📁
+                        </div>
+
+                        <div class="activity-text">
+                            <strong>Fuiste asignado a un proyecto</strong>
+                            <span>Proyecto Gamma</span>
+                        </div>
+
+                        <time>25 Ago, 9:15 AM</time>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="assets/js/dashboard-empleado.js"></script>
+
+</body>
+</html>

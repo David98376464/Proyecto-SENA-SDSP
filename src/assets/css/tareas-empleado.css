@@ -1,0 +1,917 @@
+/* =========================================================
+   TAREAS EMPLEADO - SGSP
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+    color: #263238;
+}
+
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 250px;
+    min-width: 250px;
+
+    height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border-right: 1px solid #e7eaf0;
+
+    z-index: 100;
+}
+
+.sidebar-header {
+    padding: 25px 22px;
+    border-bottom: 1px solid #eef0f4;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-container img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #1677ff;
+    color: #ffffff;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text span {
+    font-size: 19px;
+    font-weight: 700;
+    color: #202938;
+}
+
+.logo-text small {
+    margin-top: 2px;
+
+    font-size: 8px;
+    line-height: 1.3;
+
+    color: #8a93a3;
+}
+
+.sidebar-menu {
+    flex: 1;
+    padding: 22px 14px;
+}
+
+.menu-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    height: 47px;
+
+    margin-bottom: 7px;
+
+    padding: 0 15px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    color: #667085;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+.menu-item:hover {
+    background: #f0f6ff;
+    color: #1677ff;
+}
+
+.menu-item.active {
+    background: #eaf3ff;
+    color: #1677ff;
+    font-weight: 600;
+}
+
+.menu-item.active::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 7px;
+
+    width: 4px;
+    height: 33px;
+
+    border-radius: 0 5px 5px 0;
+
+    background: #1677ff;
+}
+
+.menu-icon {
+    width: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+.sidebar-bottom {
+    padding: 15px 14px 20px;
+
+    border-top: 1px solid #eef0f4;
+}
+
+.logout:hover {
+    color: #e74c3c;
+    background: #fff2f1;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.main-content {
+    width: calc(100% - 250px);
+
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 30px 35px 45px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.top-header h1 {
+    margin: 0 0 5px;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    color: #202938;
+}
+
+.top-header p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #7b8494;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.notification {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e5e8ee;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+}
+
+.notification-dot {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #1677ff;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #1677ff;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-data strong {
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #273142;
+}
+
+.user-data span {
+    font-size: 11px;
+
+    color: #8a93a3;
+}
+
+
+/* =========================================================
+   RESUMEN
+========================================================= */
+
+.task-summary {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.summary-card {
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8ebf0;
+
+    border-radius: 12px;
+
+    box-shadow: 0 2px 8px rgba(35, 45, 65, 0.03);
+}
+
+.summary-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+.summary-icon.total {
+    background: #eaf3ff;
+}
+
+.summary-icon.pending {
+    background: #fff7e6;
+}
+
+.summary-icon.progress {
+    background: #eef4ff;
+}
+
+.summary-icon.completed {
+    background: #edf9f3;
+}
+
+.summary-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 11px;
+
+    color: #7d8797;
+}
+
+.summary-card strong {
+    font-size: 23px;
+
+    font-weight: 600;
+
+    color: #273142;
+}
+
+
+/* =========================================================
+   SECCIÓN
+========================================================= */
+
+.tasks-section {
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.section-header h2 {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    color: #273142;
+}
+
+.section-header p {
+    margin: 4px 0 0;
+
+    font-size: 12px;
+
+    color: #8a93a3;
+}
+
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.filters {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.search-box {
+    width: 220px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e6ec;
+
+    border-radius: 8px;
+}
+
+.search-box span {
+    font-size: 18px;
+
+    color: #8c95a4;
+}
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    color: #374151;
+}
+
+.search-box input::placeholder {
+    color: #a0a7b2;
+}
+
+.filters select {
+    height: 40px;
+
+    padding: 0 12px;
+
+    border: 1px solid #e2e6ec;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #5f6979;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 11px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   CONTENEDOR TABLA
+========================================================= */
+
+.tasks-container {
+    background: #ffffff;
+
+    border: 1px solid #e8ebf0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(35, 45, 65, 0.03);
+}
+
+.table-responsive {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLA
+========================================================= */
+
+.tasks-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+.tasks-table thead {
+    background: #f8f9fb;
+}
+
+.tasks-table th {
+    padding: 14px 18px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e7eaf0;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    color: #697386;
+
+    white-space: nowrap;
+}
+
+.tasks-table td {
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #eef0f4;
+
+    font-size: 10px;
+
+    color: #5e6878;
+}
+
+.tasks-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.tasks-table tbody tr:hover {
+    background: #fafcff;
+}
+
+.tasks-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   NOMBRE DE TAREA
+========================================================= */
+
+.task-name {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 230px;
+}
+
+.task-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #eaf3ff;
+
+    color: #1677ff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.task-name div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.task-name strong {
+    font-size: 11px;
+
+    font-weight: 500;
+
+    color: #354052;
+}
+
+.task-name span {
+    font-size: 9px;
+
+    color: #9aa2af;
+}
+
+
+/* =========================================================
+   PROYECTO
+========================================================= */
+
+.project-name {
+    font-size: 10px;
+
+    font-weight: 500;
+
+    color: #4c5666;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRIORIDAD
+========================================================= */
+
+.priority {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: 500;
+}
+
+.priority.high {
+    background: #fff0ef;
+
+    color: #e4574f;
+}
+
+.priority.medium {
+    background: #fff7e6;
+
+    color: #c68a17;
+}
+
+.priority.low {
+    background: #edf9f3;
+
+    color: #29965d;
+}
+
+
+/* =========================================================
+   FECHA
+========================================================= */
+
+.date {
+    white-space: nowrap;
+
+    font-size: 10px;
+
+    color: #667085;
+}
+
+
+/* =========================================================
+   ESTADOS
+========================================================= */
+
+.task-status {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.task-status.pending {
+    background: #fff7e6;
+
+    color: #c68a17;
+}
+
+.task-status.progress {
+    background: #eaf3ff;
+
+    color: #1677ff;
+}
+
+.task-status.completed {
+    background: #edf9f3;
+
+    color: #29965d;
+}
+
+
+/* =========================================================
+   BOTÓN ACTUALIZAR
+========================================================= */
+
+.btn-status {
+    padding: 7px 11px;
+
+    border: 1px solid #dce6f5;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #1677ff;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.btn-status:hover {
+    background: #1677ff;
+
+    border-color: #1677ff;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SIN RESULTADOS
+========================================================= */
+
+.no-results {
+    display: none;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.no-results div {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+}
+
+.no-results h3 {
+    margin: 0 0 5px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #3c4655;
+}
+
+.no-results p {
+    margin: 0;
+
+    font-size: 11px;
+
+    color: #8a93a3;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .task-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .filters {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 210px;
+        min-width: 210px;
+    }
+
+    .main-content {
+        width: calc(100% - 210px);
+
+        margin-left: 210px;
+
+        padding: 25px 20px;
+    }
+
+    .user-data {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        width: 70px;
+        min-width: 70px;
+    }
+
+    .main-content {
+        width: calc(100% - 70px);
+
+        margin-left: 70px;
+
+        padding: 20px 15px;
+    }
+
+    .logo-text,
+    .menu-item span:last-child {
+        display: none;
+    }
+
+    .sidebar-header {
+        padding: 20px 14px;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .menu-item {
+        justify-content: center;
+
+        padding: 0;
+    }
+
+    .task-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .filters select {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SGSP | Mis proyectos</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS general -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS proyectos empleado -->
+    <link rel="stylesheet" href="assets/css/proyectos-empleado.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    
+                        <img src="assets/img/logo.pnj.jpeg" alt="Logo SGSP">
+
+                </div>
+            </div>
+
+
+            <nav class="sidebar-menu">
+
+                <a href="dashboard-empleado.html" class="menu-item">
+                    <span class="menu-icon">🏠</span>
+                    <span>Inicio</span>
+                </a>
+
+                <a href="proyectos-empleado.html" class="menu-item active">
+                    <span class="menu-icon">📁</span>
+                    <span>Mis proyectos</span>
+                </a>
+
+                <a href="tareas-empleado.html" class="menu-item">
+                    <span class="menu-icon">✅</span>
+                    <span>Mis tareas</span>
+                </a>
+
+                <a href="materiales-empleado.html" class="menu-item">
+                    <span class="menu-icon">📦</span>
+                    <span>Materiales</span>
+                </a>
+
+                <a href="avances-empleado.html" class="menu-item">
+                    <span class="menu-icon">📈</span>
+                    <span>Avances</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="perfil-empleado.html" class="menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span>Configuracion</span>
+                </a>
+
+                <a href="index.html" class="menu-item logout">
+                    <span class="menu-icon">🚪</span>
+                    <span>Cerrar sesión</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             CONTENIDO PRINCIPAL
+        ========================== -->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <header class="top-header">
+
+                <div>
+
+                    <h1>Mis proyectos</h1>
+
+                    <p>
+                        Consulta los proyectos en los que estás asignado.
+                    </p>
+
+                </div>
+
+
+                <div class="user-info">
+
+                    <div class="notification">
+
+                        <span>🔔</span>
+
+                        <span class="notification-dot"></span>
+
+                    </div>
+
+
+                    <div class="user-profile">
+
+                        <div class="user-avatar">
+                            JV
+                        </div>
+
+                        <div class="user-data">
+
+                            <strong>
+                                José Vega
+                            </strong>
+
+                            <span>
+                                Empleado
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =========================
+                 RESUMEN
+            ========================== -->
+
+            <section class="summary-section">
+
+                <div class="summary-card">
+
+                    <div class="summary-icon">
+                        📁
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Proyectos asignados
+                        </span>
+
+                        <strong id="totalProyectos">
+                            3
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon progress">
+                        ↗
+                    </div>
+
+                    <div>
+
+                        <span>
+                            En progreso
+                        </span>
+
+                        <strong id="proyectosProgreso">
+                            2
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card">
+
+                    <div class="summary-icon completed">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Completados
+                        </span>
+
+                        <strong id="proyectosCompletados">
+                            1
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 FILTROS
+            ========================== -->
+
+            <section class="projects-section">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h2>
+                            Proyectos asignados
+                        </h2>
+
+                        <p>
+                            Visualiza el estado y progreso de cada proyecto.
+                        </p>
+
+                    </div>
+
+
+                    <div class="filters">
+
+                        <div class="search-box">
+
+                            <span>⌕</span>
+
+                            <input
+                                type="text"
+                                id="buscarProyecto"
+                                placeholder="Buscar proyecto..."
+                            >
+
+                        </div>
+
+
+                        <select id="filtroEstado">
+
+                            <option value="todos">
+                                Todos los estados
+                            </option>
+
+                            <option value="En progreso">
+                                En progreso
+                            </option>
+
+                            <option value="Completado">
+                                Completado
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================
+                     LISTA DE PROYECTOS
+                ========================== -->
+
+                <div
+                    class="projects-grid"
+                    id="projectsContainer"
+                >
+
+                    <!-- Proyecto Alfa -->
+
+                    <article class="project-card">
+
+                        <div class="project-card-header">
+
+                            <div class="project-icon">
+                                PA
+                            </div>
+
+                            <span class="status status-progress">
+                                En progreso
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <h3>
+                                Proyecto Alfa
+                            </h3>
+
+                            <p class="project-description">
+                                Desarrollo de sitio web y diseño de interfaz
+                                para el cliente.
+                            </p>
+
+
+                            <div class="project-data">
+
+                                <div>
+
+                                    <span>
+                                        Responsable
+                                    </span>
+
+                                    <strong>
+                                        Carlos Rodríguez
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Fecha límite
+                                    </span>
+
+                                    <strong>
+                                        15 Sep 2026
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress-section">
+
+                                <div class="progress-label">
+
+                                    <span>
+                                        Progreso
+                                    </span>
+
+                                    <strong>
+                                        75%
+                                    </strong>
+
+                                </div>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-fill"
+                                        style="width: 75%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <span>
+                                4 tareas asignadas
+                            </span>
+
+                            <button
+                                class="btn-view"
+                                data-project="Proyecto Alfa"
+                            >
+                                Ver proyecto
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto Beta -->
+
+                    <article class="project-card">
+
+                        <div class="project-card-header">
+
+                            <div class="project-icon">
+                                PB
+                            </div>
+
+                            <span class="status status-progress">
+                                En progreso
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <h3>
+                                Proyecto Beta
+                            </h3>
+
+                            <p class="project-description">
+                                Implementación y configuración de una
+                                plataforma web.
+                            </p>
+
+
+                            <div class="project-data">
+
+                                <div>
+
+                                    <span>
+                                        Responsable
+                                    </span>
+
+                                    <strong>
+                                        Laura Martínez
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Fecha límite
+                                    </span>
+
+                                    <strong>
+                                        25 Sep 2026
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress-section">
+
+                                <div class="progress-label">
+
+                                    <span>
+                                        Progreso
+                                    </span>
+
+                                    <strong>
+                                        50%
+                                    </strong>
+
+                                </div>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-fill"
+                                        style="width: 50%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <span>
+                                3 tareas asignadas
+                            </span>
+
+                            <button
+                                class="btn-view"
+                                data-project="Proyecto Beta"
+                            >
+                                Ver proyecto
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Proyecto Gamma -->
+
+                    <article class="project-card">
+
+                        <div class="project-card-header">
+
+                            <div class="project-icon">
+                                PG
+                            </div>
+
+                            <span class="status status-completed">
+                                Completado
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content">
+
+                            <h3>
+                                Proyecto Gamma
+                            </h3>
+
+                            <p class="project-description">
+                                Diseño y organización de contenidos
+                                digitales para el proyecto.
+                            </p>
+
+
+                            <div class="project-data">
+
+                                <div>
+
+                                    <span>
+                                        Responsable
+                                    </span>
+
+                                    <strong>
+                                        Andrés Gómez
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        Fecha límite
+                                    </span>
+
+                                    <strong>
+                                        30 Ago 2026
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="progress-section">
+
+                                <div class="progress-label">
+
+                                    <span>
+                                        Progreso
+                                    </span>
+
+                                    <strong>
+                                        100%
+                                    </strong>
+
+                                </div>
+
+                                <div class="progress-bar">
+
+                                    <div
+                                        class="progress-fill completed-fill"
+                                        style="width: 100%;"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <span>
+                                2 tareas asignadas
+                            </span>
+
+                            <button
+                                class="btn-view"
+                                data-project="Proyecto Gamma"
+                            >
+                                Ver proyecto
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- SIN RESULTADOS -->
+
+                <div
+                    class="no-results"
+                    id="noResults"
+                >
+
+                    <div>
+                        🔎
+                    </div>
+
+                    <h3>
+                        No se encontraron proyectos
+                    </h3>
+
+                    <p>
+                        Intenta cambiar los filtros de búsqueda.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="assets/js/proyectos-empleado.js"></script>
+
+</body>
+
+</html>
